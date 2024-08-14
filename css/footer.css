@@ -5,12 +5,18 @@
   background-color: #fff;
   width: 100%;
   height: auto;
-  padding: 20px 0px 20px 0px;
+  padding: 20px;
   text-align: center;
-  bottom: 0;
   border-top: 1px solid #d9d9d9;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#rhinny-footer {
+  width: 8em;
+  margin: 0 20px;
 }
 
 .link-paginas {
@@ -25,7 +31,7 @@
   flex-direction: column;
   align-items: start;
   list-style: none;
-  margin: 0 30px;
+  margin: 0 10em;
 }
 
 .titulo-link,
@@ -41,8 +47,12 @@
   text-decoration: none;
 }
 
-.links:hover {
-  color: var(--azul);
+li {
+  margin: 5px 0;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .links:visited {
