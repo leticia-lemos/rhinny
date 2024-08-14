@@ -6,14 +6,13 @@ nav {
   height: 4em;
   margin-bottom: 0px;
   z-index: 1000;
-  background-color: var(--branco);
+  background-color: #fff;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
 nav ul {
-  background-color: var(--branco);
+  background-color: #fff;
   width: 100%;
   border-bottom: 1px solid #D9D9D9;
   list-style: none;
@@ -31,12 +30,16 @@ nav ul {
 #logo-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-family: "CheriLiney";
+  justify-content: space-between;
 }
 
 #rhinny {
-  width: 2em;
+  width: 8em;
+  margin: 0 35px;
+}
+
+.botoes {
+  margin: 0 35px;
 }
 
 .btn-login,

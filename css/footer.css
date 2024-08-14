@@ -1,0 +1,55 @@
+@import url(../css/cores.css);
+@import url(../css/tipografia.css);
+
+.footer-container {
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  padding: 20px 0px 20px 0px;
+  text-align: center;
+  bottom: 0;
+  border-top: 1px solid #d9d9d9;
+  display: flex;
+  flex-direction: row;
+}
+
+.link-paginas {
+  display: flex;
+  flex-direction: row;
+}
+
+.paginas,
+.redes-sociais,
+.contato {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  list-style: none;
+  margin: 0 30px;
+}
+
+.titulo-link,
+.titulo-redes,
+.titulo-contato {
+  font-family: "Poppins-semibold";
+}
+
+.links {
+  font-family: "Poppins-regular";
+  color: var(--preto);
+  list-style: none;
+  text-decoration: none;
+}
+
+.links:hover {
+  color: var(--azul);
+}
+
+.links:visited {
+  color: var(--preto);
+}
+
+.copyright {
+  font-family: "Poppins-semibold";
+  font-size: 0.9em;
+}
