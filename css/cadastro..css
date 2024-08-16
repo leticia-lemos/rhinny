@@ -21,7 +21,7 @@
   margin-bottom: 1em;
 }
 
-/*progresso*/
+/* começo progresso */
 #progresso {
   display: flex;
   align-items: center;
@@ -43,6 +43,7 @@
   position: relative;
   text-align: center;
 }
+
 #progresso li:before {
   content: counter(step);
   counter-increment: step;
@@ -51,7 +52,7 @@
   display: block;
   font-size: 10px;
   color: #333;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   border-radius: 3px;
   margin: 0 auto 5px auto;
 }
@@ -60,12 +61,13 @@
   content: "";
   width: 100%;
   height: 2px;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   position: absolute;
   left: -50%;
   top: 9px;
   z-index: -1;
 }
+
 #progresso li:first-child:after {
   content: none;
 }
@@ -77,10 +79,11 @@
 }
 
 #progresso li.active:after {
-    background-color: #D9D9D9;
-    color: white;
-    border-radius: 8px;
-  }
+  background-color: #d9d9d9;
+  color: white;
+  border-radius: 8px;
+}
+/* final progresso */
 
 .form-cadastro {
   display: flex;
