@@ -1,0 +1,16 @@
+@import url(../css/cores.css);
+@import url(../css/tipografia.css);
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    margin: 10px auto;
+  }
+}
