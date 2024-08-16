@@ -29,7 +29,8 @@
   border: 1px solid #d9d9d9;
   border-radius: 8px;
   width: 28em;
-  height: 20em;
+  height: 21em;
+  margin: 10px 0 0 0    ;
 }
 
 .campo-email {
@@ -63,6 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 15px 15px 15px;
 }
 
 #btn-entrar {
