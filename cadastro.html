@@ -1,65 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/cadastro..css" />
 
-    <link rel="shortcut icon" href="./img/rhinny.svg" type="image/x-icon" />
-    <title>Página cadastro</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/cadastro.css" />
 
-  <body>
-    <div class="container">
-      <nav>
-        <ul id="logo-nav">
-          <li>
-            <img src="./img/logo.svg" id="rhinny" alt="Rhinny" />
-          </li>
-          <li class="botoes">
-            <a href="#" class="btn-login">Login</a>
-            <a href="#" class="btn-cadastro">Cadastro</a>
-          </li>
-        </ul>
-      </nav>
+  <link rel="shortcut icon" href="./img/rhinny.svg" type="image/x-icon" />
+  <title>Página cadastro</title>
+</head>
 
-      <section class="campo-cadastro">
-        <h1 class="titulo-cadastro">Cadastro</h1>
-        <p class="subtitulo-cadastro">Crie sua conta!</p>
+<body>
+  <div class="container">
+    <nav>
+      <ul id="logo-nav">
+        <li>
+          <img src="./img/logo.svg" id="rhinny" alt="Rhinny" />
+        </li>
+        <li class="botoes">
+          <a href="#" class="btn-login">Login</a>
+          <a href="#" class="btn-cadastro">Cadastro</a>
+        </li>
+      </ul>
+    </nav>
 
-        <ul id="progresso">
-            <li class="active"></li>
-            <li></li>
-          </ul>
+    <section class="campo-cadastro">
+      <h1 class="titulo-cadastro">Cadastro</h1>
+      <p class="subtitulo-cadastro">Crie sua conta!</p>
 
-        <form action="" class="form-cadastro">
-            <h2 class="subtitulo-form">Dados do Responsável</h2>
-            <div class="campo-nome">
-                <label for="" id="titulo-form">Nome</label>
-                <input type="name" id="nome">
-            </div>
-            <div class="campo-email">
-                <label for="" id="titulo-form">Email</label>
-                <input type="email" id="email">
-            </div>
-            <div class="campo-senha">
-                <label for="" id="titulo-form">Senha</label>
-                <input type="password" id="senha">
-            </div>
-            <div class="campo-data">
-                <label for="" id="titulo-form">Data de Nascimento</label>
-                <input type="date" id="data">
-            </div>
-            <div class="btn">
-                <button type="submit" id="btn-entrar">Continuar</button>
-            </div>
-        </form>
-        <img src="./img/rhinny2.svg" id="rhinny-form" alt="Imagem do mascote Rhinny">
+      <ul id="progresso">
+        <li class="active"></li>
+        <li></li>
+      </ul>
 
-      </section>
-    </div>
-  </body>
+      <!-- Formulário de Dados do Responsável -->
+      <form id="form-dados-responsavel" class="form-cadastro">
+        <h2 class="subtitulo-form">Dados do Responsável</h2>
+        <div class="campo-nome">
+          <label for="nome" id="titulo-form">Nome</label>
+          <input type="text" id="nome" />
+        </div>
+        <div class="campo-email">
+          <label for="email" id="titulo-form">Email</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="campo-senha">
+          <label for="senha" id="titulo-form">Senha</label>
+          <input type="password" id="senha" />
+        </div>
+        <div class="campo-data">
+          <label for="data" id="titulo-form">Data de Nascimento</label>
+          <input type="date" id="data" />
+        </div>
+        <div class="btn">
+          <button type="button" id="btn-continuar">Continuar</button>
+        </div>
+      </form>
+
+      <!-- Formulário de Dados da Criança -->
+      <form id="form-dados-crianca" class="form-cadastro" style="display: none;">
+        <button type="button" id="btn-voltar">Voltar</button>
+        <h2 class="subtitulo-form">Dados da Criança</h2>
+        <div class="campo-nome-crianca">
+          <label for="nome-crianca" id="titulo-form">Nome da Criança</label>
+          <input type="text" id="nome-crianca" />
+        </div>
+        <div class="campo-data-crianca">
+          <label for="data-crianca" id="titulo-form">Data de Nascimento</label>
+          <input type="date" id="data-crianca" />
+        </div>
+        <div class="btn">
+          <button type="submit" id="btn-submit-crianca">Enviar</button>
+        </div>
+      </form>
+
+      <img src="./img/rhinny2.svg" id="rhinny-form" alt="Imagem do mascote Rhinny">
+    </section>
+  </div>
+
+  <script src="./js/form.js"></script>
+</body>
+
 </html>

@@ -55,6 +55,7 @@
   background-color: #d9d9d9;
   border-radius: 3px;
   margin: 0 auto 5px auto;
+  border-radius: 8px;
 }
 
 #progresso li:after {
@@ -73,7 +74,6 @@
 
 #progresso li:first-child:after {
   content: none;
-  border-radius: 8px;
 }
 
 #progresso li.active:before {
@@ -101,16 +101,22 @@
   margin: 10px 0 0 0;
 }
 
+#form-dados-crianca {
+  height: 25em;
+}
+
 .subtitulo-form {
   font-family: "Poppins-bold";
   font-size: 1.4em;
   margin: 35px 0 10px 0;
 }
 
-.campo-nome {
+.campo-nome,
+#nome-crianca {
   display: flex;
   flex-direction: column;
   margin: 30px 0px;
+  outline: none;
 }
 
 .campo-email {
@@ -125,7 +131,8 @@
   margin: 20px 0px;
 }
 
-.campo-data {
+.campo-data,
+#data-crianca {
   display: flex;
   flex-direction: column;
   margin: 20px 0px;
@@ -140,7 +147,9 @@
 #nome,
 #email,
 #senha,
-#data {
+#data,
+#nome-crianca,
+#data-crianca {
   background-color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
@@ -155,7 +164,8 @@
   margin: 0 15px 15px 15px;
 }
 
-#btn-entrar {
+#btn-continuar,
+#btn-submit-crianca {
   font-family: "Poppins-semibold";
   font-size: 1.2em;
   color: #f5f5f5;
@@ -168,6 +178,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 1em;
+  cursor: pointer;
 }
 
 #rhinny-form {
