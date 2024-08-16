@@ -21,6 +21,61 @@
   margin-bottom: 1em;
 }
 
+/*progresso*/
+#progresso {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  counter-reset: step;
+}
+
+#progresso li {
+  font-family: "Poppins-bold";
+  list-style-type: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 33.33%;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+#progresso li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #333;
+  background: white;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+
+#progresso li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1;
+}
+#progresso li:first-child:after {
+  content: none;
+}
+
+#progresso li.active:before,
+#progresso li.active:after {
+  background: var(--azul);
+  color: white;
+}
+
 .form-cadastro {
   display: flex;
   flex-direction: column;
