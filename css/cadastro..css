@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10em 10em 0 10em;
+  margin: 3em 10em 0 10em;
   height: auto;
 }
 
@@ -58,18 +58,22 @@
 }
 
 #progresso li:after {
+  display: flex;
+  align-self: center;
+  justify-content: center;
   content: "";
-  width: 100%;
+  width: 15px;
   height: 2px;
   background-color: #d9d9d9;
   position: absolute;
-  left: -50%;
+  left: -100%;
   top: 9px;
   z-index: -1;
 }
 
 #progresso li:first-child:after {
   content: none;
+  border-radius: 8px;
 }
 
 #progresso li.active:before {
@@ -93,20 +97,38 @@
   border: 1px solid #d9d9d9;
   border-radius: 8px;
   width: 28em;
-  height: 21em;
+  height: 38em;
   margin: 10px 0 0 0;
 }
 
-.campo-email {
+.subtitulo-form {
+  font-family: "Poppins-bold";
+  font-size: 1.4em;
+  margin: 35px 0 10px 0;
+}
+
+.campo-nome {
   display: flex;
   flex-direction: column;
   margin: 30px 0px;
 }
 
-.campo-senha {
+.campo-email {
   display: flex;
   flex-direction: column;
   margin: 10px 0px;
+}
+
+.campo-senha {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+.campo-data {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
 }
 
 #titulo-form {
@@ -115,8 +137,10 @@
   margin-bottom: 5px;
 }
 
+#nome,
 #email,
-#senha {
+#senha,
+#data {
   background-color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
@@ -143,12 +167,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 #rhinny-form {
   width: 27em;
   position: relative;
-  bottom: 15em;
+  bottom: 27em;
   left: 45em;
 }
