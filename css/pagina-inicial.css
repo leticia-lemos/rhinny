@@ -1,0 +1,95 @@
+@import url(../css/tipografia.css);
+@import url(../css/cores.css);
+
+.section-inicial {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50em;
+  margin: 2em 3em;
+}
+
+.campo-lugares {
+  background-color: aquamarine;
+  height: 45em;
+  width: 80em;
+}
+
+/* começo menu lateral */
+.menu-lateral {
+  background-color: #fff;
+  height: 45em;
+  width: 15em;
+  border-radius: 20px;
+  position: relative;
+  right: 8em;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.titulo-menu {
+  font-family: "Poppins-semibold";
+  font-size: 1.2em;
+  color: #1e1e1e;
+  margin: 1em;
+}
+
+#search-menu {
+  margin: 5px;
+  position: relative;
+  bottom: 2.1em;
+  left: 12em;
+  cursor: pointer;
+}
+
+#pesquisa-menu {
+  background-color: transparent;
+  outline: none;
+  border-radius: 15px;
+  border: 1px solid #d9d9d9;
+  height: 2.5em;
+  width: 16em;
+  margin: 0 1em;
+  padding: 15px;
+}
+
+#pesquisa-menu::placeholder {
+    font-family: "Poppins-regular";
+    color: #B3B3B3;
+}
+
+/* final menu lateral */
+
+/* começo areas */
+.campo-pesquisa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#campo-pesquisa {
+  background-color: transparent;
+  outline: none;
+  border-radius: 15px;
+  border: 1px solid #d9d9d9;
+  height: 2.5em;
+  width: 30em;
+  padding: 15px;
+  position: relative;
+  bottom: 3em;
+}
+
+#campo-pesquisa::placeholder {
+    font-family: "Poppins-regular";
+    color: #B3B3B3;
+}
+
+#search {
+  margin: 5px;
+  position: relative;
+  right: 2.5em;
+  bottom: 2.5em;
+  cursor: pointer;
+}
+
+/* final areas */
