@@ -11,9 +11,42 @@
 }
 
 .campo-lugares {
-  background-color: aquamarine;
   height: 45em;
   width: 80em;
+}
+
+.campo-locais {
+  height: 35em;
+  width: 85em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
+.grupo-locais {
+  background-color: transparent;
+  width: 17em;
+  height: 19em;
+  border: 1px solid #D9D9D9;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  cursor: pointer;
+}
+
+#praca-lelita {
+  width: 90%;
+  margin: 0 10px;
+}
+
+.titulo-locais {
+  font-family: "Poppins-regular";
+  color: #1e1e1e;
+  margin-top: 15px;
 }
 
 /* começo menu lateral */
@@ -43,6 +76,7 @@
 }
 
 #pesquisa-menu {
+  font-family: "Poppins-regular";
   background-color: transparent;
   outline: none;
   border-radius: 15px;
@@ -51,11 +85,6 @@
   width: 16em;
   margin: 0 1em;
   padding: 15px;
-}
-
-#pesquisa-menu::placeholder {
-    font-family: "Poppins-regular";
-    color: #B3B3B3;
 }
 
 /* final menu lateral */
@@ -68,6 +97,7 @@
 }
 
 #campo-pesquisa {
+  font-family: "Poppins-regular";
   background-color: transparent;
   outline: none;
   border-radius: 15px;
@@ -77,11 +107,6 @@
   padding: 15px;
   position: relative;
   bottom: 3em;
-}
-
-#campo-pesquisa::placeholder {
-    font-family: "Poppins-regular";
-    color: #B3B3B3;
 }
 
 #search {
