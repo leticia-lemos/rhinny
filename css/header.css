@@ -25,6 +25,7 @@ nav ul {
   position: fixed;
   height: 4em;
   margin: 0;
+  z-index: 100;
 }
 
 #logo-nav {
@@ -38,26 +39,14 @@ nav ul {
   margin: 0 35px;
 }
 
-.botoes {
-  margin: 0 35px;
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 1em;
 }
 
-.btn-login,
-.btn-cadastro {
-  font-family: "Poppins-regular";
-  text-decoration: none;
-  padding: 5px;
-}
-
-.btn-login {
-  background-color: #e3e3e3;
-  color: #1e1e1e;
-  border-radius: 8px;
-  margin-right: 10px;
-}
-
-.btn-cadastro {
-  background-color: var(--azul);
-  color: #f5f5f5;
-  border-radius: 8px;
+#foto-usuario {
+  width: 3em;
+  height: 5em;
 }

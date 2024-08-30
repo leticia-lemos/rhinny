@@ -19,5 +19,6 @@ body {
 .inicial {
   font-family: "Poppins-regular";
   margin: 15px;
-  height: 10em; /* pra teste na pagina modelo */
+  height: 10em;
+  margin: 5em; /* pra teste na pagina modelo */
 }

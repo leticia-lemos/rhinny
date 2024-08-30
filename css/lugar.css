@@ -1,0 +1,63 @@
+@import url(../css/cores.css);
+@import url(../css/tipografia.css);
+
+.section-inicial {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 50em;
+  margin: 2em 3em;
+}
+
+.layout-lugar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+#praca-boulevard {
+  width: 25%;
+  border-radius: 25px;
+}
+
+.grupo-direita {
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px;
+}
+
+.btn-acessibilidade {
+    font-family: "Poppins-regular";
+    border: none;
+    border-radius: 10px;
+    margin: 15px 0 0 0;
+    padding: 5px;
+}
+
+#piso-tatil {
+    background-color: #FCEDB3;
+    color: #9A7A00;
+}
+
+#placas-braille {
+    background-color: #CFF7D3;
+    color: #02542D;
+}
+
+#mapas-tateis {
+    background-color: #BCE2FC;
+    color: #007ACD;
+}
+
+.grupo-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 15px 0;
+}
+
+#icon {
+    width: 10%;
+}
