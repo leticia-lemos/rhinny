@@ -195,6 +195,7 @@
   background: none;
   width: 30em;
   margin-top: 2em;
+  cursor: pointer;
 }
 
 .bx {
