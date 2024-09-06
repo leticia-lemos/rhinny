@@ -185,6 +185,7 @@
   justify-content: center;
   margin-top: 1em;
   cursor: pointer;
+  text-decoration: none;
 }
 
 #btn-voltar {
