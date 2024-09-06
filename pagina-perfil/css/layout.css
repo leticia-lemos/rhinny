@@ -1,0 +1,10 @@
+@media (min-width: 1920px) {
+  .campo-perfil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 20em;
+    margin: 0;
+  }
+}
