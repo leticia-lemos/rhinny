@@ -1,3 +1,5 @@
+/* header.css */
+
 @import url(../css/cores.css);
 @import url(../css/tipografia.css);
 
@@ -29,6 +31,7 @@ nav {
 
 .botoes {
   margin: 25px 35px;
+  display: flex;
 }
 
 .menu-toggle {
@@ -41,22 +44,45 @@ nav {
   border-radius: 3px;
 }
 
-.menu-open .botoes {
+.menu-collapse.menu-open {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
   position: absolute;
-  top: 4em;
+  top: 4em; 
   right: 0;
-  background-color: white;
-  padding: 1em;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: calc(100vh - 4em);
+  z-index: 1000;
+  border-bottom: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+.menu-collapse .botoes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-collapse .btn-login,
+.menu-collapse .btn-cadastro {
+  margin: 10px 0;
+  font-size: 1em;
+  padding: 10px 20px;
 }
 
 .btn-login,
 .btn-cadastro {
   font-family: "Poppins-regular";
   text-decoration: none;
-  padding: 5px;
+  width: 6em;
+  height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-login {

@@ -14,13 +14,6 @@
   <title>Landing page</title>
 </head>
 
-<script>
-  function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('menu-open');
-  }
-</script>
-
 <body>
   <div class="container">
     <nav>
@@ -28,18 +21,19 @@
         <li>
           <img src="./img/logo.svg" id="rhinny" alt="Rhinny" />
         </li>
-        <li class="botoes">
-          <a href="../pagina-login/login.html" class="btn-login">Login</a>
-          <a href="../pagina-cadastro/cadastro.html" class="btn-cadastro">Cadastro</a>
-        </li>
         <div class="menu-toggle" onclick="toggleMenu()">
           <div></div>
           <div></div>
           <div></div>
         </div>
       </ul>
+      <div class="menu-collapse">
+        <div class="botoes">
+          <a href="../pagina-login/login.html" class="btn-login">Login</a>
+          <a href="../pagina-cadastro/cadastro.html" class="btn-cadastro">Cadastro</a>
+        </div>
+      </div>
     </nav>
-    
 
     <section class="section-inicial">
       <img src="./img/imagem-inicial.svg" class="imagem-inicial" alt="">
@@ -134,5 +128,7 @@
     </footer>
   </div>
 </body>
+
+<script defer src="./js/menu.js"></script>
 
 </html>

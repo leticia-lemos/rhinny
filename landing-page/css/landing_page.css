@@ -54,6 +54,7 @@
 .lista-compromissos {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
   margin: 50px 35px 65px 35px;
 }
 
