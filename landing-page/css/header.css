@@ -24,20 +24,15 @@ nav {
 
 #rhinny {
   width: 8em;
-  margin: 0 5px;
+  margin: 20px 5px;
 }
 
 .botoes {
-  display: none;
+  margin: 25px 35px;
 }
 
 .menu-toggle {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
-  cursor: pointer;
+  display: none;
 }
 
 .menu-toggle div {
@@ -55,10 +50,6 @@ nav {
   background-color: white;
   padding: 1em;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.botoes {
-  margin: 0 35px;
 }
 
 .btn-login,
