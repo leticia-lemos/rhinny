@@ -6,14 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/landing_page.css">
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/layout.css">
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/footer.css">
-  <link rel="stylesheet" href="./css/modelo.css">
+  <link rel="stylesheet" href="./css/layout.css">
 
   <link rel="shortcut icon" href="./img/rhinny.svg" type="image/x-icon">
   <title>Landing page</title>
 </head>
+
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('nav');
+    nav.classList.toggle('menu-open');
+  }
+</script>
 
 <body>
   <div class="container">
@@ -26,6 +32,11 @@
           <a href="../pagina-login/login.html" class="btn-login">Login</a>
           <a href="../pagina-cadastro/cadastro.html" class="btn-cadastro">Cadastro</a>
         </li>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </ul>
     </nav>
 
