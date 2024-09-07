@@ -28,8 +28,9 @@
 .titulo2 {
   font-family: "Poppins-semibold";
   color: #1e1e1e;
-  width: 50%;
+  width: 80%;
   margin-left: 15px;
+  margin-bottom: 5px;
   font-size: 1.3em;
 }
 
@@ -47,14 +48,14 @@
 .texto2 {
   font-family: "Poppins-regular";
   color: #757575;
-  width: 70%;
+  width: 80%;
   margin-left: 46px;
 }
 
 .lista-compromissos {
   display: flex;
   flex-direction: row;
-  margin-top: 35px;
+  margin: 50px 35px 65px 35px;
 }
 
 .conteudo {
@@ -72,7 +73,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 5em 10em 5em 10em;
+  margin: 5em 10em;
+  gap: 10em;
+}
+
+.img-inclusao, .img-facilidade {
+  width: 450px;
+  height: auto;
 }
 
 .campo-img {
@@ -88,6 +95,6 @@
 .texto-imagens {
   font-family: "Poppins-regular";
   color: #757575;
-  width: 80%;
+  width: 85%;
   margin-top: 0.5em;
 }
