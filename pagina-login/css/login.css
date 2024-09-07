@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10em 10em 0 10em;
+  margin: 8em 10em 0 10em;
   height: auto;
 }
 
@@ -30,7 +30,7 @@
   border-radius: 8px;
   width: 28em;
   height: 21em;
-  margin: 10px 0 0 0    ;
+  margin: 10px 0 0 0;
 }
 
 .campo-email {
@@ -40,10 +40,10 @@
 }
 
 .campo-senha {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0px;
-  }
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
 
 #titulo-form {
   font-family: "Poppins-regular";
@@ -58,6 +58,8 @@
   border-radius: 8px;
   width: 28em;
   height: 2.5em;
+  padding: 5px;
+  outline: none;
 }
 
 .btn {
@@ -84,8 +86,8 @@
 }
 
 #rhinny-form {
-  width: 27em;
+  width: 20em;
   position: relative;
-  bottom: 15em;
-  left: 45em;
+  bottom: 20em;
+  left: 38em;
 }
