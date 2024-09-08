@@ -47,8 +47,54 @@
 
     <aside class="menu-flutuante">
       <h3 class="titulo-menu">Palavras-chaves</h3>
-      <input type="search" id="pesquisa-menu" placeholder="Pesquisar" />
-      <box-icon name="search" id="search-menu" color="#0098ff"></box-icon>
+      <div class="search-box">
+        <input type="search" id="pesquisa-menu" placeholder="Pesquisar" />
+        <button class="search-btn" onclick="adicionarPalavraChave()">
+          <box-icon name="search" id="search-menu" color="#0098ff"></box-icon>
+        </button>
+      </div>
+
+      <!-- Contêiner onde as palavras-chave aparecerão -->
+      <div id="palavras-chaves-container" class="palavras-chaves-container">
+        <!-- As palavras-chave vão aparecer aqui -->
+      </div>
+
+      <h3 class="titulo-menu">Acessibilidades</h3>
+
+      <div class="filtro">
+        <div class="filtro-header" onclick="toggleSection('sinalizacao-opcoes')">
+          <span class="titulo-filtro">Sinalização</span>
+          <img src="./img/seta-menu.svg" alt="">
+        </div>
+        <ul id="sinalizacao-opcoes" class="filtro-opcoes">
+          <li><input type="checkbox" id="braille" /> <label for="braille">Placas em Braille</label></li>
+          <li><input type="checkbox" id="tactile" /> <label for="tactile">Sinalização tátil</label></li>
+          <li><input type="checkbox" id="trilhas" /> <label for="trilhas">Trilhas adaptadas</label></li>
+          <li><input type="checkbox" id="mapas" /> <label for="mapas">Mapas táteis</label></li>
+        </ul>
+      </div>
+
+      <div class="filtro">
+        <div class="filtro-header" onclick="toggleSection('audio-opcoes')">
+          <span class="titulo-filtro">Áudio</span>
+          <img src="./img/seta-menu.svg" alt="">
+        </div>
+        <ul id="audio-opcoes" class="filtro-opcoes">
+          <li><input type="checkbox" id="guias-audio" /> <label for="guias-audio">Guias de áudio</label></li>
+          <li><input type="checkbox" id="libras" /> <label for="libras">Libras</label></li>
+        </ul>
+      </div>
+
+      <div class="filtro">
+        <div class="filtro-header" onclick="toggleSection('equipamentos-opcoes')">
+          <span class="titulo-filtro">Equipamentos</span>
+          <img src="./img/seta-menu.svg" alt="">
+        </div>
+        <ul id="equipamentos-opcoes" class="filtro-opcoes">
+          <li><input type="checkbox" id="cadeiras-rodas" /> <label for="cadeiras-rodas">Cadeiras de rodas</label></li>
+          <li><input type="checkbox" id="rampas" /> <label for="rampas">Rampas</label></li>
+        </ul>
+      </div>
     </aside>
 
     <section class="section-inicial">

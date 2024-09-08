@@ -61,11 +61,11 @@
   margin-top: 15px;
 }
 
-/* começo menu lateral */
+/* Começo menu lateral */
 .menu-flutuante {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   position: fixed;
   top: 7em;
   left: 20px;
@@ -73,23 +73,14 @@
   border-radius: 20px;
   padding: 15px;
   width: 15em;
-  height: 25em;
+  height: 28em;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .titulo-menu {
   font-family: "Poppins-semibold";
-  font-size: 1.2em;
   color: #1e1e1e;
-  margin: 1em;
-}
-
-#search-menu {
-  margin: 5px;
-  position: relative;
-  bottom: 2.1em;
-  left: 5em;
-  cursor: pointer;
+  margin: 1em 0;
 }
 
 #pesquisa-menu {
@@ -100,11 +91,98 @@
   border: 1px solid #d9d9d9;
   height: 2.5em;
   width: 16em;
-  margin: 0 1em;
+  margin: 0;
   padding: 15px;
 }
 
-/* final menu lateral */
+#search-menu {
+  margin: 5px;
+  position: relative;
+  bottom: 0;
+  right: 3em;
+  cursor: pointer;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.search-btn {
+  background: transparent;
+  border: none;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.palavras-chaves-container {
+  font-family: "Poppins-regular";
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.palavra-chave {
+  background-color: #cfe6ff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+}
+
+.palavra-chave .remove-btn {
+  content: url(../img/close.svg);
+  background: transparent;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.filtro {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.filtro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.titulo-filtro {
+  font-family: "Poppins-regular";
+}
+
+.filtro-header box-icon {
+  font-size: 1.2em;
+}
+
+.filtro-opcoes {
+  list-style: none;
+  padding-left: 1em;
+  margin-top: 10px;
+  display: none;
+}
+
+.filtro-opcoes li {
+  font-family: "Poppins-regular";
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+input [type="checkbox"] {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* Final menu lateral */
 
 /* começo areas */
 .campo-pesquisa {
