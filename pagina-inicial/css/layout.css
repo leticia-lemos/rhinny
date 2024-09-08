@@ -1,16 +1,124 @@
-@import url(../css/cores.css);
-@import url(../css/tipografia.css);
+/* @media (max-width: 845px) {} */
+/* @media (max-width: 768px) {} */
+/* @media (max-width: 475px) {} */
 
-@media (max-width: 768px) {
-  .container {
+@media (min-width: 1920px) {
+  .section-inicial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50em;
+    margin: 2em 3em;
+  }
+
+  .campo-lugares {
+    height: 45em;
+    width: 80em;
+  }
+
+  .campo-locais {
+    height: 35em;
+    width: 85em;
+    margin: 0 5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3em;
+  }
+
+  .grupo-locais {
+    background-color: transparent;
+    width: 17em;
+    height: 19em;
+    border: 1px solid #d9d9d9;
+    border-radius: 15px;
+    margin: 5px;
     padding: 15px;
-    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    cursor: pointer;
   }
-}
 
-@media (max-width: 480px) {
-  .container {
-    padding: 10px;
-    margin: 10px auto;
+  #praca-lelita {
+    width: 90%;
+    margin: 0 10px;
   }
+
+  .titulo-locais {
+    font-family: "Poppins-regular";
+    color: #1e1e1e;
+    margin-top: 15px;
+  }
+
+  /* começo menu lateral */
+  .menu-lateral {
+    background-color: #fff;
+    height: 45em;
+    width: 15em;
+    border-radius: 20px;
+    position: fixed;
+    right: 98em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .titulo-menu {
+    font-family: "Poppins-semibold";
+    font-size: 1.2em;
+    color: #1e1e1e;
+    margin: 1em;
+  }
+
+  #search-menu {
+    margin: 5px;
+    position: relative;
+    bottom: 2.1em;
+    left: 12em;
+    cursor: pointer;
+  }
+
+  #pesquisa-menu {
+    font-family: "Poppins-regular";
+    background-color: transparent;
+    outline: none;
+    border-radius: 15px;
+    border: 1px solid #d9d9d9;
+    height: 2.5em;
+    width: 16em;
+    margin: 0 1em;
+    padding: 15px;
+  }
+
+  /* final menu lateral */
+
+  /* começo areas */
+  .campo-pesquisa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 5em;
+  }
+
+  #campo-pesquisa {
+    font-family: "Poppins-regular";
+    background-color: transparent;
+    outline: none;
+    border-radius: 15px;
+    border: 1px solid #d9d9d9;
+    height: 2.5em;
+    width: 30em;
+    padding: 15px;
+    position: relative;
+    bottom: 3em;
+  }
+
+  #search {
+    margin: 5px;
+    position: relative;
+    right: 2.5em;
+    bottom: 2.5em;
+    cursor: pointer;
+  }
+  /* final areas */
 }

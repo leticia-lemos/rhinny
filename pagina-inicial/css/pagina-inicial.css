@@ -6,8 +6,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 50em;
-  margin: 2em 3em;
+  height: 53em;
+  margin: 2em 3em 4em 15em;
 }
 
 .campo-lugares {
@@ -27,9 +27,9 @@
 
 .grupo-locais {
   background-color: transparent;
-  width: 17em;
-  height: 19em;
-  border: 1px solid #D9D9D9;
+  width: 20em;
+  height: 21.5em;
+  border: 1px solid #d9d9d9;
   border-radius: 15px;
   margin: 5px;
   padding: 15px;
@@ -37,6 +37,16 @@
   flex-direction: column;
   align-items: start;
   cursor: pointer;
+}
+
+.img-lugar {
+  margin: 0 1em;
+}
+
+.estrelas {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0;
 }
 
 #praca-lelita {
@@ -51,14 +61,19 @@
 }
 
 /* começo menu lateral */
-.menu-lateral {
-  background-color: #fff;
-  height: 45em;
-  width: 15em;
-  border-radius: 20px;
+.menu-flutuante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: fixed;
-  right: 98em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  top: 7em;
+  left: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px;
+  width: 15em;
+  height: 25em;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .titulo-menu {
@@ -72,7 +87,7 @@
   margin: 5px;
   position: relative;
   bottom: 2.1em;
-  left: 12em;
+  left: 5em;
   cursor: pointer;
 }
 
@@ -120,3 +135,92 @@
 }
 
 /* final areas */
+
+/* Estilos do modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.modal-content {
+  background-color: var(--azul);
+  margin: 4.5em 0 0 75em;
+  width: 15em;
+  height: 15em;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.content-sem-perfil {
+  background-color: var(--branco);
+  padding: 0;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  width: 15em;
+  height: 14em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 2em;
+}
+
+.perfil {
+  font-family: "Poppins-bold";
+  color: var(--branco);
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+#foto-perfil {
+  width: 50%;
+  z-index: 1;
+}
+
+.linha {
+  width: 12em;
+  margin: 10px 1px;
+}
+
+.user {
+  cursor: pointer;
+}
+
+.titulo-perfil {
+  font-family: "Poppins-bold";
+  color: #fff;
+}
+
+.usuario {
+  font-family: "Poppins-bold";
+  color: #606060;
+  text-align: center;
+  margin: 2em 0 0 0;
+}
+
+.links {
+  margin: 2em 1em;
+}
+
+.texto-perfil {
+  font-family: "Poppins-medium";
+  color: var(--preto);
+  text-decoration: none;
+}
+
+.texto-sair {
+  font-family: "Poppins-medium";
+  color: #e10531;
+  text-decoration: none;
+}
