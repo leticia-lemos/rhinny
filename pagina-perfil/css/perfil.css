@@ -6,14 +6,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
+  width: 90em;
   height: 40%;
-  margin: 0;
+  margin: 0 25px;
   gap: 3em;
 }
 
 #perfil-usuario {
-  margin: 0 0 0 5em;
+  margin: 0 0 0 3em;
 }
 
 .textos {
@@ -28,6 +28,7 @@
 
 .nome-usuario {
   font-size: 26px;
+  width: 100%;
 }
 
 .p-responsavel {
@@ -36,7 +37,7 @@
 
 .nome-responsavel {
   font-family: "Poppins-regular";
-  color: #1E1E1E;
+  color: #1e1e1e;
 }
 
 #editar-perfil {
@@ -48,7 +49,7 @@
   justify-content: center;
   gap: 5px;
   text-decoration: none;
-  margin: 0 0 0 68.7em;
+  margin: 0 0 0 45em;
 }
 /* final perfil */
 
@@ -56,57 +57,126 @@
 .campo-favoritos {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  height: 40%;
+  width: 85em;
+  height: 35em;
   margin: 2em 5em;
 }
 
 .titulo-favoritos {
-    font-family: "Poppins-semibold";
-    color: #1E1E1E;
+  font-family: "Poppins-semibold";
+  color: #1e1e1e;
 }
 
 .p-textos {
-    font-family: "Poppins-regular";
-    color: #757575;
-    margin: 0.5em 0 1em 0;
+  font-family: "Poppins-regular";
+  color: #757575;
+  margin: 0.5em 0 1em 0;
 }
 
 .campo-locais {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 80%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80%;
+  gap: 5em;
+  margin-top: 15px;
 }
 
 .lugar {
-    width: 23em;
-    height: 22em;
-    border: 1px solid #D9D9D9;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    margin: 0 5em;
+  width: 23em;
+  height: 22em;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin: 0;
 }
 
 .imagem-lugar {
-    width: 336px;
-    height: 252px;
-    border-radius: 8px;
-    margin: 1em;
+  width: 336px;
+  height: 252px;
+  border-radius: 8px;
+  margin: 1em;
 }
 
 .p-titulo-lugar {
-    font-family: "Poppins-regular";
-    color: #1E1E1E;
-    margin: 0 1em;
+  font-family: "Poppins-regular";
+  color: #1e1e1e;
+  margin: 0 1em;
 }
 
 .estrelas {
-    display: flex;
-    flex-direction: row;
-    margin: 0 0.7em;
+  display: flex;
+  flex-direction: row;
+  margin: 0 0.7em;
 }
 /* final favoritos */
+
+/* começo comentarios */
+.campo-comentarios {
+  display: flex;
+  flex-direction: column;
+  width: 85em;
+  height: 35em;
+  margin: 0 5em;
+}
+
+.titulo-comentario-perfil {
+  font-family: "Poppins-semibold";
+  color: #1e1e1e;
+}
+
+.p-comentario-perfil {
+  font-family: "Poppins-regular";
+  color: #757575;
+  margin: 0.5em 0 1em 0;
+}
+
+.grupo-comentarios {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1em 5em;
+  gap: 5em;
+}
+
+.grupo-comentarios h3 {
+  font-family: "Poppins-semibold";
+  margin: 5px;
+}
+
+.comentario-perfil {
+  width: 15em;
+  height: 10em;
+  padding: 5px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+.usuario-comentario {
+  display: flex;
+  flex-direction: row;
+  margin-top: 45px;
+  margin-left: 10px;
+}
+
+.usuario-data {
+  margin: 10px;
+}
+
+.nome-user {
+  font-family: "Poppins-semibold";
+  font-size: 15px;
+  color: #757575;
+}
+
+.data {
+  font-family: "Poppins-regular";
+  font-size: 14px;
+  color: #b3b3b3;
+}
