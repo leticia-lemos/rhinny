@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 3em 10em 0 10em;
+  margin: 4em 10em 0 10em;
   height: auto;
 }
 
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   gap: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   overflow: hidden;
   counter-reset: step;
 }
@@ -97,18 +97,18 @@
   border: 1px solid #d9d9d9;
   border-radius: 8px;
   width: 28em;
-  height: 38em;
-  margin: 10px 0 0 0;
+  height: 31em;
+  margin: 0;
 }
 
 #form-dados-crianca {
-  height: 26em;
+  height: 25em;
 }
 
 .subtitulo-form {
   font-family: "Poppins-bold";
-  font-size: 1.4em;
-  margin: 35px 0 15px 0;
+  font-size: 1.3em;
+  margin: 25px 0 15px 0;
 }
 
 .subtitulo-form2 {
@@ -121,7 +121,7 @@
 #nome-crianca {
   display: flex;
   flex-direction: column;
-  margin: 20px 0px;
+  margin: 10px 0px;
   outline: none;
 }
 
@@ -134,14 +134,14 @@
 .campo-senha {
   display: flex;
   flex-direction: column;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
 .campo-data,
 #data-crianca {
   display: flex;
   flex-direction: column;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
 #titulo-form {
@@ -156,11 +156,14 @@
 #data,
 #nome-crianca,
 #data-crianca {
+  font-family: "Poppins-regular";
   background-color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
   width: 28em;
   height: 2.5em;
+  outline: none;
+  padding: 5px;
 }
 
 .btn {
@@ -204,8 +207,8 @@
 }
 
 #rhinny-form {
-  width: 27em;
+  width: 20em;
   position: relative;
-  bottom: 27em;
-  left: 44.5em;
+  bottom: 22em;
+  left: 37em;
 }

@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/layout.css" />
   <link rel="stylesheet" href="./css/header.css" />
   <link rel="stylesheet" href="./css/cadastro.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
 
   <!-- icons -->
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
@@ -23,11 +23,18 @@
         <li>
           <img src="./img/logo.svg" id="rhinny" alt="Rhinny" />
         </li>
-        <li class="botoes">
+        <div class="menu-toggle">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </ul>
+      <div class="menu-collapse">
+        <div class="botoes">
           <a href="../pagina-login/login.html" class="btn-login">Login</a>
           <a href="../pagina-cadastro/cadastro.html" class="btn-cadastro">Cadastro</a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </nav>
 
     <section class="campo-cadastro">
@@ -85,6 +92,7 @@
   </div>
 
   <script src="./js/form.js"></script>
+  <script defer src="./js/menu.js"></script>
 </body>
 
 </html>
