@@ -73,7 +73,7 @@
   border-radius: 20px;
   padding: 15px;
   width: 15em;
-  height: 28em;
+  min-height: 28em;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -166,7 +166,6 @@
 
 .filtro-opcoes {
   list-style: none;
-  padding-left: 1em;
   margin-top: 10px;
   display: none;
 }
@@ -177,10 +176,51 @@
   cursor: pointer;
 }
 
-input [type="checkbox"] {
-  cursor: pointer;
-  margin-right: 5px;
+/* Oculta o checkbox padrão */
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
 }
+
+/* Estilo para o container do checkbox */
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+}
+
+/* Cria o quadrado do checkbox */
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Estilo do checkbox quando marcado */
+input[type="checkbox"]:checked + label::before {
+  background-color: #0098ff;
+  border-color: #0098ff;
+}
+
+/* Estilo do ícone de check quando marcado */
+input[type="checkbox"]:checked + label::after {
+  content: url(../img/check.svg);
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+}
+
 
 /* Final menu lateral */
 
