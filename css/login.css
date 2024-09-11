@@ -51,8 +51,8 @@
   margin-bottom: 5px;
 }
 
-#email,
-#senha {
+#email_cadastro,
+#senha_cadastro {
   background-color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
