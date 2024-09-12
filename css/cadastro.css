@@ -186,7 +186,9 @@
   margin-top: 1em;
   cursor: pointer;
 }
-
+#btn-continuar{
+  opacity: 50%;
+}
 #btn-voltar {
   display: flex;
   align-items: start;
