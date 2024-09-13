@@ -2,6 +2,10 @@
   body {
     overflow: auto;
   }
+  
+  .container {
+    height: 80vh;
+  }
 
   .menu-toggle {
     display: flex;
@@ -71,7 +75,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5em 5em 0 5em;
+    margin: 8em 5em 0 5em;
     height: auto;
   }
 
