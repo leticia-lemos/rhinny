@@ -1,8 +1,9 @@
 /* @media (max-width: 845px) {} */
 /* @media (max-width: 768px) {} */
 /* @media (max-width: 475px) {} */
+/* @media (max-width: 1920px) {} */
 
-@media (min-width: 1920px) {
+@media (min-width: 1324px) {
   .section-inicial {
     display: flex;
     flex-direction: row;
@@ -72,8 +73,8 @@
   #search-menu {
     margin: 5px;
     position: relative;
-    bottom: 2.1em;
-    left: 12em;
+    bottom: 0;
+    right: 3.5em;
     cursor: pointer;
   }
 
