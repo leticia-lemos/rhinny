@@ -9,6 +9,17 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .imagens {
+    margin: 5em;
+    gap: 5em;
+  }
+}
+
 @media (max-width: 975px) {
   nav {
     height: 2em;
@@ -77,8 +88,8 @@
   .menu-collapse.menu-open {
     position: absolute;
     top: 6em;
-    right: 0;
-    width: 15em;
+    right: 1em;
+    width: 13em;
     height: 9em;
     z-index: 1000;
     border-bottom: 1px solid #d9d9d9;
@@ -163,8 +174,8 @@
   .menu-collapse.menu-open {
     display: flex;
     position: absolute;
-    top: 4em;
-    right: 1em;
+    top: 6em;
+    right: 0.5em;
     width: 13em;
     height: 9em;
   }
@@ -279,6 +290,24 @@
     margin: 1em 0;
   }
 
+  .campo-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+  }
+
+  .titulo-imagens {
+    margin: 0;
+  }
+
+  .conjunto-textos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+  }
+
   .imagens {
     display: flex;
     flex-direction: column;
@@ -300,7 +329,7 @@
 
   .descricao-footer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 2em 2em 2em 0;
   }
 
@@ -313,7 +342,7 @@
   }
 
   .footer-container .descricao-footer ul {
-    height: auto;
+    height: 10em;
   }
 
   .copyright {
@@ -454,6 +483,10 @@
     gap: 2em;
   }
 
+  .titulo-imagens {
+    margin: 0;
+  }
+
   .img-inclusao,
   .img-facilidade {
     width: 20em;
@@ -461,9 +494,14 @@
   }
 
   .campo-img {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
   }
-  
+
+  .conjunto-textos {
+    margin: 0;
+  }
 
   .descricao-footer {
     display: flex;
@@ -471,6 +509,17 @@
   }
 
   .footer-container .descricao-footer ul {
-    height: auto;
+    height: 10em;
+  }
+
+  .paginas {
+    margin-bottom: 1em;
+    width: 350px;
+    height: 15em;
+  }
+
+  .redes-sociais,
+  .contato {
+    height: 7em;
   }
 }
