@@ -402,3 +402,13 @@
   }
 }
 
+@media (min-width: 1324px) {
+  .section-inicial {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-top: 60px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
