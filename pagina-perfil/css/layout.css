@@ -1,4 +1,6 @@
-@media (min-width: 1920px) {
+/* @media (min-width: 1920px) */
+
+@media (min-width: 1324px) {
   /* começo perfil */
   .campo-perfil {
     display: flex;
@@ -54,8 +56,8 @@
   .campo-favoritos {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    height: 40%;
+    width: 95%;
+    height: 50%;
     margin: 2em 5em;
   }
 
@@ -73,6 +75,7 @@
   .campo-locais {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     height: 80%;
   }
@@ -108,4 +111,14 @@
     margin: 0 0.7em;
   }
   /* final favoritos */
+
+  /* começo comentarios */
+.campo-comentarios {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 35em;
+  margin: 8em 5em;
+}
+
 }
