@@ -12,6 +12,7 @@
 
 .descricao-footer {
   display: flex;
+  flex-direction: row;
   margin-top: 55px;
   justify-content: space-evenly;
   align-items: center;
