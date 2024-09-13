@@ -186,8 +186,12 @@
   margin-top: 1em;
   cursor: pointer;
 }
-#btn-continuar{
+#btn-continuar:disabled{
   opacity: 50%;
+}
+
+#btn-continuar:active{
+  opacity: 100%;
 }
 #btn-voltar {
   display: flex;

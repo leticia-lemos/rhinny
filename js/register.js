@@ -1,27 +1,24 @@
 // Objeto Form que contém métodos para obter valores dos campos do formulário
 const Form = {
- 
   email: () => document.getElementById("email-cadastro").value,
- 
   senha: () => document.getElementById("senha-cadastro").value,
- 
   nome: () => document.getElementById("nome-cadastro").value,
- 
   data: () => document.getElementById("data").value,
-  
   data_crianca: () => document.getElementById("nome-cadastro-crianca").value,
-    nome_crianca: () => document.getElementById("data-cadastro-crianca").value,
+  nome_crianca: () => document.getElementById("data-cadastro-crianca").value,
+  botao_cadastrar: () => document.getElementById("btn-submit-crianca"),
+  botao_continuar: () => document.getElementById("btn-continuar")
 };
 
 // Adiciona um ouvinte de evento ao botão "btn-continuar"
 document.getElementById("btn-continuar").addEventListener("click", function () {
-  
-  const email = Form.email(); 
-  const senha = Form.senha(); 
-  const nome = Form.nome(); 
-  console.log(email); 
-  console.log(senha); 
-  console.log(nome); 
+
+  const email = Form.email();
+  const senha = Form.senha();
+  const nome = Form.nome();
+  console.log(email);
+  console.log(senha);
+  console.log(nome);
   // Tenta criar um usuário com email e senha usando Firebase
   firebase
     .auth()
@@ -37,7 +34,7 @@ document.getElementById("btn-continuar").addEventListener("click", function () {
       var errorMessage = error.message; // Obtém a mensagem do erro
       console.log(errorCode); // Registra o código do erro no console
       console.log(errorMessage); // Registra a mensagem do erro no console
-      
+
     });
 });
 
@@ -71,3 +68,40 @@ document
         console.error("dados nao enviados"); // Mensagem de erro no console
       });
   });
+
+function disableContinuar() {
+  Form.botao_continuar().disabled = !isFormContinuarValid()
+}
+
+function isFormContinuarValid() {
+
+  const nome = Form.nome();
+  if (!nome) {
+    Form.botao_continuar().disabled = true
+    return false
+  }
+
+  const email = Form.email();
+  if (!email || !validarEmail()) {
+    Form.botao_continuar().disabled = true
+    return false 
+  }
+  const senha = Form.senha();
+  if (!senha || senha.length <= 5) {
+    Form.botao_continuar().disabled = true
+    return false
+  }
+  const data = Form.data();
+  if (!data) {
+    Form.botao_continuar().disabled = true
+    return false
+  }
+
+  Form.botao_continuar().disabled = false
+  return true
+}
+
+
+function validarEmail() {
+  return /\S+@\S+\.\S+/.test(Form.email());
+}
