@@ -286,3 +286,119 @@
     height: auto;
   }
 }
+
+@media (max-width: 975px) {
+  nav {
+    position: relative;
+    padding: 0 10px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1em;
+    z-index: 1000;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .menu-toggle div {
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+  }
+
+  .botoes {
+    display: none;
+  }
+
+  nav.menu-open .botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    position: absolute;
+    top: 4em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2em;
+    z-index: 1000;
+    border-bottom: 1px solid #d9d9d9;
+    border-radius: 8px;
+  }
+
+  .btn-login,
+  .btn-cadastro {
+    font-size: 0.8em;
+    padding: 8px 16px;
+    margin: 10px 0;
+  }
+
+  #rhinny {
+    width: 5em;
+  }
+
+  .section-inicial {
+    margin-top: 60px;
+  }
+
+  .imagem-inicial {
+    width: 100%;
+  }
+
+  .compromissos {
+    margin: 20px;
+  }
+
+  .titulo1 {
+    font-size: 1.2em;
+  }
+
+  .imagens {
+    flex-direction: column;
+    margin: 20px 0;
+    gap: 2em;
+  }
+
+  .img-inclusao,
+  .img-facilidade {
+    width: 100%;
+  }
+
+  .logo-footer {
+    display: none;
+  }
+
+  .descricao-footer {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 2em 2em 0;
+    gap: 0;
+  }
+  
+  .paginas,
+  .redes-sociais,
+  .contato {
+    margin-bottom: 1em;
+    width: 350px;
+    height: auto;
+  }
+}
+
