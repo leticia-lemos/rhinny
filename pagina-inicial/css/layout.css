@@ -1,25 +1,24 @@
-/* @media (max-width: 845px) {} */
-/* @media (max-width: 768px) {} */
-/* @media (max-width: 475px) {} */
-/* @media (max-width: 1920px) {} */
-
 @media (min-width: 1920px) {
   body {
     overflow-x: hidden;
   }
-  
+
   .section-inicial {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 50em;
-    margin: 2em 3em;
+    margin: 4em 3em;
   }
 
   .campo-lugares {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     height: 45em;
     width: 80em;
+    margin-bottom: 5em;
   }
 
   .campo-locais {
@@ -34,21 +33,32 @@
 
   .grupo-locais {
     background-color: transparent;
-    width: 17em;
-    height: 19em;
+    width: 18em;
+    height: 22em;
     border: 1px solid #d9d9d9;
     border-radius: 15px;
     margin: 5px;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     cursor: pointer;
+  }
+
+  .img-lugar {
+    margin: 0;
   }
 
   #praca-lelita {
     width: 90%;
     margin: 0 10px;
+  }
+
+  .text-locais {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
   }
 
   .titulo-locais {
@@ -58,13 +68,19 @@
   }
 
   /* começo menu lateral */
-  .menu-lateral {
-    background-color: #fff;
-    height: 45em;
-    width: 15em;
-    border-radius: 20px;
+  .menu-flutuante {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     position: fixed;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    top: 7em;
+    left: 3em;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    width: 15em;
+    min-height: 28em;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   }
 
   .titulo-menu {
@@ -101,7 +117,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0 5em;
+    margin: 0 6em;
   }
 
   #campo-pesquisa {
@@ -125,4 +141,314 @@
     cursor: pointer;
   }
   /* final areas */
+}
+
+@media (max-width: 1550px) {
+  .campo-pesquisa {
+    margin: 0 32em 0 0;
+  }
+}
+
+@media (max-width: 1350px) {
+  .campo-pesquisa {
+    margin: 0 32em 0 0;
+  }
+
+  .menu-flutuante {
+    left: 2em;
+  }
+}
+
+@media (max-width: 1260px) {
+  nav {
+    width: 50%;
+    height: 4em;
+    position: relative;
+    padding: 0 10px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  .section-inicial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50em;
+    margin: 4em 0;
+  }
+
+  .campo-lugares {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .campo-pesquisa {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+  }
+
+  .campo-locais {
+    height: 35em;
+    width: 75em;
+    margin: 0 5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3em;
+  }
+
+  .menu-flutuante {
+    display: none;
+  }
+}
+
+@media (max-width: 975px) {
+  .section-inicial {
+    height: 53em;
+    margin: 2em 0 4em 15em;
+  }
+
+  nav {
+    height: 2em;
+    position: relative;
+    padding: 0 10px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  #logo-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1em;
+    z-index: 1000;
+  }
+
+  .campo-lugares {
+    width: 20em;
+    align-items: center;
+    margin: 0 -1em 0 2em;
+  }
+
+  .campo-locais {
+    flex-wrap: wrap;
+    width: 65em;
+    margin: 0;
+    gap: 2em;
+  }
+
+  .grupo-locais {
+    width: 17em;
+  }
+
+  .img-lugar {
+    width: 15em;
+  }
+
+  .logo-footer {
+    margin-left: 2em;
+    margin-right: 5em;
+  }
+
+  .descricao-footer {
+    flex-direction: row;
+    margin: 2em -4em 2em 0;
+    gap: 0;
+  }
+
+  .footer-container .descricao-footer ul {
+    height: auto;
+  }
+
+  .paginas,
+  .redes-sociais,
+  .contato {
+    margin-top: 1em;
+    margin-left: 5em;
+    margin-bottom: 1em;
+    width: 350px;
+    height: 15em;
+  }
+}
+
+/* @media (max-width: 845px) {} */
+
+@media (max-width: 768px) {
+  .section-inicial {
+    flex-wrap: wrap;
+    height: 53em;
+    margin: 2em 0 4em 15em;
+  }
+
+  .descricao-footer {
+    flex-direction: row;
+    margin: 2em 2em 2em 0;
+    gap: 0;
+  }
+
+  .paginas,
+  .redes-sociais,
+  .contato {
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    width: 350px;
+    height: 15em;
+  }
+
+  .copyright {
+    margin-top: 3em;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .section-inicial {
+    flex-wrap: wrap;
+    height: 53em;
+    margin: 0 0 4em 20em;
+  }
+
+  nav {
+    position: relative;
+    padding: 0 10px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1em;
+    z-index: 1000;
+  }
+
+  .campo-pesquisa {
+    margin-top: 4em;
+  }
+
+  .campo-locais {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65em;
+    height: 15em;
+    margin: 1em 0 0 0;
+    gap: 2em;
+  }
+
+  .logo-footer {
+    display: none;
+  }
+
+  .descricao-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-container .descricao-footer ul {
+    height: 10em;
+  }
+
+  .paginas {
+    margin-bottom: 1em;
+    width: 350px;
+    height: 15em;
+  }
+
+  .redes-sociais,
+  .contato {
+    height: 7em;
+  }
+}
+
+@media (max-width: 475px) {
+  nav {
+    position: relative;
+    padding: 0 10px;
+    border-bottom: 1px solid #d9d9d9;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1em;
+    z-index: 1000;
+  }
+
+  .section-inicial {
+    margin: 2em;
+    height: auto;
+  }
+
+  .campo-pesquisa {
+    width: 20em;
+  }
+
+  .campo-lugares {
+    margin: 0;
+  }
+
+  .campo-locais {
+    flex-wrap: wrap;
+    width: 6em;
+    height: auto;
+    margin: 0;
+    gap: 2em;
+  }
+
+  .logo-footer {
+    display: none;
+  }
+
+  .descricao-footer {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 2em;
+    gap: 0;
+  }
+
+  .footer-container .descricao-footer ul {
+    height: auto;
+  }
+
+  .paginas {
+    margin-bottom: 2em;
+    width: 350px;
+    height: auto;
+  }
+
+  .redes-sociais,
+  .contato {
+    height: 5em;
+  }
+
+  .copyright {
+    top: 2em;
+    bottom: 0;
+  }
 }

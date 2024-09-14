@@ -18,16 +18,18 @@
 .campo-locais {
   height: 35em;
   width: 85em;
-  margin: 0 5em;
+  margin: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 3em;
 }
 
 .grupo-locais {
   background-color: transparent;
-  width: 20em;
+  width: 19em;
   height: 21.5em;
   border: 1px solid #d9d9d9;
   border-radius: 15px;
@@ -35,24 +37,27 @@
   padding: 15px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   cursor: pointer;
   text-decoration: none;
 }
 
+.text-locais {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 .img-lugar {
-  margin: 0 1em;
+  margin: 0;
+  border-radius: 8px;
 }
 
 .estrelas {
   display: flex;
   flex-direction: row;
   margin: 5px 0;
-}
-
-#praca-lelita {
-  width: 90%;
-  margin: 0 10px;
 }
 
 .titulo-locais {
@@ -68,7 +73,7 @@
   align-items: start;
   position: fixed;
   top: 7em;
-  left: 20px;
+  left: 2em;
   background-color: #fff;
   border-radius: 20px;
   padding: 15px;
@@ -221,7 +226,6 @@ input[type="checkbox"]:checked + label::after {
   color: #fff;
 }
 
-
 /* Final menu lateral */
 
 /* começo areas */
@@ -229,7 +233,8 @@ input[type="checkbox"]:checked + label::after {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 5em;
+  justify-content: center;
+  margin: 0 35em 0 0;
 }
 
 #campo-pesquisa {
