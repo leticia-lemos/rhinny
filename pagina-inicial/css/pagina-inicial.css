@@ -6,8 +6,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: auto;
   height: 53em;
-  margin: 2em 3em 4em 15em;
+  margin: 2em 3em 4em 5.5em;
 }
 
 .campo-lugares {
@@ -73,7 +74,7 @@
   align-items: start;
   position: fixed;
   top: 7em;
-  left: 2em;
+  left: 1.5em;
   background-color: #fff;
   border-radius: 20px;
   padding: 15px;

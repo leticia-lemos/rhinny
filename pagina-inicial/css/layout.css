@@ -144,12 +144,20 @@
 }
 
 @media (max-width: 1550px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .campo-pesquisa {
     margin: 0 32em 0 0;
   }
 }
 
 @media (max-width: 1350px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .campo-pesquisa {
     margin: 0 32em 0 0;
   }
@@ -160,6 +168,10 @@
 }
 
 @media (max-width: 1260px) {
+  body {
+    overflow-x: hidden;
+  }
+
   nav {
     width: 50%;
     height: 4em;
@@ -381,6 +393,7 @@
 }
 
 @media (max-width: 475px) {
+
   nav {
     position: relative;
     padding: 0 10px;
@@ -401,16 +414,21 @@
   }
 
   .section-inicial {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
     margin: 2em;
     height: auto;
   }
 
   .campo-pesquisa {
     width: 20em;
+    margin-left: 2em;
   }
 
   .campo-lugares {
     margin: 0;
+    height: 150em;
   }
 
   .campo-locais {
@@ -436,7 +454,7 @@
     height: auto;
   }
 
-  .paginas {
+  /* .paginas {
     margin-bottom: 2em;
     width: 350px;
     height: auto;
@@ -445,10 +463,9 @@
   .redes-sociais,
   .contato {
     height: 5em;
-  }
+  } */
 
   .copyright {
-    top: 2em;
-    bottom: 0;
+    bottom: 1em;
   }
 }
