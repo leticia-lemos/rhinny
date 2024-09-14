@@ -277,8 +277,8 @@ input[type="checkbox"]:checked + label::after {
 .modal-content {
   background-color: var(--azul);
   margin: 4.5em 0 0 75em;
-  width: 15em;
-  height: 15em;
+  width: 14em;
+  height: 12em;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -293,8 +293,8 @@ input[type="checkbox"]:checked + label::after {
   border-top-right-radius: 40px;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  width: 15em;
-  height: 14em;
+  width: 14em;
+  height: 13em;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -309,7 +309,7 @@ input[type="checkbox"]:checked + label::after {
 }
 
 #foto-perfil {
-  width: 50%;
+  width: 45%;
   z-index: 1;
 }
 
@@ -329,23 +329,27 @@ input[type="checkbox"]:checked + label::after {
 
 .usuario {
   font-family: "Poppins-bold";
+  font-size: 16px;
   color: #606060;
   text-align: center;
-  margin: 2em 0 0 0;
+  margin: 2.5em 0 0 0;
 }
 
 .links {
-  margin: 2em 1em;
+  margin: 1em;
+}
+
+.texto-perfil,
+.texto-sair {
+  font-family: "Poppins-medium";
+  font-size: 14px;
+  text-decoration: none;
 }
 
 .texto-perfil {
-  font-family: "Poppins-medium";
   color: var(--preto);
-  text-decoration: none;
 }
 
 .texto-sair {
-  font-family: "Poppins-medium";
   color: #e10531;
-  text-decoration: none;
 }

@@ -218,11 +218,6 @@
 }
 
 @media (max-width: 975px) {
-  .section-inicial {
-    height: 53em;
-    margin: 2em 0 4em 15em;
-  }
-
   nav {
     height: 2em;
     position: relative;
@@ -248,6 +243,28 @@
     background-color: #fff;
     padding: 1em;
     z-index: 1000;
+  }
+
+  /* Estilos do modal */
+  .modal-content {
+    margin: 4em 0 0 8em;
+    width: 14em;
+    height: 12em;
+  }
+
+  .content-sem-perfil {
+    width: 14em;
+    height: 13em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 2em;
+  }
+
+  .section-inicial {
+    width: 30em;
+    height: 53em;
+    margin: 2em 0 4em 15em;
   }
 
   .campo-lugares {
@@ -290,10 +307,13 @@
   .redes-sociais,
   .contato {
     margin-top: 1em;
-    margin-left: 5em;
     margin-bottom: 1em;
     width: 350px;
     height: 15em;
+  }
+
+  .copyright {
+    bottom: 0;
   }
 }
 
@@ -393,11 +413,14 @@
 }
 
 @media (max-width: 475px) {
-
   nav {
     position: relative;
     padding: 0 10px;
     border-bottom: 1px solid #d9d9d9;
+  }
+
+  #logo-nav {
+    width: 100%;
   }
 
   nav ul {
@@ -413,11 +436,28 @@
     z-index: 1000;
   }
 
+  /* Estilos do modal */
+  .modal-content {
+    margin: 4em 0 0 8em;
+    width: 14em;
+    height: 12em;
+  }
+
+  .content-sem-perfil {
+    width: 14em;
+    height: 13em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 2em;
+  }
+
   .section-inicial {
     display: flex;
     align-items: center;
-    justify-content: center ;
-    margin: 2em;
+    justify-content: center;
+    margin: 2em ;
+    width: 20em;
     height: auto;
   }
 
@@ -453,17 +493,6 @@
   .footer-container .descricao-footer ul {
     height: auto;
   }
-
-  /* .paginas {
-    margin-bottom: 2em;
-    width: 350px;
-    height: auto;
-  }
-
-  .redes-sociais,
-  .contato {
-    height: 5em;
-  } */
 
   .copyright {
     bottom: 1em;

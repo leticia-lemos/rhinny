@@ -22,4 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.style.display = "none";
     }
   });
+
+  // Fecha o modal ao fazer scroll na página
+  window.addEventListener("scroll", function () {
+    modal.style.display = "none";
+  });
 });
