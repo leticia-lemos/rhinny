@@ -479,7 +479,7 @@
   }
 
   .imagens {
-    margin: 2em 2em 4em 2em;
+    margin: 1em 2em 4em 2em;
     gap: 2em;
   }
 
@@ -489,8 +489,9 @@
 
   .img-inclusao,
   .img-facilidade {
-    width: 20em;
+    width: 18em;
     height: auto;
+    margin-bottom: 0.5em;
   }
 
   .campo-img {

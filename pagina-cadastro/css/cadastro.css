@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 4em 10em 0 10em;
+  margin: 5em 10em 0 10em;
   height: auto;
 }
 
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   gap: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   overflow: hidden;
   counter-reset: step;
 }
@@ -97,18 +97,22 @@
   border: 1px solid #d9d9d9;
   border-radius: 8px;
   width: 28em;
-  height: 31em;
+  height: 30em;
   margin: 0;
 }
 
 #form-dados-crianca {
-  height: 25em;
+  height: 23em;
+}
+
+.campo-nome-crianca {
+  margin-top: 2em;
 }
 
 .subtitulo-form {
   font-family: "Poppins-bold";
   font-size: 1.3em;
-  margin: 25px 0 15px 0;
+  margin: 20px 0 15px 0;
 }
 
 .subtitulo-form2 {
@@ -121,7 +125,7 @@
 #nome-crianca {
   display: flex;
   flex-direction: column;
-  margin: 10px 0px;
+  margin: 5px 0px;
   outline: none;
 }
 
