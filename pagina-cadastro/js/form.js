@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const btnContinuar = document.getElementById("btn-continuar");
   const btnVoltar = document.getElementById("btn-voltar");

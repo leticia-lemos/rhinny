@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
   <link rel="stylesheet" href="./css/header.css" />
   <link rel="stylesheet" href="./css/login.css" />
-  <link rel="stylesheet" href="./css/layout.css" />
 
   <link rel="shortcut icon" href="./img/rhinny.svg" type="image/x-icon" />
   <title>Página login</title>
@@ -18,22 +18,13 @@
     <nav>
       <ul id="logo-nav">
         <li>
-          <a href="../landing-page/landing_page.html">
-            <img src="./img/logo.svg" id="rhinny" alt="Rhinny" />
-          </a>
+          <img src="./img/logo.svg" id="rhinny" alt="Rhinny" />
         </li>
-        <div class="menu-toggle">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        <li class="botoes">
+          <a href="#" class="btn-login">Login</a>
+          <a href="#" class="btn-cadastro">Cadastro</a>
+        </li>
       </ul>
-      <div class="menu-collapse">
-        <div class="botoes">
-          <a href="../pagina-login/login.html" class="btn-login">Login</a>
-          <a href="../pagina-cadastro/cadastro.html" class="btn-cadastro">Cadastro</a>
-        </div>
-      </div>
     </nav>
 
     <section class="campo-login">
@@ -42,22 +33,26 @@
 
       <form action="" class="form-login">
         <div class="campo-email">
-          <label for="email" id="titulo-form">Email</label>
-          <input type="email" id="email">
+          <label for="" id="titulo-form">Email</label>
+          <input type="email" id="email_cadastro">
         </div>
         <div class="campo-senha">
-          <label for="senha" id="titulo-form">Senha</label>
-          <input type="password" id="senha">
+          <label for="" id="titulo-form">Senha</label>
+          <input type="password" id="senha_cadastro">
         </div>
         <div class="btn">
-          <a href="../pagina-inicial/pagina-inicial.html" id="btn-entrar">Entrar</a>
+          <button type="button" onclick="entrar()" id="btn-entrar">Entrar</button>
         </div>
       </form>
       <img src="./img/rhinny2.svg" id="rhinny-form" alt="Imagem do mascote Rhinny">
+
     </section>
   </div>
 
-  <script defer src="./js/menu.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+  <script src="../firebase_js/firebase-init.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>

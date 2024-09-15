@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 5em 10em 0 10em;
+  margin: 3em 10em 0 10em;
   height: auto;
 }
 
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   gap: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   overflow: hidden;
   counter-reset: step;
 }
@@ -87,6 +87,7 @@
   color: white;
   border-radius: 8px;
 }
+
 /* final progresso */
 
 .form-cadastro {
@@ -97,22 +98,18 @@
   border: 1px solid #d9d9d9;
   border-radius: 8px;
   width: 28em;
-  height: 30em;
-  margin: 0;
+  height: 38em;
+  margin: 10px 0 0 0;
 }
 
 #form-dados-crianca {
-  height: 23em;
-}
-
-.campo-nome-crianca {
-  margin-top: 2em;
+  height: 26em;
 }
 
 .subtitulo-form {
   font-family: "Poppins-bold";
-  font-size: 1.3em;
-  margin: 20px 0 15px 0;
+  font-size: 1.4em;
+  margin: 35px 0 15px 0;
 }
 
 .subtitulo-form2 {
@@ -122,10 +119,10 @@
 }
 
 .campo-nome,
-#nome-crianca {
+#nome-cadastro-crianca {
   display: flex;
   flex-direction: column;
-  margin: 5px 0px;
+  margin: 20px 0px;
   outline: none;
 }
 
@@ -138,14 +135,14 @@
 .campo-senha {
   display: flex;
   flex-direction: column;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 .campo-data,
-#data-crianca {
+#data-cadastro-crianca {
   display: flex;
   flex-direction: column;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 #titulo-form {
@@ -154,20 +151,44 @@
   margin-bottom: 5px;
 }
 
-#nome,
-#email,
-#senha,
-#data,
-#nome-crianca,
-#data-crianca {
+.form-erros {
   font-family: "Poppins-regular";
+  font-size: 1.0em;
+  margin-bottom: 5px;
+  color: red;
+}
+
+#erro-nome-obrigatorio {
+  display: none;
+}
+
+#erro-email-obrigatorio {
+  display: none;
+}
+
+#erro-email-invalido {
+  display: none;
+}
+
+#erro-senha-obrigatoria{
+  display: none;
+}
+
+#erro-data-obrigatoria{
+  display: none;
+}
+
+#nome-cadastro,
+#email-cadastro,
+#senha-cadastro,
+#data,
+#nome-cadastro-crianca,
+#data-cadastro-crianca {
   background-color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
   width: 28em;
   height: 2.5em;
-  outline: none;
-  padding: 5px;
 }
 
 .btn {
@@ -192,7 +213,14 @@
   justify-content: center;
   margin-top: 1em;
   cursor: pointer;
-  text-decoration: none;
+}
+
+#btn-continuar:disabled {
+  opacity: 50%;
+}
+
+#btn-continuar:active {
+  opacity: 100%;
 }
 
 #btn-voltar {
@@ -211,8 +239,8 @@
 }
 
 #rhinny-form {
-  width: 20em;
+  width: 27em;
   position: relative;
-  bottom: 22em;
-  left: 37em;
+  bottom: 27em;
+  left: 44.5em;
 }
