@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./css/footer.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/perfil.css" />
-  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/layout.css">
 
   <link rel="shortcut icon" href="./img/rhinny.png" type="image/x-icon" />
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
@@ -19,15 +19,31 @@
   <div class="container">
     <nav>
       <ul id="logo-nav">
-        <li>
-          <img src="./img/logo.svg" id="rhinny" alt="Rhinny" />
-        </li>
-        <div class="user">
+        <li><img src="./img/logo.svg" id="rhinny" alt="Rhinny" /></li>
+        <div class="user" id="user-icon">
           <box-icon name="chevron-down" id="chevron-down" color="#6d6d6d"></box-icon>
-          <img src="./img/user.svg" id="foto-usuario" alt="" />
+          <img src="./img/user.svg" id="foto-usuario" alt="Usuário" />
         </div>
       </ul>
     </nav>
+
+    <!-- Modal -->
+    <div id="user-modal" class="modal">
+      <div class="modal-content">
+        <p class="perfil">Perfil</p>
+        <img src="./img/user.svg" id="foto-perfil" alt="Foto de perfil">
+        <div class="content-sem-perfil">
+          <h3 class="usuario">Lucas Jesus Silva</h3>
+          <div class="links">
+            <a href="../pagina-perfil/perfil.html" class="texto-perfil">Perfil</a>
+            <hr class="linha">
+            <a href="../pagina-faq/faq.html" class="texto-perfil">Suporte</a>
+            <hr class="linha">
+            <a href="" class="texto-sair">Sair</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section class="campo-perfil">
       <img src="./img/foto-perfil.svg" id="perfil-usuario" alt="" />
@@ -37,8 +53,51 @@
         <p class="nome-responsavel">Ana Maria Jesus Silva</p>
       </div>
 
-      <a href="" id="editar-perfil"><img src="./img/icon-lapis.svg" alt="" />Editar perfil</a>
+      <a href="javascript:void(0)" id="editar-perfil"><img src="./img/icon-lapis.svg" alt="" />Editar perfil</a>
     </section>
+
+    <!-- Modal de Edição de Perfil -->
+<div id="modal-config-perfil" class="modal-config">
+  <div class="modal-content-config">
+    <span class="close-btn">&times;</span>
+    <h2>Configurações de perfil</h2>
+
+    <div class="form-content">
+      <div class="left-section">
+        <img src="./img/user.svg" alt="Foto de Perfil" class="profile-pic">
+        <a href="#" class="edit-icon"><img src="./img/lapis-modal.svg" alt="Editar"></a>
+      </div>
+      <div class="right-section">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Seu nome">
+          </div>
+          <div class="form-group">
+            <label for="birthdate">Nascimento</label>
+            <input type="text" id="birthdate" placeholder="00/00/0000" disabled>
+            <img src="./img/calendario-icon.svg" alt="Calendário" class="calendar-icon">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" value="seuemail@exemplo.com" disabled>
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Sua senha">
+          </div>
+        </div>
+        <div class="actions">
+          <a href="#" class="delete-account">Excluir minha conta</a>
+          <button class="save-btn">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <section class="campo-favoritos">
       <h2 class="titulo-favoritos">Meus favoritos</h2>
@@ -154,36 +213,17 @@
         <div class="logo">
           <img src="./img/logo.svg" class="logo-footer" alt="Imagem Logo 'Rhinny'" />
         </div>
-        <div class="paginas">
-          <p id="titulo-paginas">Páginas</p>
-          <ul>
-            <li><a href="../landing-page/landing_page.html">Landing page</a></li>
-            <li><a href="../pagina-inicial/pagina-inicial.html">Tela inicial</a></li>
-            <li><a href="../pagina-perfil/perfil.html">Perfil</a></li>
-            <li><a href="#">Fale conosco</a></li>
-            <li><a href="#">Política e Privacidade</a></li>
-            <li><a href="#">Termos de uso</a></li>
-          </ul>
-        </div>
         <div class="redes-sociais">
-          <p id="redes_sociais-titulo">Redes Sociais</p>
-          <ul>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Linkedln</a></li>
-          </ul>
-        </div>
-        <div class="contato">
-          <p id="contato-titulo">Contato</p>
-          <ul>
-            <li><a href="">Telefone</a></li>
-            <li><a href="">Email</a></li>
-            <li><a href="">Endereço</a></li>
-          </ul>
+          <a href="#"><img src="./img/facebook-icon.svg" alt="Facebook" /></a>
+          <a href="#"><img src="./img/twitter-icon.svg" alt="Twitter" /></a>
+          <a href="#"><img src="./img/instagram-icon.svg" alt="Instagram" /></a>
         </div>
       </div>
-      <p class="copyright">Copyright &copy; 2024 Rampoint</p>
     </footer>
   </div>
+
+  <script src="./js/modal-perfil.js"></script>
+  <script src="./js/modal-editar-perfil.js"></script>
 </body>
 
 </html>
