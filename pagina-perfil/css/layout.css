@@ -1,124 +1,237 @@
-/* @media (min-width: 1920px) */
-
-@media (min-width: 1920px) {
-  /* começo perfil */
+@media (max-width: 1100px) {
   .campo-perfil {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    height: 40%;
-    margin: 0;
-    gap: 3em;
-  }
-
-  #perfil-usuario {
-    margin: 0 0 0 5em;
-  }
-
-  .textos {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nome-usuario,
-  .p-responsavel {
-    font-family: "Poppins-semibold";
-  }
-
-  .nome-usuario {
-    font-size: 26px;
-  }
-
-  .p-responsavel {
-    color: #0098ff;
-  }
-
-  .nome-responsavel {
-    font-family: "Poppins-regular";
-    color: #1e1e1e;
-  }
-
-  #editar-perfil {
-    font-family: "Poppins-medium";
-    color: #000;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    text-decoration: none;
-    margin: 0 0 0 68.7em;
-  }
-  /* final perfil */
-
-  /* começo favoritos */
-  .campo-favoritos {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    height: 50%;
-    margin: 2em 5em;
-  }
-
-  .titulo-favoritos {
-    font-family: "Poppins-semibold";
-    color: #1e1e1e;
-  }
-
-  .p-textos {
-    font-family: "Poppins-regular";
-    color: #757575;
-    margin: 0.5em 0 1em 0;
+    margin-top: 2em;
   }
 
   .campo-locais {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    height: 80%;
+    gap: 2em;
   }
 
-  .lugar {
-    width: 23em;
-    height: 22em;
-    border: 1px solid #d9d9d9;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    margin: 0 5em;
+  .footer-container {
+    width: 100em;
   }
-
-  .imagem-lugar {
-    width: 336px;
-    height: 252px;
-    border-radius: 8px;
-    margin: 1em;
-  }
-
-  .p-titulo-lugar {
-    font-family: "Poppins-regular";
-    color: #1e1e1e;
-    margin: 0 1em;
-  }
-
-  .estrelas {
-    display: flex;
-    flex-direction: row;
-    margin: 0 0.7em;
-  }
-  /* final favoritos */
-
-  /* começo comentarios */
-.campo-comentarios {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 35em;
-  margin: 8em 5em;
 }
 
+@media (max-width: 1000px) {
+  .modal-content-config {
+    width: 25em;
+    height: auto;
+    margin: 4% auto;
+  }
+
+  .modal-content-config h2 {
+    margin-top: 30px;
+  }
+
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .calendar-icon {
+    display: none;
+  }
+
+  .footer-container {
+    width: 100em;
+  }
+}
+
+@media (max-width: 975px) {
+  .modal-content-config {
+    width: 24em;
+    height: auto;
+    margin: 5% auto;
+  }
+
+  .modal-content-config h2 {
+    margin-top: 30px;
+  }
+
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  .calendar-icon {
+    display: none;
+  }
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+  .modal-content-config {
+    width: 22em;
+    height: 85vh;
+  }
+
+  .modal-content-config h2 {
+    margin-top: 35px;
+  }
+
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calendar-icon {
+    display: none;
+  }
+}
+
+/* Responsividade para telas menores que 480px (celulares) */
+@media (max-width: 480px) {
+  #logo-nav {
+    width: 27em;
+  }
+
+  .campo-perfil {
+    width: 15em;
+    margin: 2em 5em;
+    flex-direction: column;
+  }
+
+  #editar-perfil {
+    margin: 0;
+  }
+
+  /* Estilos do modal do perfil */
+  .modal-content {
+    margin: 4.5em 0 0 9.5em;
+  }
+
+  .modal-content-config {
+    background-color: #f8f8ff;
+    margin: 10% 0 0 1em;
+    width: 25em;
+    height: 65vh;
+  }
+
+  .modal-content-config h2 {
+    margin-top: 35px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calendar-icon {
+    display: none;
+  }
+
+  .campo-favoritos {
+    width: 23em;
+    height: 77em;
+    margin: 2em;
+  }
+
+  .campo-comentarios {
+    width: 20em;
+    height: 70em;
+    margin: 3em 2em;
+  }
+
+  .grupo-comentarios {
+    flex-direction: column;
+    align-items: baseline;
+    margin: 1em 3em;
+    gap: 2em;
+  }
+
+  .footer-container {
+    width: 26.5em;
+  }
+
+  .logo-footer {
+    display: none;
+  }
+
+  .descricao-footer {
+    width: 10em;
+    margin-left: 3em;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .redes-sociais {
+    height: 8em;
+  }
+
+  .copyright {
+    bottom: 4em;
+  }
+}
+
+@media (max-width: 415px) {
+  .modal-content-config {
+    background-color: #f8f8ff;
+    margin: 10% 0 0 1.5em;
+    width: 22em;
+    height: 85vh;
+  }
+}
+
+@media (max-width: 395px) {
+  .modal-content-config {
+    width: 22em;
+    height: 85vh;
+  }
 }
