@@ -26,6 +26,9 @@ firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     // Redirecionar ou realizar ações com o usuário autenticado
     console.log("Usuário logado:", user.uid);
+    setTimeout(() => {
+      window.location.href = "../pagina-inicial/pagina-inicial.html";
+    }, 3000);
   }
 });
 
@@ -53,6 +56,7 @@ document
         const user = userCredential.user; // Obtém o objeto do usuário
         console.log("Usuário criado com ID:", user.uid);
         enviandoParaBanco(user.uid, nome, data, nome_crianca, data_crianca);
+        window.location.href = "../pagina-inicial/pagina-inicial.html"
       })
       .catch((error) => {
         // Se ocorrer um erro durante a criação do usuário
