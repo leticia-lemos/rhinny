@@ -12,7 +12,7 @@ const auth = firebase.auth();
 
 firebase.auth().onAuthStateChanged((user) => {
     if(!user){
-        window.location.href = "../../pagina-inicial/pagina-inicial.html";
+        // window.location.href = "..//pagina-login/login.html";
     }
 })
 
@@ -23,3 +23,4 @@ function logout(){
         alert("Erro ao fazer logout")
     })
 }
+
