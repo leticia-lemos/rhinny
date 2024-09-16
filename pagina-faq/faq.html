@@ -33,13 +33,13 @@
                 <p class="perfil">Perfil</p>
                 <img src="./img/user.svg" id="foto-perfil" alt="Foto de perfil">
                 <div class="content-sem-perfil">
-                    <h3 class="usuario">Lucas Jesus Silva</h3>
+                    <h3 id="nome_usuario" class="usuario"></h3>
                     <div class="links">
                         <a href="../pagina-perfil/perfil.html" class="texto-perfil">Perfil</a>
                         <hr class="linha">
                         <a href="../pagina-faq/faq.html" class="texto-perfil">Suporte</a>
                         <hr class="linha">
-                        <a href="" class="texto-sair">Sair</a>
+                        <a href="" class="texto-sair" onclick="logout()">Sair</a>
                     </div>
                 </div>
             </div>
@@ -428,6 +428,11 @@
     </div>
     <script src="./js/modal-perfil.js"></script>
     <script src="./js/accordion-faq.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+    <script src="../firebase_js/authGuard.js"></script>
+    <script src="../firebase_js/mostrarDados.js"></script>
 </body>
 
 </html>
