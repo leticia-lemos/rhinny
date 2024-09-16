@@ -1,3 +1,4 @@
+//iniciando firebase
 const firebaseConfig = {
     apiKey: "AIzaSyAK1Y4DAftt63mVx3tngghMWXYDfg5zzTo",
     authDomain: "rhinny-319e6.firebaseapp.com",

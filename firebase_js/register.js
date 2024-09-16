@@ -118,7 +118,7 @@ function isFormContinuarValid() {
 function validarEmail() {
   return /\S+@\S+\.\S+/.test(Form.email());
 }
-
+//dando uma mensagem agradavel para o usuario
 function showError(error) {
   switch (error.code) {
     case "auth/invalid-email":
@@ -145,7 +145,7 @@ function showError(error) {
       return "Ocorreu um erro desconhecido. Tente novamente.";
   }
 }
-
+//impede do usuario passar valores invalidos no formulario
 function disableContinuar() {
   Form.botao_continuar().disabled = !isFormContinuarValid();
   console.log(isFormContinuarValid());

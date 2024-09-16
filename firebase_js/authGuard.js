@@ -10,9 +10,10 @@ const firebaseConfig = {
 const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
+//identifica o usuario a partir do estado de autenticação 
 firebase.auth().onAuthStateChanged((user) => {
     if(!user){
-        // window.location.href = "..//pagina-login/login.html";
+        window.location.href = "..//pagina-login/login.html";
     }
 })
 
