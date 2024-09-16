@@ -1,73 +1,176 @@
-@media (max-width: 845px) {
-  body {
-    overflow: auto;
+/* Responsividade para telas menores que 1420px */
+@media (max-width: 1420px) {
+  #logo-nav {
+    width: 89em;
   }
 
-  .menu-toggle {
-    display: flex;
+  .layout-lugar {
+    width: 85em;
+  }
+
+  .grupo-direita {
+    margin-top: 2em;
+  }
+
+  .outros-comentarios {
+    width: 80em;
+  }
+
+  .campo-outros-comentarios {
+    margin-top: 2em;
+  }
+
+  .localizar {
+    width: 80em;
+  }
+
+  .footer-container {
+    width: 88.5em;
+  }
+}
+
+/* Responsividade para telas menores que 1024px */
+@media (max-width: 1024px) {
+  .outros-comentarios {
+    width: 85em;
+  }
+
+  .campo-outros-comentarios {
+    margin-top: 1em;
+  }
+
+  .localizar {
+    width: 80em;
+  }
+
+  .footer-container {
+    width: 90em;
+  }
+}
+
+/* Responsividade para telas menores que 975px */
+@media (max-width: 975px) {
+  #logo-nav {
+    width: 56em;
+  }
+
+  .modal-content {
+    margin: 4.5em 0 0 40em;
+  }  
+
+  .layout-lugar {
+    width: 53em;
+    gap: 5em;
+  }
+
+  #praca-boulevard {
+    left: 2em;
+  }
+
+  .grupo-direita {
+    margin: 0;
+  }
+
+  .grupo-acessibilidade {
+    gap: 2em;
+  }
+
+  .comentario {
+    width: 30em;
+  }
+
+  .conteudo-comentario {
+    min-width: 30em;
+  }
+
+  .outros-comentarios {
+    width: 45em;
+  }
+
+  .localizar {
+    width: 45em;
+  }
+
+  .footer-container {
+    width: 56em;
+  }
+}
+
+/* Responsividade para telas menores que 475px */
+@media (max-width: 475px) {
+  #logo-nav {
+    width: 29.5em;
+  }
+
+  .modal-content {
+    margin: 4.5em 0 0 13em;
+  }  
+
+  #praca-boulevard {
+    width: 50%;
+    top: 3em;
+    left: 7em;
+  }
+
+  .layout-lugar {
     flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-    margin-top: 1.5em;
+    width: 25em;
+    height: 45em;
   }
 
-  .menu-toggle div {
-    width: 100%;
-    height: 4px;
-    background-color: #000;
+  #select-acessibilidade {
+    width: 8em;
   }
 
-  .menu-collapse {
+  .conteudo-comentario {
+    min-width: 30em;
+  }
+
+  .botao {
+    margin-right: 4em;
+  }
+
+  .outros-comentarios {
+    width: 25em;
+    text-align: center;
+    margin: 10em 2em 2em 2em;
+  }
+
+  .campo-outros-comentarios {
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+
+  .localizar {
+    width: 25em;
+    text-align: center;
+    margin: 4em 2em 2em 2em;
+  }
+
+  .localizar img {
+    width: 75%;
+  }
+
+  .footer-container {
+    width: 29.5em;
+  }
+
+  .logo-footer {
     display: none;
   }
 
-  .menu-collapse.menu-open {
-    display: flex;
-    position: absolute;
-    top: 5em;
-    right: 1em;
-    width: 13em;
-    height: 9em;
-  }
-
-  nav.menu-open .user {
-    display: flex;
+  .descricao-footer {
+    width: 10em;
+    margin-left: 3em;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: gray;
-    position: absolute;
-    top: 4em;
-    right: 1em;
-    width: 100%;
-    height: 2em;
-    z-index: 1000;
-    border-bottom: 1px solid #d9d9d9;
-    border-radius: 8px;
+    align-items: baseline;
   }
 
-  .menu-collapse .botoes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
+  .redes-sociais {
+    height: 12em;
   }
-} 
 
-@media (max-width: 768px) {
-  .container {
-    padding: 15px;
-    margin: 15px auto;
+  .copyright {
+    bottom: 4em;
   }
 }
-
-@media (max-width: 475px) {
-  .container {
-    padding: 10px;
-    margin: 10px auto;
-  }
-}
-
-/* @media (min-width: 1920px) {} */

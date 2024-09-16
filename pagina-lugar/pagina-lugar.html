@@ -22,15 +22,31 @@
   <div class="container">
     <nav>
       <ul id="logo-nav">
-        <li>
-          <img src="./img/logo.svg" id="rhinny" alt="Rhinny" />
-        </li>
-        <div class="user">
+        <li><img src="./img/logo.svg" id="rhinny" alt="Rhinny" /></li>
+        <div class="user" id="user-icon">
           <box-icon name="chevron-down" id="chevron-down" color="#6d6d6d"></box-icon>
-          <img src="./img/user.svg" id="foto-usuario" alt="" />
+          <img src="./img/user.svg" id="foto-usuario" alt="Usuário" />
         </div>
       </ul>
     </nav>
+
+    <!-- Modal -->
+    <div id="user-modal" class="modal">
+      <div class="modal-content">
+        <p class="perfil">Perfil</p>
+        <img src="./img/user.svg" id="foto-perfil" alt="Foto de perfil">
+        <div class="content-sem-perfil">
+          <h3 class="usuario">Lucas Jesus Silva</h3>
+          <div class="links">
+            <a href="../pagina-perfil/perfil.html" class="texto-perfil">Perfil</a>
+            <hr class="linha">
+            <a href="../pagina-faq/faq.html" class="texto-perfil">Suporte</a>
+            <hr class="linha">
+            <a href="" class="texto-sair">Sair</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section class="inicial">
       <div class="layout-lugar">
@@ -211,6 +227,8 @@
       <p class="copyright">Copyright &copy; 2024 Rampoint</p>
     </footer>
   </div>
+  <script defer src="./js/api-mapa.js"></script>
+  <script defer src="./js/modal-perfil.js"></script>
 </body>
-<script defer src="./js/api-mapa.js"></script>
+
 </html>
