@@ -6,8 +6,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10em 10em 0 10em;
-  height: auto;
+  margin: 35em 10em 0 10em;
+  height: 1em;
 }
 
 .titulo-login {
@@ -30,7 +30,12 @@
   border-radius: 8px;
   width: 28em;
   height: 21em;
-  margin: 10px 0 0 0    ;
+  margin: 10px 0 0 0;
+}
+
+.form-login input {
+  font-family: "Poppins-regular";
+  padding: 5px;
 }
 
 .campo-email {
@@ -40,10 +45,10 @@
 }
 
 .campo-senha {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0px;
-  }
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px;
+}
 
 #titulo-form {
   font-family: "Poppins-regular";
@@ -80,11 +85,12 @@
   align-items: center;
   justify-content: center;
   margin-top: 2em;
+  cursor: pointer;
 }
 
 #rhinny-form {
-  width: 27em;
+  width: 22em;
   position: relative;
-  bottom: 15em;
-  left: 45em;
+  bottom: 20em;
+  left: 37em;
 }
