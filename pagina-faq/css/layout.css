@@ -51,15 +51,15 @@
 
 @media (max-width: 768px) {
   #logo-nav {
-    width: 45.3em;
+    width: 47.5em;
   }
 
   .modal-content {
-    margin: 4.5em 0 0 28em;
+    margin: 4.5em 0 0 30em;
   }
 
-  .section-inicial {
-    align-items: start;
+  .campo-perguntas {
+    width: 35em;
   }
 
   .perguntas {
@@ -75,35 +75,44 @@
     width: 40em;
     padding: 1em;
     min-height: 22em;
-    margin: 0 0 0 2em;
-    background-color: aqua;
+    margin: 0 0 0 3em;
   }
 
   .faq-sidebar {
     width: 40em;
     height: 12em;
     margin-bottom: 1em;
-    margin: 0 0 0 2em;
-    background-color: aquamarine;
+    margin: 0 0 0 5em;
+  }
+
+  #titulo2 {
+    margin-left: 1em;
   }
 
   .faq-sidebar ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 15px;
   }
 
   .campo-feedback {
-    margin: 12em 0 2em 0;
+    width: 48em;
+    margin: 18em 0 2em 0;
   }
 
   .texto-feedback {
     width: 90%;
   }
 
+  .form-feedback {
+    width: 35em;
+  }
+
   .footer-container {
-    width: 45em;
+    width: 46em;
   }
 
   .logo-footer {
@@ -111,8 +120,8 @@
   }
 
   .descricao-footer {
-    width: 40em;
-    gap: 2em;
+    width: 43em;
+    gap: 3em;
     margin-left: 5em;
     flex-direction: row;
     align-items: baseline;
@@ -120,7 +129,7 @@
 
   .redes-sociais {
     height: 8em;
-    margin-right: 2em;
+    margin: 0;
   }
 
   .copyright {
@@ -200,11 +209,11 @@
 
 @media (max-width: 480px) {
   #logo-nav {
-    width: 24em;
+    width: 26.5em;
   }
 
   .modal-content {
-    margin: 4.5em 0 0 12em;
+    margin: 4.5em 0 0 10em;
   }
 
   .section-inicial {
@@ -218,10 +227,9 @@
   }
 
   .perguntas {
-    width: 24em;
+    width: 25em;
     min-height: 40em;
-    margin: 1em 0;
-    background-color: cadetblue ;
+    margin: 1em;
   }
 
   #titulo1 {
@@ -231,7 +239,7 @@
   #texto1 {
     margin-top: 5px;
     margin-left: 15px;
-    width: 65%;
+    width: 100%;
   }
 
   .faq-container {
@@ -246,21 +254,21 @@
   }
 
   .faq-sidebar {
-    width: 24em;
+    width: 25em;
+    height: 15em;
     margin: 0 1em;
-    background-color: aquamarine;
   }
 
   .faq-sidebar ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 13px;
   }
 
   .campo-feedback {
     width: 24em;
-    margin: 1em 0 2em 0;
+    margin: 6em 0 2em 0;
   }
 
   .titulo-feedback {
@@ -270,11 +278,11 @@
   .texto-feedback {
     margin-top: 5px;
     margin-left: 15px;
-    width: 85%;
+    width: 100%;
   }
 
   .form-feedback {
-    width: 20em;
+    width: 22em;
     height: 20em;
     display: flex;
     flex-direction: column;
@@ -285,7 +293,7 @@
   }
 
   .footer-container {
-    width: 24em;
+    width: 26em;
   }
 
   .logo-footer {
@@ -317,20 +325,26 @@
     width: 24.5em;
   }
 
-  .section-inicial {
-    margin: 4em 2em;
+  .modal-content {
+    margin: 4.5em 0 0 9em;
   }
 
   .perguntas {
     width: 23em;
+    margin: 1em;
   }
 
   #texto1 {
-    width: 35%;
+    width: 75%;
   }
 
   .faq-sidebar {
     width: 20em;
+    height: 15em;
+  }
+
+  .faq-content {
+    width: 87%;
   }
 
   .campo-feedback {
@@ -338,7 +352,7 @@
   }
 
   .texto-feedback {
-    width: 85%;
+    width: 100%;
   }
 
   .form-feedback {

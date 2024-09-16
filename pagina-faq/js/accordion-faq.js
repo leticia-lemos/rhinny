@@ -35,16 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
       var body = this.nextElementSibling;
       var isActive = this.classList.contains("active");
 
-      // Fechar todos os accordions
-      accordions.forEach(function (header) {
-        header.classList.remove("active");
-        var body = header.nextElementSibling;
+      // Se já está ativo, recolher o accordion
+      if (isActive) {
+        this.classList.remove("active");
         body.style.maxHeight = null;
         body.style.opacity = 0;
-      });
+      } else {
+        // Fechar todos os outros accordions
+        accordions.forEach(function (header) {
+          header.classList.remove("active");
+          var body = header.nextElementSibling;
+          body.style.maxHeight = null;
+          body.style.opacity = 0;
+        });
 
-      // Abrir o accordion clicado se não estava ativo
-      if (!isActive) {
+        // Abrir o accordion clicado
         this.classList.add("active");
         body.style.maxHeight = body.scrollHeight + "px"; // Ajusta a altura para o conteúdo
         body.style.opacity = 1;
