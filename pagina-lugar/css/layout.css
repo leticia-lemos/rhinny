@@ -1,4 +1,25 @@
-/* Responsividade para telas menores que 1420px */
+@media (min-width: 1920px) {
+  #logo-nav {
+    width: 114em;
+  }
+
+  .layout-lugar {
+    width: 110em;
+  }
+
+  #praca-boulevard {
+    bottom: 0;
+  }
+
+  .grupo-direita {
+    margin-top: 2em;
+  }
+
+  .modal-content {
+    margin: 4.5em 0 0 95em;
+  }
+}
+
 @media (max-width: 1420px) {
   #logo-nav {
     width: 89em;
@@ -56,7 +77,7 @@
 
   .modal-content {
     margin: 4.5em 0 0 40em;
-  }  
+  }
 
   .layout-lugar {
     width: 53em;
@@ -99,12 +120,12 @@
 /* Responsividade para telas menores que 475px */
 @media (max-width: 475px) {
   #logo-nav {
-    width: 29.5em;
+    width: 30em;
   }
 
   .modal-content {
     margin: 4.5em 0 0 13em;
-  }  
+  }
 
   #praca-boulevard {
     width: 50%;
@@ -167,7 +188,7 @@
   }
 
   .redes-sociais {
-    height: 12em;
+    height: 8em;
   }
 
   .copyright {

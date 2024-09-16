@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/layout.css" />
   <link rel="stylesheet" href="./css/header.css" />
   <link rel="stylesheet" href="./css/login.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
 
   <link rel="shortcut icon" href="./img/rhinny.svg" type="image/x-icon" />
   <title>Página login</title>
@@ -18,14 +18,25 @@
     <nav>
       <ul id="logo-nav">
         <li>
-          <img src="./img/logo.svg" id="rhinny" alt="Rhinny" />
+          <a href="../landing-page/landing_page.html">
+            <img src="./img/logo.svg" id="rhinny" alt="Rhinny" />
+          </a>
         </li>
-        <li class="botoes">
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </ul>
+      <div class="menu-collapse">
+        <div class="botoes">
           <a href="../pagina-login/login.html" class="btn-login">Login</a>
           <a href="../pagina-cadastro/cadastro.html" class="btn-cadastro">Cadastro</a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </nav>
+
+    <div class="menu-overlay"></div> <!-- Overlay de fundo -->
 
     <section class="campo-login">
       <h1 class="titulo-login">Login</h1>
@@ -53,6 +64,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
   <script src="../firebase_js/firebase-init.js"></script>
   <script src="js/login.js"></script>
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

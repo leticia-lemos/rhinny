@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 3em 10em 0 10em;
+  margin: 8em 10em 0 10em;
   height: auto;
 }
 
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   gap: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   overflow: hidden;
   counter-reset: step;
 }
@@ -97,19 +97,19 @@
   background-color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
-  width: 28em;
-  height: 38em;
+  width: 32em;
+  height: 25em;
   margin: 10px 0 0 0;
 }
 
 #form-dados-crianca {
-  height: 26em;
+  height: 25em;
 }
 
 .subtitulo-form {
   font-family: "Poppins-bold";
   font-size: 1.4em;
-  margin: 35px 0 15px 0;
+  margin: 25px 0 15px 0;
 }
 
 .subtitulo-form2 {
@@ -122,27 +122,27 @@
 #nome-cadastro-crianca {
   display: flex;
   flex-direction: column;
-  margin: 20px 0px;
+  margin: 0px;
   outline: none;
 }
 
 .campo-email {
   display: flex;
   flex-direction: column;
-  margin: 10px 0px;
+  margin: 0px;
 }
 
 .campo-senha {
   display: flex;
   flex-direction: column;
-  margin: 20px 0px;
+  margin: 5px 0px;
 }
 
 .campo-data,
 #data-cadastro-crianca {
   display: flex;
   flex-direction: column;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
 #titulo-form {
@@ -151,9 +151,16 @@
   margin-bottom: 5px;
 }
 
+.grupo {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  margin: 1em 0;
+}
+
 .form-erros {
   font-family: "Poppins-regular";
-  font-size: 1.0em;
+  font-size: 1em;
   margin-bottom: 5px;
   color: red;
 }
@@ -170,25 +177,37 @@
   display: none;
 }
 
-#erro-senha-obrigatoria{
+#erro-senha-obrigatoria {
   display: none;
 }
 
-#erro-data-obrigatoria{
+#erro-data-obrigatoria {
   display: none;
 }
 
 #nome-cadastro,
 #email-cadastro,
 #senha-cadastro,
-#data,
-#nome-cadastro-crianca,
-#data-cadastro-crianca {
+#data {
+  font-family: "Poppins-regular";
+  padding: 5px;
   background-color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
-  width: 28em;
+  width: 16em;
   height: 2.5em;
+}
+
+#nome-cadastro-crianca,
+#data-cadastro-crianca {
+  font-family: "Poppins-regular";
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  width: 25em;
+  height: 2.5em;
+  margin: 1em 0;
 }
 
 .btn {
@@ -239,8 +258,8 @@
 }
 
 #rhinny-form {
-  width: 27em;
+  width: 20em;
   position: relative;
   bottom: 27em;
-  left: 44.5em;
+  left: 37em;
 }

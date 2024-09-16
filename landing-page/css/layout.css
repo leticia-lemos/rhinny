@@ -7,6 +7,35 @@
     max-width: 100%;
     max-height: 100%;
   }
+
+  .imagem-inicial2 {
+    display: none;
+  }
+
+  .conjunto-textos {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1920px) {
+  .imagem-inicial2 {
+    display: none;
+  }
+}
+
+@media (max-width: 1880px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .imagens {
+    margin: 5em;
+    gap: 5em;
+  }
+
+  .imagem-inicial2 {
+    display: none;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -17,6 +46,10 @@
   .imagens {
     margin: 5em;
     gap: 5em;
+  }
+
+  .imagem-inicial2 {
+    display: none;
   }
 }
 
@@ -115,7 +148,11 @@
   }
 
   .imagem-inicial {
-    width: 100%;
+    display: none;
+  }
+
+  .imagem-inicial2 {
+    display: flex;
   }
 
   .compromissos {
@@ -127,9 +164,13 @@
   }
 
   .imagens {
-    flex-direction: column;
-    margin: 20px 0;
-    gap: 2em;
+    flex-direction: row;
+    margin: 1em 0 2em 0;
+    gap: 5em;
+  }
+
+  .campo-img {
+    width: 40%;
   }
 
   .img-inclusao,
@@ -174,7 +215,7 @@
   .menu-collapse.menu-open {
     display: flex;
     position: absolute;
-    top: 6em;
+    top: 6.5em;
     right: 0.5em;
     width: 13em;
     height: 9em;
@@ -292,7 +333,7 @@
 
   .campo-img {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 65%;
@@ -303,8 +344,10 @@
   }
 
   .conjunto-textos {
+    width: 65%;
     display: flex;
     flex-direction: column;
+    margin-top: 25px;
     margin-left: 15px;
   }
 
@@ -329,16 +372,19 @@
 
   .descricao-footer {
     display: flex;
-    flex-direction: row;
-    margin: 2em 2em 2em 0;
+    flex-direction: column;
+    margin: 2em 6em 2em 0;
   }
 
   .paginas,
-  .redes-sociais,
   .contato {
     margin-bottom: 1em;
     width: 350px;
     height: 15em;
+  }
+
+  .redes-sociais {
+    height: 6em;
   }
 
   .footer-container .descricao-footer ul {
@@ -347,6 +393,72 @@
 
   .copyright {
     bottom: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .imagem-inicial2 {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .section-inicial {
+    margin-top: 55px;
+  }
+
+  .imagem-inicial {
+    display: none;
+  }
+
+  .lista-compromissos {
+    margin: 50px 5px 65px 5px;
+  }
+
+  .imagens {
+    margin: 1em 2em 4em 2em;
+    gap: 2em;
+  }
+
+  .titulo-imagens {
+    margin: 0;
+  }
+
+  .img-inclusao,
+  .img-facilidade {
+    width: 18em;
+    height: auto;
+    margin-bottom: 0.5em;
+  }
+
+  .campo-img {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+
+  .conjunto-textos {
+    margin: 0;
+  }
+
+  .descricao-footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-container .descricao-footer ul {
+    height: 10em;
+  }
+
+  .paginas {
+    margin-bottom: 1em;
+    width: 350px;
+    height: 15em;
+  }
+
+  .redes-sociais,
+  .contato {
+    height: 7em;
   }
 }
 
@@ -426,8 +538,12 @@
     width: 100%;
   }
 
+  .imagem-inicial2 {
+    display: none;
+  }
+
   .compromissos {
-    margin: 20px;
+    margin: 30px 20px;
   }
 
   .titulo1 {
@@ -443,6 +559,14 @@
   .img-inclusao,
   .img-facilidade {
     width: 100%;
+  }
+
+  .campo-img {
+    gap: 2em;
+  }
+
+  .conjunto-textos {
+    width: 85%;
   }
 
   .logo-footer {
@@ -462,65 +586,5 @@
     margin-bottom: 1em;
     width: 350px;
     height: auto;
-  }
-}
-
-@media (max-width: 520px) {
-  .section-inicial {
-    margin-top: 55px;
-  }
-
-  .imagem-inicial {
-    display: none;
-  }
-
-  .lista-compromissos {
-    margin: 50px 5px 65px 5px;
-  }
-
-  .imagens {
-    margin: 1em 2em 4em 2em;
-    gap: 2em;
-  }
-
-  .titulo-imagens {
-    margin: 0;
-  }
-
-  .img-inclusao,
-  .img-facilidade {
-    width: 18em;
-    height: auto;
-    margin-bottom: 0.5em;
-  }
-
-  .campo-img {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-  }
-
-  .conjunto-textos {
-    margin: 0;
-  }
-
-  .descricao-footer {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer-container .descricao-footer ul {
-    height: 10em;
-  }
-
-  .paginas {
-    margin-bottom: 1em;
-    width: 350px;
-    height: 15em;
-  }
-
-  .redes-sociais,
-  .contato {
-    height: 7em;
   }
 }

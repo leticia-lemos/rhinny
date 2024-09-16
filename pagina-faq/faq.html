@@ -1,11 +1,433 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/faq.css" />
+    <link rel="stylesheet" href="./css/layout.css">
+
+    <link rel="shortcut icon" href="./img/rhinny.png" type="image/x-icon" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <title>Fale conosco</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <nav>
+            <ul id="logo-nav">
+                <li><img src="./img/logo.svg" id="rhinny" alt="Rhinny" /></li>
+                <div class="user" id="user-icon">
+                    <box-icon name="chevron-down" id="chevron-down" color="#6d6d6d"></box-icon>
+                    <img src="./img/user.svg" id="foto-usuario" alt="Usuário" />
+                </div>
+            </ul>
+        </nav>
+
+        <!-- Modal -->
+        <div id="user-modal" class="modal">
+            <div class="modal-content">
+                <p class="perfil">Perfil</p>
+                <img src="./img/user.svg" id="foto-perfil" alt="Foto de perfil">
+                <div class="content-sem-perfil">
+                    <h3 class="usuario">Lucas Jesus Silva</h3>
+                    <div class="links">
+                        <a href="../pagina-perfil/perfil.html" class="texto-perfil">Perfil</a>
+                        <hr class="linha">
+                        <a href="../pagina-faq/faq.html" class="texto-perfil">Suporte</a>
+                        <hr class="linha">
+                        <a href="" class="texto-sair">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-inicial">
+            <h1 class="titulo-principal">Fale Conosco</h1>
+            <p class="texto-principal">Conte com a ajuda do nosso suporte</p>
+        </section>
+
+        <section class="campo-perguntas">
+            <h1 id="titulo1">Perguntas Frequentes</h1>
+            <p id="texto1">Precisa de uma resposta? Você pode encontrar aqui!</p>
+
+            <section class="perguntas">
+                <div class="faq-container">
+                    <div class="faq-sidebar">
+                        <h3 id="titulo2">Filtrar por categoria</h3>
+                        <ul>
+                            <li><a href="#" class="category-link active" data-category="landing-page">Landing Page</a>
+                            </li>
+                            <li><a href="#" class="category-link" data-category="tela-inicial">Tela Inicial</a></li>
+                            <li><a href="#" class="category-link" data-category="perfil">Perfil</a></li>
+                            <li><a href="#" class="category-link" data-category="fale-conosco">Fale Conosco</a></li>
+                            <li><a href="#" class="category-link" data-category="politica-privacidade">Política e
+                                    Privacidade</a></li>
+                            <li><a href="#" class="category-link" data-category="termos-uso">Termos de Uso</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="faq-content">
+                        <div class="accordion" id="landing-page">
+                            <h1 data-category="landing-page" id="titulo-accordion">Landing Page</h1>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">O que é este site?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Nosso site é uma plataforma dedicada à reciclagem de
+                                        eletrônicos. Em troca da doação de seus eletrônicos, você recebe um cupom em QR
+                                        code que pode ser usado em lojas parceiras.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Como funciona a troca por cupons?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Ao doar seus eletrônicos no nosso ecoponto, você ganha um
+                                        cupom em QR code que pode ser resgatado em uma das lojas parceiras listadas na
+                                        seção "Play".</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Quais são os benefícios de usar este serviço?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Além de ajudar o meio ambiente reciclando seus eletrônicos,
+                                        você ganha cupons que podem ser usados para descontos em lojas parceiras.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Há algum custo para utilizar o ecoponto?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Não, o uso do ecoponto é totalmente gratuito para os
+                                        usuários.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" id="tela-inicial" style="display: none;">
+                            <h1 data-category="tela-inicial" id="titulo-accordion">Tela Inicial</h1>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">O que devo fazer se não receber meu QR code?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Se você não receber seu QR code, verifique a seção "Perfil"
+                                        para ver se ele foi gerado. Caso contrário, entre em contato com o suporte
+                                        técnico.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Como faço para gerar meu QR code?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Após doar seus eletrônicos, você receberá um email com um
+                                        codigo que gera o QR code diretamente no site na seção “QR CODE” . Este QR code
+                                        pode ser visualizado e salvo na seção "Perfil".</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion" id="perfil" style="display: none;">
+                            <h1 data-category="perfil" id="titulo-accordion">Perfil</h1>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Como funcionam os cupons, medalhas e moedas?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">A seção "Play" oferece um tutorial gamificado que explica
+                                        como você pode ganhar e usar cupons, acumular medalhas e moedas.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Quais lojas aceitam os cupons?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Você pode ver a lista completa das lojas parceiras na seção
+                                        "Play".</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Como posso acumular mais moedas?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Você pode acumular moedas doando mais eletrônicos.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Como resgato minhas medalhas?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Medalhas são concedidas automaticamente quando você alcança
+                                        certos marcos. Elas podem ser vistas na seção "Perfil".</p>
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens de accordion para a categoria "Play" aqui-->
+                        </div>
+                        <div class="accordion" id="fale-conosco" style="display: none;">
+                            <h1 data-category="fale-conosco" id="titulo-accordion">Fale Conosco</h1>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Quais tipos de eletrônicos são aceitos?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Aceitamos diversos tipos de eletrônicos, incluindo placas
+                                        mãe, memoria ram, HD/SSD, entre outros. Consulte a seção "Saiba Sobre Hardware"
+                                        para mais detalhes.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Como posso saber se meu eletrônico é elegível para doação?
+                                    </h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Verifique a lista de dispositivos aceitos na seção "Saiba
+                                        Sobre Hardware". Se seu dispositivo não estiver na lista, entre em contato
+                                        conosco para mais informações.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Como posso identificar se um componente está quebrado?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Nosso manual oferece orientações detalhadas sobre como
+                                        identificar problemas comuns em eletrônicos para saber se estão aptos para
+                                        doação.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">O que devo fazer com eletrônicos que não são aceitos?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Para eletrônicos não aceitos, recomendamos buscar outros
+                                        centros de reciclagem especializados ou entrar em contato com fabricantes para
+                                        programas de descarte.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Posso doar componentes avulsos?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Sim, aceitamos componentes avulsos. Verifique a seção "Saiba
+                                        Sobre Hardware" para mais detalhes sobre cada tipo de componente.</p>
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens de accordion para a categoria "Materiais" aqui-->
+                        </div>
+
+                        <div class="accordion" id="termos-uso" style="display: none;">
+                            <h1 data-category="termos-uso" id="titulo-accordion">Termos de Uso</h1>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Como faço uma doação?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Você pode levar seus eletrônicos ao nosso ecoponto mais
+                                        próximo. Após a doação, você receberá um QR code em seu perfil no site.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Qual é o valor do cupom que recebo?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">O valor do cupom pode ser resgatado de acordo com a
+                                        quantidade de RamCoins que você possui. Consulte a tabela de valores na seção
+                                        "Play".</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Posso doar mais de um eletrônico por vez?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Sim, você pode doar múltiplos eletrônicos e receberá cupons
+                                        correspondentes a cada item doado.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Há um limite para o número de doações que posso fazer?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Não há limite para o número de doações. Quanto mais você
+                                        doar, mais cupons e recompensas você pode acumular.</p>
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens de accordion para a categoria "Doações e Cupons" aqui-->
+                        </div>
+                        <div class="accordion" id="problemas-tecnicos" style="display: none;">
+                            <h1 data-category="problemas-tecnicos" id="titulo-accordion">Problemas Técnicos</h1>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">O que devo fazer se encontrar um bug no site?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Por favor, reporte qualquer bug ou problema técnico através
+                                        da seção "Contato" para que possamos corrigi-lo o mais rápido possível.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Existe um suporte ao cliente disponível?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Sim, nosso suporte ao cliente está disponível para ajudá-lo
+                                        com quaisquer problemas. Entre em contato através da seção "Contato".</p>
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens de accordion para a categoria "Problemas Técnicos" aqui -->
+                        </div>
+                        <div class="accordion" id="politica-privacidade" style="display: none;">
+                            <h1 data-category="politica-privacidade" id="titulo-accordion">Política e Privacidade</h1>
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Qual é a política de privacidade do site?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Nossa política de privacidade pode ser consultada na seção
+                                        "Políticas", onde explicamos como lidamos com seus dados pessoais.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Quais são os termos de uso do serviço?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Os termos de uso estão disponíveis na seção "Políticas" e
+                                        detalham todas as condições para uso do nosso serviço.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Como meus dados são protegidos?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Utilizamos medidas de segurança robustas para proteger seus
+                                        dados pessoais. Detalhes completos estão disponíveis em nossa política de
+                                        privacidade.</p>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <div class="accordion-header">
+                                    <h3 id="titulo-pergunta">Posso excluir minha conta e dados pessoais?</h3>
+                                    <span class="arrow-icon"><img src="./img/seta.svg" alt=""></span>
+                                </div>
+                                <div class="accordion-body">
+                                    <p id="texto-pergunta">Sim, você pode solicitar a exclusão de sua conta e dados
+                                        pessoais entrando em contato com nosso suporte ao cliente.</p>
+                                </div>
+                            </div>
+                            <!-- Adicione mais itens de accordion para a categoria "Política e Privacidade" aqui-->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="campo-feedback">
+                <h1 class="titulo-feedback">Envie seu feedback</h1>
+                <p class="texto-feedback">Gostou da nossa iniciativa? Envie sugestões, críticas ou elogios para
+                    melhorarmos sua experiência conosco!</p>
+
+                <form action="" class="form-feedback">
+                    <label for="email">Email</label>
+                    <input type="email">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea name="" id=""></textarea>
+                    <div class="btn-form">
+                        <button type="submit" class="btn">Enviar</button>
+                    </div>
+                </form>
+            </section>
+
+            <footer class="footer-container">
+                <div class="descricao-footer">
+                    <div class="logo">
+                        <img src="./img/logo.svg" class="logo-footer" alt="Imagem Logo 'Rhinny'" />
+                    </div>
+                    <div class="paginas">
+                        <p id="titulo-paginas">Páginas</p>
+                        <ul>
+                            <li><a href="../landing-page/landing_page.html">Landing page</a></li>
+                            <li><a href="../pagina-inicial/pagina-inicial.html">Tela inicial</a></li>
+                            <li><a href="../pagina-perfil/perfil.html">Perfil</a></li>
+                            <li><a href="../pagina-faq/faq.html">Fale conosco</a></li>
+                            <li><a href="../pagina-politicas/politicas.html">Política e Privacidade</a></li>
+                            <li><a href="../pagina-termos/termos.html">Termos de uso</a></li>
+                        </ul>
+                    </div>
+                    <div class="redes-sociais">
+                        <p id="redes_sociais-titulo">Redes Sociais</p>
+                        <ul>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Linkedln</a></li>
+                        </ul>
+                    </div>
+                    <div class="contato">
+                        <p id="contato-titulo">Contato</p>
+                        <ul>
+                            <li><a href="">Telefone</a></li>
+                            <li><a href="">Email</a></li>
+                            <li><a href="">Endereço</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="copyright">Copyright &copy; 2024 Rampoint</p>
+            </footer>
+    </div>
+    <script src="./js/modal-perfil.js"></script>
+    <script src="./js/accordion-faq.js"></script>
 </body>
+
 </html>
