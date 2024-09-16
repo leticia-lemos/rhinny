@@ -14,7 +14,7 @@
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 
-<body>
+<body onload="getUserData()" > 
   <div class="container">
     <nav>
       <ul id="logo-nav">
@@ -236,7 +236,9 @@
   <script defer src="./js/modal-perfil.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
   <script src="../firebase_js/authGuard.js"></script>
+  <script src="../firebase_js/mostrarDados.js"></script>
 
 </body>
 
