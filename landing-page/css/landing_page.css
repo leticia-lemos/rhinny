@@ -12,6 +12,12 @@
 
 .imagem-inicial {
   width: 100%;
+  margin-top: 1em;
+}
+
+.imagem-inicial2 {
+  width: 100%;
+  margin-top: 1em;
 }
 
 .compromissos {
@@ -97,4 +103,8 @@
   color: #757575;
   width: 85%;
   margin-top: 0.5em;
+}
+
+.conjunto-textos {
+  width: 90%;
 }

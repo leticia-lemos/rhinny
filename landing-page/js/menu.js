@@ -1,28 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const nav = document.querySelector("nav");
-  const menuToggle = document.querySelector(".menu-toggle");
-  const menuCollapse = document.querySelector(".menu-collapse");
+function toggleMenu() {
+  const menu = document.querySelector('.menu-collapse');
+  const overlay = document.querySelector('.menu-overlay');
 
-  function toggleMenu() {
-    menuCollapse.classList.toggle("menu-open");
+  if (menu.classList.contains('menu-open')) {
+    menu.classList.remove('menu-open');
+    overlay.style.display = 'none'; // Esconde o fundo semitransparente
+  } else {
+    menu.classList.add('menu-open');
+    overlay.style.display = 'block'; // Mostra o fundo semitransparente
   }
+}
 
-  function closeMenu(event) {
-    if (
-      !menuCollapse.contains(event.target) &&
-      !menuToggle.contains(event.target)
-    ) {
-      menuCollapse.classList.remove("menu-open");
-    }
+// Função para fechar o menu ao rolar a página
+function closeMenuOnScroll() {
+  const menu = document.querySelector('.menu-collapse');
+  const overlay = document.querySelector('.menu-overlay');
+
+  if (menu.classList.contains('menu-open')) {
+    menu.classList.remove('menu-open');
+    overlay.style.display = 'none'; // Esconde o fundo semitransparente
   }
+}
 
-  function closeMenuOnScroll() {
-    if (menuCollapse.classList.contains("menu-open")) {
-      menuCollapse.classList.remove("menu-open");
-    }
-  }
-
-  menuToggle.addEventListener("click", toggleMenu);
-  document.addEventListener("click", closeMenu);
-  window.addEventListener("scroll", closeMenuOnScroll);
-});
+// Adiciona o listener de scroll
+window.addEventListener('scroll', closeMenuOnScroll);
