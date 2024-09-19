@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./css/lugar.css" />
   <link rel="stylesheet" href="./css/layout.css" />
 
-  
+
   <link rel="shortcut icon" href="./img/rhinny.svg" type="image/x-icon" />
   <title>Página lugar</title>
 
@@ -50,35 +50,33 @@
 
     <section class="inicial">
       <div class="layout-lugar">
+        <div class="heart-icon">
+          <img src="./img/Heart.svg" alt="Ícone de coração" />
+        </div>
+        
         <img src="./img/praca-boulevard.svg" id="praca-boulevard" alt="" />
         <div class="grupo-direita">
           <h3 class="titulo-local">Praça Boulevard Barueri</h3>
           <div class="acessibilidades">
-            <button class="btn-acessibilidade" id="piso-tatil">
-              Piso Tátil
-            </button>
-            <button class="btn-acessibilidade" id="placas-braille">
-              Placas de Braille
-            </button>
-            <button class="btn-acessibilidade" id="mapas-tateis">
-              Mapas Táteis
-            </button>
+            <button class="btn-acessibilidade" id="piso-tatil">Piso Tátil</button>
+            <button class="btn-acessibilidade" id="placas-braille">Placas de Braille</button>
+            <button class="btn-acessibilidade" id="mapas-tateis">Mapas Táteis</button>
           </div>
           <div class="grupo-icons">
-            <img src="./img/icon-elevador.svg" id="icon" alt="" />
-            <img src="./img/icon-banheiro.svg" id="icon" alt="" />
+            <img src="./img/icon-elevador-sem-cor.svg" id="icon" alt="" />
+            <img src="./img/icon-banheiro-sem-cor.svg" id="icon" alt="" />
             <img src="./img/icon-rampa.svg" id="icon" alt="" />
           </div>
           <p class="titulo-acessibilidade">Adicione as acessibilidades disponíveis no local:</p>
-
           <div class="grupo-acessibilidade">
             <div class="grupo-input">
               <p class="titulo-input">Sinalização</p>
               <div class="select-container">
                 <select name="" id="select-acessibilidade">
-                  <option value="">Opção 1</option>
-                  <option value="">Opção 2</option>
-                  <option value="">Opção 3</option>
+                  <option value="">Placas em Braille</option>
+                  <option value="">Sinalização tátil</option>
+                  <option value="">Trilhas adaptadas</option>
+                  <option value="">Mapas táteis</option>
                 </select>
               </div>
             </div>
@@ -86,9 +84,11 @@
               <p class="titulo-input">Áudio</p>
               <div class="select-container">
                 <select name="" id="select-acessibilidade">
-                  <option value="">Opção 1</option>
-                  <option value="">Opção 2</option>
-                  <option value="">Opção 3</option>
+                  <option value="">Guias de áudio</option>
+                  <option value="">Descrição de áudio</option>
+                  <option value="">App de orientação auditiva</option>
+                  <option value="">Legendagem ao vivo</option>
+                  <option value="">Audiodescrição de performances</option>
                 </select>
               </div>
             </div>
@@ -96,9 +96,9 @@
               <p class="titulo-input">Equipamentos</p>
               <div class="select-container">
                 <select name="" id="select-acessibilidade">
-                  <option value="">Opção 1</option>
-                  <option value="">Opção 2</option>
-                  <option value="">Opção 3</option>
+                  <option value="">Brinquedos táteis</option>
+                  <option value="">Equipamentos com audiodescrição</option>
+                  <option value="">Áreas de descanso acessíveis</option>
                 </select>
               </div>
             </div>
@@ -112,15 +112,14 @@
               </div>
             </div>
             <p class="coment">Escrever comentário</p>
-            <textarea name="" class="conteudo-comentario" placeholder="Escreva seu comentário aqui">
-            </textarea>
+            <textarea name="" class="conteudo-comentario" placeholder="Escreva seu comentário aqui"></textarea>
             <div class="botao">
               <button type="submit" class="btn-enviar">Enviar</button>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section>   
 
     <section class="outros-comentarios">
       <h2 class="titulo-outros">Outros comentários</h2>
@@ -227,6 +226,7 @@
   </div>
   <script defer src="./js/api-mapa.js"></script>
   <script defer src="./js/modal-perfil.js"></script>
+  <script defer src="./js/animacao-coracao.js"></script>
 </body>
 
 </html>

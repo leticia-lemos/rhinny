@@ -10,7 +10,30 @@
   margin: 2em 3em;
 }
 
+.heart-icon {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 5em; 
+  left: 4em; 
+  background-color: #0098FF;
+  border-radius: 50%;
+  padding: 10px; 
+  z-index: 10;
+}
+
+.heart-icon img {
+  width: 1.5em;
+  height: auto;
+  cursor: pointer;
+}
+
+.heart-icon.filled img {
+  content: url("./img/Heart-filled.svg");
+}
+
 .layout-lugar {
+  position: relative;
   width: 80em;
   height: 40em;
   margin: 2em;
@@ -35,7 +58,8 @@
 .grupo-direita {
   display: flex;
   flex-direction: column;
-  margin: 0 25px;
+  margin: 0;
+  margin-right: -2em;
 }
 
 .btn-acessibilidade {
@@ -94,7 +118,7 @@
 }
 
 #select-acessibilidade {
-  width: 10em;
+  width: 13em;
   height: 3em;
   border: 1px solid #d9d9d9;
   border-radius: 10px;
@@ -161,6 +185,7 @@
 
 .conteudo-comentario {
   font-family: "Poppins-regular";
+  color: #1e1e1e;
   outline: none;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
@@ -173,11 +198,6 @@
   display: flex;
   flex-wrap: wrap;
   resize: none;
-}
-
-.conteudo-comentario::placeholder {
-  font-family: "Poppins-regular";
-  color: #1e1e1e;
 }
 
 .botao {
