@@ -337,6 +337,7 @@
     align-items: center;
     justify-content: center;
     width: 65%;
+    margin-left: -1em;
   }
 
   .titulo-imagens {

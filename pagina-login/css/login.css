@@ -84,7 +84,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2em;
+  margin-top: 1em;
   cursor: pointer;
 }
 
@@ -93,4 +93,10 @@
   position: relative;
   bottom: 20em;
   left: 37em;
+}
+
+.esqueceu-senha {
+  font-family: "Poppins-regular";
+  text-decoration: underline;
+  margin-top: 1em;
 }
