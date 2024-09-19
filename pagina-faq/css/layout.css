@@ -1,4 +1,8 @@
 @media (min-width: 1920px) {
+  .modal-content {
+    margin: 4.5em 0 0 105em;
+  }
+
   .perguntas {
     width: 120em;
   }
@@ -46,6 +50,10 @@
 
   .descricao-footer {
     gap: 5em;
+  }
+
+  .logo-footer {
+    margin-left: 1em;
   }
 }
 

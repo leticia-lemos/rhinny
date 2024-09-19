@@ -31,3 +31,4 @@ document.getElementById('reset-settings').addEventListener('click', () => {
   body.classList.remove('high-contrast', 'font-size-large', 'font-size-small');
   isLargeFont = false; // Resetar o estado do tamanho da fonte
 });
+

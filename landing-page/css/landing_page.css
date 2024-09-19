@@ -112,7 +112,6 @@
 }
 
 /* botao acessibilidade */
-/* Botão de acessibilidade */
 .accessibility-btn {
   position: fixed;
   top: 15em;
@@ -130,7 +129,6 @@
   justify-content: center;
 }
 
-/* Ícone do botão de acessibilidade */
 #icon-btn {
   width: 2.5em;
 }
@@ -139,52 +137,56 @@
   background-color: #0056b3;
 }
 
-/* Menu de acessibilidade estilo dropdown */
 .accessibility-menu {
   display: none;
   position: fixed;
-  top: 20em;
+  top: 20.5em;
   right: 20px;
-  background-color: #ffffff;
+  background-color: #f8f8f8;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   padding: 10px;
-  width: 14em; /* Aumentar um pouco a largura */
+  width: 14em;
 }
 
 .accessibility-menu.show {
   display: block;
 }
 
-/* Estilos das opções dentro do menu de acessibilidade */
 .accessibility-option {
-  font-family: "Poppins", sans-serif; /* Certifique-se que a fonte esteja carregada corretamente */
-  width: 100%; /* Ajusta para ocupar a largura total do menu */
+  font-family: "Poppins-bold";
+  width: 100%;
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   color: #000;
   border: none;
   border-bottom: 1px solid #ccc;
   margin: 5px 0;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .accessibility-option:hover {
-  background-color: #ccc; /* Um leve destaque ao passar o mouse */
+  background-color: #ccc;
 }
 
 .accessibility-option:last-child {
   border-bottom: none;
 }
 
-/* Estilos para o modo de alto contraste */
+.icon-acessibilidade {
+  width: 2em;
+  margin-bottom: 5px;
+}
+
 .high-contrast {
   background-color: #121212;
-  color: #fff;
+  color: #f8f8f8;
 }
 
 .high-contrast nav {
@@ -203,14 +205,13 @@
 .high-contrast .texto2,
 .high-contrast .titulo-imagens,
 .high-contrast .texto-imagens {
-  color: #fff;
+  color: #f8f8f8;
 }
 
 .high-contrast .footer-container {
-  background-color: black;
+  background-color: #121212;
 }
 
-/* Estilos para ajuste de fonte */
 .font-size-large {
   font-size: 18px;
 }

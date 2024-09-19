@@ -340,4 +340,5 @@ textarea {
   color: #fff;
   border: none;
   border-radius: 8px;
+  cursor: pointer;
 }
