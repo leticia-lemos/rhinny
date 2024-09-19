@@ -38,7 +38,7 @@ function getUserData(globalUserId) {
 
 // Função para exibir dados do usuário na tela
 function mostrarDadosFirestore(userData) {
-  document.getElementById("nome_usuario").innerHTML = userData.nome_adulto; // Mostra o nome do adulto na interface
+  document.getElementById("nome_usuario").innerHTML = userData.nome_crianca; // Mostra o nome do adulto na interface
   document.getElementById("nome_crianca").innerHTML = userData.nome_crianca; // Mostra o nome da criança na interface
   document.getElementById("nome_adulto").innerHTML = userData.nome_adulto; // Mostra novamente o nome do adulto (opcional)
   document.getElementById("nome_trocar").placeholder = userData.nome_crianca; // Define o placeholder com o nome da criança
