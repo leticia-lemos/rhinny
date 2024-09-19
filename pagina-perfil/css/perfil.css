@@ -96,6 +96,10 @@
   margin: 0;
 }
 
+.lugar a {
+  text-decoration: none;
+}
+
 .imagem-lugar {
   width: 336px;
   height: 252px;

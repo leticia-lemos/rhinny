@@ -1,3 +1,9 @@
+@media (min-width: 1920px) {
+  .modal-content-config {
+    height: 40vh;
+  }
+}
+
 @media (max-width: 1100px) {
   .campo-perfil {
     margin-top: 2em;
