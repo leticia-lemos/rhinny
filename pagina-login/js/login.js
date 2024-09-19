@@ -3,7 +3,7 @@
 
 
 const form_login = {
-  email: () => document.getElementById('email_cadastro').value,
+  email: () => document.getElementById('email_login').value,
   senha: () => document.getElementById('senha_cadastro').value,
 };
 
@@ -28,6 +28,28 @@ function entrar(){
     console.log(errorMessage)
   });
 
+}
+
+function recuperarSenha() {
+  const email = document.getElementById('email_login').value
+  if(!email){
+    document.getElementById('erro-recuperacao').style.display = 'block'
+  }else{
+        document.getElementById('erro-recuperacao').style.display = 'block'
+    firebase.auth().sendPasswordResetEmail(email)
+    .then(() => {
+        // E-mail de redefinição de senha enviado!
+        alert("Um e-mail de redefinição de senha foi enviado para " + email);
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // Trate o erro aqui
+        alert("Erro: " + errorMessage);
+    });
+  }
+  // Supondo que você tenha um campo de entrada com o ID "email"
+  
 }
 
 
