@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var accordionContainers = document.querySelectorAll(".accordion");
 
   // Exibir a categoria "Geral" por padrão
-  document.getElementById("landing-page").style.display = "block";
+  document.getElementById("geral").style.display = "block";
 
   // Alternar a exibição de categorias ao clicar nos links da barra lateral
   categoryLinks.forEach(function (link) {
