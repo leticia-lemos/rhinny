@@ -20,7 +20,6 @@
 }
 
 /* começo das 'perguntas' */
-
 .campo-perguntas {
   margin-left: 0;
 }
@@ -169,7 +168,6 @@
 .accordion-header.active .arrow-icon {
   color: var(--azul);
 }
-
 /* final das 'perguntas' */
 
 /* Estilos do modal do perfil */
