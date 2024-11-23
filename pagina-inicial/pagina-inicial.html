@@ -17,6 +17,7 @@
 <body onload="getUserData()">
   <div class="container">
     <nav>
+      <div id="map"></div>
       <ul id="logo-nav">
         <li><img src="./img/logo.svg" id="rhinny" alt="Rhinny" /></li>
         <div class="user" id="user-icon">
@@ -113,7 +114,7 @@
           <box-icon name="search" id="search" color="#0098ff"></box-icon>
         </div>
 
-        <div class="campo-locais">
+        <div class="campo-locais" id="campo-locais">
           <div class="grupo-locais">
             <img src="./img/praca-lelita.svg" class="img-lugar" alt="Praça Lelita Bittencourt" />
             <div class="text-locais">
@@ -127,7 +128,7 @@
               </div>
             </div>
           </div>
-          <div class="grupo-locais">
+          <!-- <div class="grupo-locais">
             <img src="./img/praca-artes.svg" class="img-lugar" alt="Praça das Artes" />
             <div class="text-locais">
               <p class="titulo-locais">Praça das Artes</p>
@@ -191,7 +192,7 @@
                 <box-icon name='star' color='#fcc803'></box-icon>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -239,7 +240,9 @@
   <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
   <script src="../firebase_js/authGuard.js"></script>
   <script src="../firebase_js/mostrarDados.js"></script>
-
+  <script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvvanoz7U50-4faMR7NRMsBcc0CfOnCZY&libraries=places"></script>
+  <script src="./js/maps.js"></script>
 </body>
 
 </html>
