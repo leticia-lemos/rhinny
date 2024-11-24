@@ -1,3 +1,4 @@
+/* Botão principal de acessibilidade */
 .accessibility-btn {
     position: fixed;
     top: 9em;
@@ -23,6 +24,7 @@
     background-color: #0056b3;
 }
 
+/* Menu de acessibilidade */
 .accessibility-menu {
     display: none;
     position: fixed;
@@ -34,42 +36,61 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     padding: 10px;
-    width: 14em;
+    width: 320px;
+    height: auto;
 }
 
+/* Mostrar o menu */
 .accessibility-menu.show {
     display: block;
 }
 
+/* Opções de acessibilidade */
 .accessibility-option {
     font-family: "Poppins-bold";
-    width: 100%;
-    padding: 10px 15px;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     background-color: #d9d9d9;
     color: #000;
     border: none;
-    border-bottom: 1px solid #ccc;
-    margin: 5px 0;
-    text-align: left;
+    border-radius: 5px;
+    padding: 10px 5px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    text-align: left;
 }
 
+/* Estilo ao passar o mouse */
 .accessibility-option:hover {
     background-color: #ccc;
 }
 
-.accessibility-option:last-child {
-    border-bottom: none;
+/* Grupo de botões lado a lado */
+.button-group {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
 }
 
+/* Estilo individual para cada botão no grupo */
+.button-group .accessibility-option {
+    flex: 1;
+    padding: 10px 5px;
+}
+
+/* Última opção sem margem inferior */
+.accessibility-option:last-child {
+    margin-bottom: 0;
+}
+
+/* Ícones de acessibilidade */
 .icon-acessibilidade {
     width: 2em;
-    margin-bottom: 5px;
 }
 
+/* Alto contraste */
 .high-contrast {
     background-color: #121212;
     color: #f8f8f8;
@@ -98,10 +119,58 @@
     background-color: #121212;
 }
 
+/* Tamanho da fonte */
 .font-size-large {
     font-size: 18px;
 }
 
 .font-size-small {
     font-size: 14px;
+}
+
+/* Fontes */
+.font-serif {
+    font-family: 'Arial', serif;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+/* Espaçamento entre linhas */
+.line-spacing-large {
+    line-height: 2 !important;
+}
+
+/* Espaçamento entre letras */
+.letter-spacing-large {
+    letter-spacing: 0.1em;
+}
+
+/* Saturação reduzida */
+.reduced-saturation {
+    filter: grayscale(50%);
+}
+
+/* Modo de leitura */
+.reading-mode {
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Máscara de leitura */
+.reading-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* Lupa de conteúdo */
+.zoomed {
+    zoom: 1.5;
 }
