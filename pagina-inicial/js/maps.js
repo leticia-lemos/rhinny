@@ -10,7 +10,7 @@ function initMap(lat, long) {
 
   const request = {
     location: userLocation,
-    radius: "3000", // Raio em metros para buscar lugares de lazer
+    radius: "2000", // Raio em metros para buscar lugares de lazer
     types: ["park", "shopping_mall", "amusement_park", "zoo"], // Tipos de lugares de lazer
   };
 
@@ -20,6 +20,7 @@ function initMap(lat, long) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
       for (let i = 0; i < results.length; i++) {
         getPlaceDetails(results[i]);
+        console.log(results[i])
       }
     } else {
       console.error("Erro ao buscar lugares de lazer:", status);
@@ -70,11 +71,12 @@ function criarTabelaMapa(lugar) {
       name: lugar.name,
       address: address,
       phone: phone,
-      photo: lugar.photos && lugar.photos.length > 0 ? lugar.photos[0].getUrl({ width: 500, height: 150 }) : './img/default-image.svg'
+      photo: lugar.photos && lugar.photos.length > 0 ? lugar.photos[0].getUrl({ width: 500, height: 150 }) : './img/default-image.svg',
+
     }));
 
     // Redireciona para a página de detalhes
-    window.location.href = "../../pagina-lugar/pagina-lugar.html";
+    window.location.href = "../../pagina-lugar/pagina-lugar.html?uid="+lugar.place_id;
   });
 
   // Adiciona o lugar ao contêiner com o ID 'campo-locais'

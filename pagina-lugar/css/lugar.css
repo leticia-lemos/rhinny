@@ -49,10 +49,10 @@
 }
 
 #praca-boulevard {
-  width: 30%;
-  position: relative;
-  bottom: 5em;
-  border-radius: 30px;
+  width: 380px;
+  height:400px;
+  border-radius: 20px;
+  margin-top: 60px;
 }
 
 .grupo-direita {
