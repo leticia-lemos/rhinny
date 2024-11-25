@@ -7,25 +7,28 @@
   align-items: center;
   justify-content: center;
   width: auto;
-  height: 53em;
-  margin: 2em 3em 4em 5.5em;
+  height: auto;
+  margin: 5em 3em auto 5.5em;
 }
 
 .campo-lugares {
-  height: 45em;
+  height: auto;
   width: 80em;
 }
 
 .campo-locais {
-  height: 35em;
-  width: 85em;
+  height: auto;
+  width: 80em;
   margin: 0;
+  margin-bottom: 35px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 3em;
+  position: relative;
+  left: 75px;
 }
 
 .grupo-locais {
@@ -81,8 +84,10 @@
   border-radius: 20px;
   padding: 15px;
   width: 15em;
-  min-height: 28em;
+  height: 28em;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .titulo-menu {
@@ -191,7 +196,7 @@ input[type="checkbox"] {
 }
 
 /* Estilo para o container do checkbox */
-input[type="checkbox"] + label {
+input[type="checkbox"]+label {
   position: relative;
   padding-left: 30px;
   cursor: pointer;
@@ -200,7 +205,7 @@ input[type="checkbox"] + label {
 }
 
 /* Cria o quadrado do checkbox */
-input[type="checkbox"] + label::before {
+input[type="checkbox"]+label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -214,13 +219,13 @@ input[type="checkbox"] + label::before {
 }
 
 /* Estilo do checkbox quando marcado */
-input[type="checkbox"]:checked + label::before {
+input[type="checkbox"]:checked+label::before {
   background-color: #0098ff;
   border-color: #0098ff;
 }
 
 /* Estilo do ícone de check quando marcado */
-input[type="checkbox"]:checked + label::after {
+input[type="checkbox"]:checked+label::after {
   content: url(../img/check.svg);
   position: absolute;
   left: 2px;
@@ -238,6 +243,8 @@ input[type="checkbox"]:checked + label::after {
   align-items: center;
   justify-content: center;
   margin: 0 35em 0 0;
+  position: relative;
+  left: 35px;
 }
 
 #campo-pesquisa {
@@ -318,6 +325,7 @@ input[type="checkbox"]:checked + label::after {
 .linha {
   width: 12em;
   margin: 10px 1px;
+  color: rgba(0, 0, 0, 0.35);
 }
 
 .user {

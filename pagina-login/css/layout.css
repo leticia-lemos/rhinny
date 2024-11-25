@@ -9,7 +9,7 @@
   }
 }
 
-@media (max-width: 1920px) {
+/* @media (max-width: 1920px) {
   .campo-login {
     height: 25em;
     margin-top: 25em;
@@ -18,13 +18,9 @@
   #rhinny-form {
     left: 47.5em;
   }
-}
+} */
 
-@media (max-width: 1500px) {
-  nav {
-    width: 94.5em;
-  }
-
+/* @media (max-width: 1500px) {
   .campo-login {
     height: 25em;
     margin-top: 25em;
@@ -37,20 +33,12 @@
 }
 
 @media (max-width: 1490px) {
-  nav {
-    width: 90.5em;
-  }
-
   #rhinny-form {
     left: 34em;
   }
-}
+} */
 
 @media (max-width: 1350px) {
-  nav {
-    width: 80em;
-  }
-
   #rhinny-form {
     left: 29em;
     bottom: 10em;
@@ -62,10 +50,6 @@
     display: none;
   }
 
-  nav {
-    width: 68em;
-  }
-
   #rhinny-form {
     width: 19em;
     left: 24em;
@@ -73,19 +57,19 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 975px) {
   nav {
-    width: 65em;
-  }
-}
-
-@media (max-width: 985px) {
-  nav {
-    width: 5em;
     height: 2em;
     position: relative;
     padding: 0 10px;
     border-bottom: 1px solid #d9d9d9;
+  }
+
+  #logo-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    list-style: none;
   }
 
   nav ul {
@@ -140,7 +124,7 @@
 
   .menu-collapse.menu-open {
     position: absolute;
-    top: 6em;
+    top: 7em;
     right: 1em;
     width: 13em;
     height: 9em;
@@ -163,7 +147,7 @@
     margin: 10px 0;
   }
 
-  #email_cadastro,
+  #email_login,
   #senha_cadastro {
     background-color: #f8f8f8;
     width: 25em;
@@ -179,25 +163,7 @@
   }
 }
 
-@media (max-width: 915px) {
-  .menu-collapse.menu-open {
-    position: absolute;
-    top: 6.5em;
-    left: 42em;
-    right: 0;
-    width: 13em;
-    height: 9em;
-    z-index: 1000;
-    border-bottom: 1px solid #d9d9d9;
-    border-radius: 8px;
-  }
-}
-
 @media (max-width: 845px) {
-  nav {
-    width: 15em;
-  }
-
   .menu-toggle {
     display: flex;
     margin-right: 1em;
@@ -206,16 +172,6 @@
   .menu-collapse {
     display: none;
   }
-
-  .menu-collapse.menu-open {
-    display: flex;
-    position: absolute;
-    top: 6.5em;
-    right: 0.5em;
-    width: 13em;
-    height: 9em;
-  }
-
   .botoes {
     display: none;
   }
@@ -246,17 +202,11 @@
   }
 }
 
-@media (max-width: 825px) {
-  .menu-collapse.menu-open {
-    display: flex;
-    position: absolute;
-    top: 6.5em;
-    left: 35em;
-  }
-}
-
-/* Oculta o #rhinny-form em telas menores */
 @media (max-width: 768px) {
+  body {
+    overflow-y: scroll;
+  }
+
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -294,12 +244,6 @@
     border-radius: 8px;
   }
 
-  .menu-collapse.menu-open {
-    position: absolute;
-    top: 6em;
-    right: 1em;
-  }
-
   .menu-collapse .botoes {
     display: flex;
     flex-direction: column;
@@ -320,13 +264,6 @@
 }
 
 @media (max-width: 550px) {
-  .menu-collapse.menu-open {
-    position: absolute;
-    top: 6.5em;
-    left: 18em;
-    right: 0;
-  }
-
   .campo-login {
     margin-left: 0;
     margin-right: 0;
@@ -334,18 +271,8 @@
 }
 
 @media (max-width: 475px) {
-  nav {
-    width: 9em;
-  }
-
   .menu-toggle {
     margin-right: 1em;
-  }
-
-  .menu-collapse.menu-open {
-    position: absolute;
-    top: 6.5em;
-    left: 12em;
   }
 
   .campo-login {
@@ -358,7 +285,7 @@
     height: 22em;
   }
 
-  #email_cadastro,
+  #email_login,
   #senha_cadastro {
     background-color: #f8f8f8;
     width: 25em;
@@ -369,18 +296,53 @@
   }
 }
 
+@media (max-width: 455px) {
+  .form-login {
+    width: 22em;
+  }
+
+  #email_login,
+  #senha_cadastro {
+    background-color: #f8f8f8;
+    width: 20em;
+  }
+
+  #btn-entrar {
+    width: 13em;
+  }
+}
+
 @media (max-width: 395px) {
   .menu-overlay {
     height: 115vh;
   }
 
   .form-login {
-    width: 22em;
+    width: 20em;
   }
 
-  #email_cadastro,
+  #email_login,
   #senha_cadastro {
-    width: 22em;
+    width: 18em;
+  }
+
+  #btn-entrar {
+    width: 12em;
+  }
+}
+
+@media (max-width: 345px) {
+  .form-login {
+    width: 18em;
+  }
+
+  #email_login,
+  #senha_cadastro {
+    width: 16em;
+  }
+
+  #btn-entrar {
+    width: 10em;
   }
 }
 
@@ -391,11 +353,5 @@
 
   .menu-toggle {
     margin-right: 1em;
-  }
-
-  .menu-collapse.menu-open {
-    position: absolute;
-    top: 6.5em;
-    left: 8em;
   }
 }

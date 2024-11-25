@@ -14,8 +14,8 @@
   display: flex;
   align-items: center;
   position: absolute;
-  top: 5em; 
-  left: 4em; 
+  top: 6em; 
+  left: 6em; 
   background-color: #0098FF;
   border-radius: 50%;
   padding: 10px; 
@@ -104,7 +104,7 @@
   display: flex;
   flex-direction: row;
   margin: 1em 0;
-  gap: 5em;
+  gap: 3em;
 }
 
 .titulo-input {
@@ -130,10 +130,10 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  cursor: pointer;
 }
 
 .select-container::after {
-  content: url(../img/Icon.svg);
   position: absolute;
   top: 50%;
   right: 10px;
@@ -191,8 +191,8 @@
   border-radius: 8px;
   margin-left: 10px;
   padding: 5px;
-  min-width: 40em;
-  max-width: 40em;
+  min-width: 41.5em;
+  max-width: 41.5em;
   max-height: 10em;
   min-height: 10em;
   display: flex;
@@ -204,7 +204,7 @@
   display: flex;
   align-items: end;
   justify-content: end;
-  margin: 2em 0;
+  margin: 2em auto;
 }
 
 .btn-enviar {

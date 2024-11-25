@@ -8,21 +8,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 50em;
     margin: 4em 3em;
+  }
+
+  .modal-content {
+    margin: 4.5em 0 0 105em;
   }
 
   .campo-lugares {
     display: flex;
     flex-direction: column;
     align-items: start;
-    height: 45em;
     width: 80em;
     margin-bottom: 5em;
   }
 
   .campo-locais {
-    height: 35em;
     width: 85em;
     margin: 0 5em;
     display: flex;
@@ -45,7 +46,6 @@
     cursor: pointer;
   }
 
-
   .img-lugar {
     margin: 0;
   }
@@ -55,7 +55,7 @@
     margin: 0 10px;
   }
 
-  
+
   .text-locais {
     width: 100%;
     display: flex;
@@ -64,8 +64,6 @@
   }
 
   .titulo-locais {
-    font-family: "Poppins-regular";
-    color: #1e1e1e;
     margin-top: 15px;
   }
 
@@ -83,6 +81,7 @@
     width: 15em;
     min-height: 28em;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: visible;
   }
 
   .titulo-menu {
@@ -142,24 +141,17 @@
     bottom: 2.5em;
     cursor: pointer;
   }
+
   /* final areas */
 }
 
 @media (max-width: 1550px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .campo-pesquisa {
     margin: 0 32em 0 0;
   }
 }
 
 @media (max-width: 1350px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .campo-pesquisa {
     margin: 0 32em 0 0;
   }
@@ -170,26 +162,13 @@
 }
 
 @media (max-width: 1260px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  nav {
-    width: 50%;
-    height: 4em;
-    position: relative;
-    padding: 0 10px;
-    border-bottom: 1px solid #d9d9d9;
-  }
-
   .section-inicial {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 50em;
     margin: 4em 0;
-;
+    ;
   }
 
   .campo-lugares {
@@ -206,7 +185,6 @@
   }
 
   .campo-locais {
-    height: 35em;
     width: 75em;
     margin: 0 5em;
     flex-direction: row;
@@ -221,13 +199,6 @@
 }
 
 @media (max-width: 975px) {
-  nav {
-    height: 2em;
-    position: relative;
-    padding: 0 10px;
-    border-bottom: 1px solid #d9d9d9;
-  }
-
   #logo-nav {
     display: flex;
     justify-content: space-between;
@@ -266,7 +237,6 @@
 
   .section-inicial {
     width: 30em;
-    height: 53em;
     margin: 2em 0 4em 15em;
   }
 
@@ -320,12 +290,9 @@
   }
 }
 
-/* @media (max-width: 845px) {} */
-
 @media (max-width: 768px) {
   .section-inicial {
     flex-wrap: wrap;
-    height: 53em;
     margin: 2em 0 4em 15em;
   }
 
@@ -354,7 +321,6 @@
 @media (max-width: 560px) {
   .section-inicial {
     flex-wrap: wrap;
-    height: 53em;
     margin: 0 0 4em 20em;
   }
 
@@ -385,7 +351,6 @@
     display: flex;
     flex-wrap: wrap;
     width: 65em;
-    height: 15em;
     margin: 1em 0 0 0;
     gap: 2em;
   }
@@ -459,8 +424,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2em ;
-    width: 20em;
+    margin: 2em;
     height: auto;
   }
 
@@ -471,13 +435,11 @@
 
   .campo-lugares {
     margin: 0;
-    height: 150em;
   }
 
   .campo-locais {
     flex-wrap: wrap;
     width: 6em;
-    height: auto;
     margin: 0;
     gap: 2em;
   }

@@ -1,11 +1,12 @@
 @media (min-width: 1920px) {
-  #logo-nav {
-    width: 114em;
-  }
-
   .layout-lugar {
     width: 110em;
   }
+
+  .heart-icon {
+    top: 6.5em;
+    left: 21.5em;
+}
 
   #praca-boulevard {
     bottom: 0;

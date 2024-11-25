@@ -157,8 +157,14 @@ nav ul {
 }
 
 body.modo-escuro nav,
-body.modo-escuro .footer-container {
+body.modo-escuro .footer-container,
+body.modo-escuro #logo-nav,
+body.modo-escuro .menu-collapse.menu-open {
     background-color: #121212;
+}
+
+body.modo-escuro .menu-collapse.menu-open {
+    border: 1px solid #DADADC;   
 }
 
 body.modo-escuro span {
@@ -174,6 +180,10 @@ body.modo-escuro nav a,
 body.modo-escuro .footer-container a,
 body.modo-escuro .copyright {
     color: #DADADC;
+}
+
+body.modo-escuro .menu-toggle div {
+    background-color: #DADADC;
 }
 
 /* botao acessibilidade */

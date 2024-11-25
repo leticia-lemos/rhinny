@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 8em 10em 0 10em;
+  margin: 6em 10em 0 10em;
   height: auto;
 }
 
@@ -28,7 +28,6 @@
   justify-content: center;
   gap: 25px;
   margin-bottom: 0;
-  overflow: hidden;
   counter-reset: step;
 }
 
@@ -142,7 +141,7 @@
 #data-cadastro-crianca {
   display: flex;
   flex-direction: column;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 
 #titulo-form {
@@ -260,6 +259,6 @@
 #rhinny-form {
   width: 20em;
   position: relative;
-  bottom: 27em;
+  bottom: 20em;
   left: 37em;
 }

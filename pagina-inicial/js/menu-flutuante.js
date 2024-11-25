@@ -23,14 +23,16 @@ window.addEventListener("scroll", function () {
 // Função para alternar a exibição dos filtros
 function toggleSection(id) {
   const opcoes = document.getElementById(id);
-  const icon = opcoes.previousElementSibling.querySelector("img");
+  const icon = opcoes.previousElementSibling.querySelector("i"); // Altera para buscar o ícone <i> ao invés de <img>
 
   if (opcoes.style.display === "none" || !opcoes.style.display) {
     opcoes.style.display = "block";
-    icon.src = "./img/seta-menu.svg"; // Ajuste para ícone de "fechar"
+    icon.classList.remove("bx-chevron-down-circle"); // Remove o ícone de "fechar"
+    icon.classList.add("bx-chevron-up-circle"); // Adiciona o ícone de "abrir"
   } else {
     opcoes.style.display = "none";
-    icon.src = "./img/seta-menu.svg"; // Ajuste para ícone de "abrir"
+    icon.classList.remove("bx-chevron-up-circle"); // Remove o ícone de "abrir"
+    icon.classList.add("bx-chevron-down-circle"); // Adiciona o ícone de "fechar"
   }
 
   // Atualiza a altura do menu ao alternar os filtros
@@ -48,8 +50,6 @@ function updateMenuHeight() {
       maxHeight += opcao.scrollHeight;
     }
   });
-
-  menu.style.maxHeight = `${maxHeight + 35}em`; // Adiciona padding extra
 }
 
 document.addEventListener("DOMContentLoaded", function () {
