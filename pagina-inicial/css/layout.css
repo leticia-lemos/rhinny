@@ -1,8 +1,4 @@
 @media (min-width: 1920px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .section-inicial {
     display: flex;
     flex-direction: row;
@@ -12,7 +8,8 @@
   }
 
   .modal-content {
-    margin: 4.5em 0 0 105em;
+    margin: 4.5em 0 0 auto;
+    margin-right: 15px;
   }
 
   .campo-lugares {
@@ -25,11 +22,6 @@
 
   .campo-locais {
     width: 85em;
-    margin: 0 5em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 3em;
   }
 
   .grupo-locais {
@@ -55,7 +47,6 @@
     margin: 0 10px;
   }
 
-
   .text-locais {
     width: 100%;
     display: flex;
@@ -74,7 +65,7 @@
     align-items: start;
     position: fixed;
     top: 7em;
-    left: 3em;
+    left: 5em;
     background-color: #fff;
     border-radius: 20px;
     padding: 15px;
@@ -118,7 +109,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0 6em;
+    margin: 0 4em;
   }
 
   #campo-pesquisa {
@@ -145,19 +136,63 @@
   /* final areas */
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 1915px) {
   .campo-pesquisa {
     margin: 0 32em 0 0;
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1465px) {
+  .campo-locais {
+    width: 79em;
+    gap: 2em;
+  }
+}
+
+@media (max-width: 1435px) {
   .campo-pesquisa {
-    margin: 0 32em 0 0;
+    margin: 0 29em 0 0;
   }
 
-  .menu-flutuante {
-    left: 2em;
+  .campo-locais {
+    width: 73em;
+    left: 155px;
+  }
+}
+
+@media (max-width: 1415px) {
+  .campo-locais {
+    width: 65em;
+    left: 225px;
+  }
+}
+
+@media (max-width: 1355px) {
+  .campo-pesquisa {
+    margin: 0 25em 0 0;
+  }
+
+  .campo-locais {
+    gap: 1em;
+    left: 185px;
+  }
+}
+
+@media (max-width: 1315px) {
+  .campo-pesquisa {
+    margin: 0 22em 0 0;
+  }
+
+  .campo-locais {
+    width: 61em;
+    left: 205px;
+  }
+}
+
+@media (max-width: 1285px) {
+  .img-lugar {
+    height: 227px;
+    width: 236px;
   }
 }
 
@@ -168,7 +203,6 @@
     align-items: center;
     justify-content: center;
     margin: 4em 0;
-    ;
   }
 
   .campo-lugares {
@@ -185,18 +219,40 @@
   }
 
   .campo-locais {
-    width: 75em;
-    margin: 0 5em;
+    width: 52em;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 3em;
-    flex-wrap: wrap;
+    left: 145px;
   }
 
+
+}
+
+@media (max-width: 1185px) {
   .menu-flutuante {
-    display: none;
+    left: 4.5em;
   }
 }
+
+@media (max-width: 1115px) {
+  .menu-flutuante {
+    left: 2.5em;
+  }
+
+  .campo-pesquisa {
+    margin: 0 6em 0 0;
+  }
+
+  #campo-pesquisa {
+    width: 26em;
+  }
+
+  .campo-locais {
+    left: 115px;
+  }
+}
+
+@media (max-width: 1065px) {}
 
 @media (max-width: 975px) {
   #logo-nav {
