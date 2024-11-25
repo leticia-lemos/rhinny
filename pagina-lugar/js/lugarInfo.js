@@ -89,7 +89,7 @@ function exibirComentarioNaTela(Comentario, key) {
     comentarioDiv.innerHTML = `
         <div class="avaliacao">
             ${estrelasHTML}
-            <div id="mediaAvaliacoes">${estrelasArredondadas}</div> <!-- Mostra a nota arredondada -->
+            <div id="mediaAvaliacoes">${Comentario.stars}</div>
         </div>
         <h2 class="titulo-comentario">${Comentario.titulo}</h2>
         <p class="p-comentario">${Comentario.text}</p>
@@ -150,23 +150,16 @@ async function calcularMedia(postId) {
         totalEstrelas += doc.data().stars || 0; // Adiciona as estrelas de cada comentário
     });
 
-    const media = totalAvaliacoes > 0 ? Math.round(totalEstrelas / totalAvaliacoes) : 0; // Arredonda para um inteiro
+    const media = totalAvaliacoes > 0 ? (totalEstrelas / totalAvaliacoes).toFixed(1) : 0;
 
     console.log(`Média das avaliações: ${media} estrelas`);
 
     // Atualiza o documento do lugar com a média
     await db.collection("lugares").doc(postId).update({
         notaMedia: media // Salva a média no documento do lugar
-    }).then(async () => {
+    }).then(() => {
         console.log('Média salva com sucesso!');
         
-        // Atualiza cada comentário com a nova média arredondada
-        await snapshot.forEach(async (doc) => {
-            await comentariosRef.doc(doc.id).update({
-                stars: media // Armazena a média arredondada no campo 'stars' do comentário
-            });
-        });
-
         // Atualiza os comentários para mostrar a nova média se necessário
         mostrarComentario();
         
