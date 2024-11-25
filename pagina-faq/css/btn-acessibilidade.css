@@ -219,27 +219,21 @@ body.modo-escuro .btn-clear {
 
 /* botao acessibilidade */
 
-body.modo-escuro .btn-login {
-    background-color: transparent;
-    border: 1px solid #DADADC;
-}
-
-body.modo-escuro .titulo-local,
-body.modo-escuro .titulo-input,
-body.modo-escuro #select-acessibilidade,
-body.modo-escuro .nome-user,
-body.modo-escuro .btn-enviar,
-body.modo-escuro .titulo-outros,
-body.modo-escuro .texto-outros,
-body.modo-escuro .titulo-comentario,
-body.modo-escuro .p-comentario,
-body.modo-escuro .titulo-localize,
-body.modo-escuro .p-localize,
-body.modo-escuro .coment,
+body.modo-escuro .titulo-principal,
+body.modo-escuro .texto-principal,
+body.modo-escuro #titulo1,
+body.modo-escuro #texto1,
+body.modo-escuro #titulo2,
+body.modo-escuro .faq-sidebar a,
+body.modo-escuro #titulo-pergunta,
+body.modo-escuro #texto-pergunta,
+body.modo-escuro .titulo-feedback,
+body.modo-escuro .texto-feedback,
+body.modo-escuro .form-feedback label,
 body.modo-escuro .usuario,
 body.modo-escuro .texto-perfil,
 body.modo-escuro .perfil,
-body.modo-escuro .conteudo-comentario {
+body.modo-escuro .btn {
     color: #DADADC;
 }
 
@@ -248,8 +242,7 @@ body.modo-escuro .texto-sair {
 }
 
 body.modo-escuro .menu-flutuante,
-body.modo-escuro .content-sem-perfil,
-body.modo-escuro .conteudo-comentario {
+body.modo-escuro .content-sem-perfil {
     background-color: #282828;
 }
 
@@ -257,17 +250,13 @@ body.modo-escuro .palavra-chave {
     background-color: #0098FF;
 }
 
-body.modo-escuro #piso-tatil {
-    color: #8D5805;
-    background-color: #FEE333;
+body.modo-escuro .faq-sidebar a.active {
+    color: #0098FF;
 }
 
-body.modo-escuro #placas-braille {
-    color: #26491D;
-    background-color: #499136;
-}
-
-body.modo-escuro #mapas-tateis {
-    color: #C0D2FF;
-    background-color: #2A55C2;
+body.modo-escuro .form-feedback input,
+body.modo-escuro .form-feedback textarea {
+    color: #DADADC;
+    background-color: rgba(217, 217, 217, 0.5);
+    outline: none;
 }
