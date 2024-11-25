@@ -18,6 +18,7 @@ function entrar(){
     // Signed in
     var user = userCredential.user;
     window.location.href = "../../pagina-inicial/pagina-inicial.html"
+
     // ...
   })
   .catch((error) => {
