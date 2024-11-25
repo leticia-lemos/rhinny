@@ -1,6 +1,6 @@
 @media (min-width: 1920px) {
-  #logo-nav {
-    width: 120em;
+  .modal-content {
+    margin: 4.5em 0 0 105em;
   }
 }
 

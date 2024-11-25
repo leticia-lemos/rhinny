@@ -379,6 +379,7 @@ body.modal-open {
   border-radius: 15px;
   border: 1px solid #ddd;
   font-size: 14px;
+  margin-top: 10px;
 }
 
 .form-group input:disabled {
@@ -415,6 +416,8 @@ body.modal-open {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  position: relative;
+  right: 40px;
 }
 
 .close-btn {
