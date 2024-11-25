@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="./css/footer.css" />
   <link rel="stylesheet" href="./css/lugar.css" />
   <link rel="stylesheet" href="./css/layout.css" />
-  <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore-compat.js"></script>
 
 
   <link rel="shortcut icon" href="./img/rhinny.svg" type="image/x-icon" />
@@ -119,9 +119,12 @@
               </div>
             </div>
             <p class="coment">Escrever comentário</p>
-            <textarea name="" class="conteudo-comentario" placeholder="Escreva seu comentário aqui"></textarea>
+            <p class="coment">Titulo</p>
+            <textarea name="" class="conteudo-comentarioTitulo" id="comentarioTituloValue" placeholder="Escreva seu titulo aqui"></textarea>
+            <p class="coment">Comentario</p>
+            <textarea name="" class="conteudo-comentario" id="comentarioValue" placeholder="Escreva seu comentário aqui"></textarea>
             <div class="botao">
-              <button type="submit" class="btn-enviar">Enviar</button>
+              <button type="button" onclick="adicionarComentario()" class="btn-enviar">Enviar</button>
             </div>
           </div>
         </div>
@@ -133,13 +136,14 @@
       <p class="texto-outros">Veja a opinião de outros visitantes</p>
       <div class="campo-outros-comentarios">
         <div class="grupo-outros-comentarios">
-          <div class="estrelas">
-            <box-icon name='star' id="star" type='solid' color='#fcc803'></box-icon>
-            <box-icon name='star' id="star" type='solid' color='#fcc803'></box-icon>
-            <box-icon name='star' id="star" type='solid' color='#fcc803'></box-icon>
-            <box-icon name='star' id="star" type='solid' color='#fcc803'></box-icon>
-            <box-icon name='star' id="star" type='solid' color='#fcc803'></box-icon>
-          </div>
+          <div class="avaliacao">
+            <span class="estrela" data-value="1">⭐</span>
+            <span class="estrela" data-value="2">⭐</span>
+            <span class="estrela" data-value="3">⭐</span>
+            <span class="estrela" data-value="4">⭐</span>
+            <span class="estrela" data-value="5">⭐</span>
+            <div id="mediaAvaliacoes">Oie</div>
+        </div>
           <h2 class="titulo-comentario">Gostei!</h2>
           <p class="p-comentario">As acessibilidades condizem com as do site.</p>
           <div class="usuario-comentario">
