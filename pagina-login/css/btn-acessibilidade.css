@@ -156,26 +156,6 @@ nav ul {
     transition: background-color 0.3s ease;
 }
 
-body.modo-escuro nav,
-body.modo-escuro .footer-container {
-    background-color: #121212;
-}
-
-body.modo-escuro span {
-    color: #f8f8ff;
-}
-
-nav a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-body.modo-escuro nav a,
-body.modo-escuro .footer-container a,
-body.modo-escuro .copyright {
-    color: #DADADC;
-}
-
 /* botao acessibilidade */
 .icon {
     width: 30px;
@@ -219,9 +199,32 @@ body.modo-escuro .btn-clear {
 
 /* botao acessibilidade */
 
+body.modo-escuro nav {
+    background-color: #121212;
+    border: 1px solid #333;
+}
+
+body.modo-escuro span {
+    color: #f8f8ff;
+}
+
+nav a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body.modo-escuro nav a {
+    color: #DADADC;
+}
+
+body.modo-escuro .group-btn,
+body.modo-escuro .btn-clear {
+    background-color: #282828;
+}
+
 body.modo-escuro .btn-login {
     background-color: transparent;
-    border: 1px solid #DADADC;
+    border: 1px solid #333;
 }
 
 body.modo-escuro .titulo-login,
@@ -242,4 +245,6 @@ body.modo-escuro #email_login,
 body.modo-escuro #senha_cadastro {
     color: #DADADC;
     background-color: rgba(217, 217, 217, 0.5);
+    border: none;
+    outline: none;
 }

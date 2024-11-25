@@ -252,69 +252,63 @@
   }
 }
 
-@media (max-width: 1065px) {}
-
-@media (max-width: 975px) {
-  #logo-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    list-style: none;
-  }
-
-  nav ul {
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    padding: 1em;
-    z-index: 1000;
-  }
-
-  /* Estilos do modal */
-  .modal-content {
-    margin: 4em 0 0 8em;
-    width: 14em;
-    height: 12em;
-  }
-
-  .content-sem-perfil {
-    width: 14em;
-    height: 13em;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    bottom: 2em;
-  }
-
-  .section-inicial {
-    width: 30em;
-    margin: 2em 0 4em 15em;
-  }
-
-  .campo-lugares {
-    width: 20em;
-    align-items: center;
-    margin: 0 -1em 0 2em;
-  }
-
+@media (max-width: 1065px) {
   .campo-locais {
-    flex-wrap: wrap;
-    width: 65em;
-    margin: 0;
-    gap: 2em;
+    left: 95px;
   }
 
+  .campo-pesquisa {
+    margin: 30px 8em 0 0;
+  }
+}
+
+@media (max-width: 1035px) {
+  .menu-flutuante {
+    left: 1.5em;
+    width: 14em;
+  }
+
+  #pesquisa-menu {
+    width: 14em;
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 1015px) {
   .grupo-locais {
     width: 17em;
   }
 
   .img-lugar {
-    width: 15em;
+    width: 200px;
+    height: 150px;
+  }
+
+  .campo-locais {
+    left: 65px;
+  }
+
+  .text-locais {
+    align-items: center;
+  }
+}
+
+@media (max-width: 975px) {
+  .campo-lugares {
+    width: auto;
+  }
+
+  .menu-flutuante {
+    display: none;
+  }
+
+  .campo-locais {
+    width: auto;
+    left: 0;
+  }
+
+  .campo-pesquisa {
+    margin: 30px auto;
   }
 
   .logo-footer {
@@ -322,12 +316,6 @@
     margin-right: 5em;
   }
 
-  .descricao-footer {
-    flex-direction: row;
-    margin: 2em -4em 2em 0;
-    gap: 0;
-  }
-
   .footer-container .descricao-footer ul {
     height: auto;
   }
@@ -346,176 +334,131 @@
   }
 }
 
-@media (max-width: 768px) {
-  .section-inicial {
-    flex-wrap: wrap;
-    margin: 2em 0 4em 15em;
+@media (max-width: 885px) {
+  .grupo-locais {
+    width: 16em;
   }
 
+  .titulo-locais {
+    text-align: center;
+  }
+}
+
+@media (max-width: 735px) {
   .descricao-footer {
-    flex-direction: row;
-    margin: 2em 2em 2em 0;
-    gap: 0;
+    flex-direction: column;
+  }
+
+  .logo-footer {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .paginas,
   .redes-sociais,
   .contato {
-    margin-top: 1em;
-    margin-left: 1em;
-    margin-bottom: 1em;
-    width: 350px;
-    height: 15em;
-  }
-
-  .copyright {
-    margin-top: 3em;
-    bottom: 0;
-  }
-}
-
-@media (max-width: 560px) {
-  .section-inicial {
-    flex-wrap: wrap;
-    margin: 0 0 4em 20em;
-  }
-
-  nav {
     position: relative;
-    padding: 0 10px;
-    border-bottom: 1px solid #d9d9d9;
-  }
-
-  nav ul {
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    padding: 1em;
-    z-index: 1000;
-  }
-
-  .campo-pesquisa {
-    margin-top: 4em;
-  }
-
-  .campo-locais {
-    display: flex;
-    flex-wrap: wrap;
-    width: 65em;
-    margin: 1em 0 0 0;
-    gap: 2em;
-  }
-
-  .logo-footer {
-    display: none;
-  }
-
-  .descricao-footer {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .footer-container .descricao-footer ul {
-    height: 10em;
+    right: 180px;
+    width: 250px;
+    height: auto;
   }
 
   .paginas {
-    margin-bottom: 1em;
-    width: 350px;
-    height: 15em;
-  }
-
-  .redes-sociais,
-  .contato {
-    height: 7em;
+    margin-top: 2em;
   }
 }
 
-@media (max-width: 475px) {
-  nav {
-    position: relative;
-    padding: 0 10px;
-    border-bottom: 1px solid #d9d9d9;
-  }
+@media (max-width: 665px) {
 
-  #logo-nav {
-    width: 100%;
+  .paginas,
+  .redes-sociais,
+  .contato {
+    right: 140px;
   }
+}
 
-  nav ul {
-    flex-direction: row;
-    align-items: center;
-    margin: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    padding: 1em;
-    z-index: 1000;
+@media (max-width: 595px) {
+
+  .paginas,
+  .redes-sociais,
+  .contato {
+    right: 120px;
   }
+}
 
-  /* Estilos do modal */
-  .modal-content {
-    margin: 4em 0 0 8em;
-    width: 14em;
-    height: 12em;
-  }
-
-  .content-sem-perfil {
-    width: 14em;
-    height: 13em;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    bottom: 2em;
-  }
-
-  .section-inicial {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2em;
-    height: auto;
-  }
-
-  .campo-pesquisa {
+@media (max-width: 545px) {
+  #campo-pesquisa {
     width: 20em;
-    margin-left: 2em;
   }
 
-  .campo-lugares {
-    margin: 0;
+  .grupo-locais {
+    width: 13em;
   }
 
-  .campo-locais {
-    flex-wrap: wrap;
-    width: 6em;
-    margin: 0;
-    gap: 2em;
+  .img-lugar {
+    width: 180px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 525px) {
+
+  .paginas,
+  .redes-sociais,
+  .contato {
+    right: 100px;
+  }
+}
+
+@media (max-width: 485px) {
+
+  .paginas,
+  .redes-sociais,
+  .contato {
+    right: 80px;
+  }
+}
+
+@media (max-width: 455px) {
+  .campo-pesquisa {
+    position: relative;
+    left: 15px;
   }
 
-  .logo-footer {
-    display: none;
+  .paginas,
+  .redes-sociais,
+  .contato {
+    right: 60px;
   }
+}
 
-  .descricao-footer {
-    display: flex;
-    flex-direction: column;
-    margin: 2em 2em;
-    gap: 0;
+@media (max-width: 405px) {
+
+  .paginas,
+  .redes-sociais,
+  .contato {
+    right: 40px;
   }
+}
 
-  .footer-container .descricao-footer ul {
-    height: auto;
+@media (max-width: 375px) {
+
+  .paginas,
+  .redes-sociais,
+  .contato {
+    right: 20px;
   }
+}
 
-  .copyright {
-    bottom: 1em;
+@media (max-width: 365px) {
+
+  #campo-pesquisa {
+    width: 18em;
+  }
+}
+
+@media (max-width: 335px) {
+  #campo-pesquisa {
+    width: 16em;
   }
 }

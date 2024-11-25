@@ -156,36 +156,6 @@ nav ul {
     transition: background-color 0.3s ease;
 }
 
-body.modo-escuro nav,
-body.modo-escuro .footer-container,
-body.modo-escuro #logo-nav,
-body.modo-escuro .menu-collapse.menu-open {
-    background-color: #121212;
-}
-
-body.modo-escuro .menu-collapse.menu-open {
-    border: 1px solid #DADADC;
-}
-
-body.modo-escuro span {
-    color: #f8f8ff;
-}
-
-nav a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-body.modo-escuro nav a,
-body.modo-escuro .footer-container a,
-body.modo-escuro .copyright {
-    color: #DADADC;
-}
-
-body.modo-escuro .menu-toggle div {
-    background-color: #DADADC;
-}
-
 /* botao acessibilidade */
 .icon {
     width: 30px;
@@ -219,9 +189,45 @@ body.modo-escuro .btn-clear {
 
 /* botao acessibilidade */
 
-body.modo-escuro .btn-login {
-    background-color: transparent;
+body.modo-escuro nav ul {
+    border-bottom: 1px solid #333;
+}
+
+body.modo-escuro nav,
+body.modo-escuro .footer-container,
+body.modo-escuro #logo-nav,
+body.modo-escuro .menu-collapse.menu-open {
+    background-color: #121212;
+}
+
+body.modo-escuro .menu-collapse.menu-open {
     border: 1px solid #DADADC;
+}
+
+body.modo-escuro span {
+    color: #f8f8ff;
+}
+
+nav a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body.modo-escuro nav a,
+body.modo-escuro .footer-container a,
+body.modo-escuro .copyright, 
+body.modo-escuro #titulo-paginas,
+body.modo-escuro #redes_sociais-titulo,
+body.modo-escuro #contato-titulo {
+    color: #DADADC;
+}
+
+body.modo-escuro .footer-container {
+    border-top: 1px solid #333;
+}
+
+body.modo-escuro .menu-toggle div {
+    background-color: #DADADC;
 }
 
 body.modo-escuro .titulo1,
@@ -251,4 +257,41 @@ body.modo-escuro .content-sem-perfil {
 
 body.modo-escuro .palavra-chave {
     background-color: #0098FF;
+}
+
+body.modo-escuro #pesquisa-menu {
+    border: 1px solid #000;
+}
+
+body.modo-escuro #campo-pesquisa,
+body.modo-escuro .grupo-locais {
+    border: 1px solid #333;
+}
+
+body.modo-escuro .menu-flutuante::-webkit-scrollbar {
+    width: 12px;
+}
+
+body.modo-escuro .menu-flutuante::-webkit-scrollbar-track {
+    background-color: #282828;
+}
+
+body.modo-escuro .menu-flutuante::-webkit-scrollbar-thumb {
+    background-color: #121212;
+    border-radius: 20px;
+    border: 3px solid #282828;
+}
+
+body.modo-escuro .accessibility-menu.active::-webkit-scrollbar {
+    width: 12px;
+}
+
+body.modo-escuro .accessibility-menu.active::-webkit-scrollbar-track {
+    background-color: #282828;
+}
+
+body.modo-escuro .accessibility-menu.active::-webkit-scrollbar-thumb {
+    background-color: #121212;
+    border-radius: 20px;
+    border: 3px solid #282828;
 }
