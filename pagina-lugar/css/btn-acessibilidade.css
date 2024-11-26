@@ -156,36 +156,6 @@ nav ul {
     transition: background-color 0.3s ease;
 }
 
-body.modo-escuro nav,
-body.modo-escuro .footer-container,
-body.modo-escuro #logo-nav,
-body.modo-escuro .menu-collapse.menu-open {
-    background-color: #121212;
-}
-
-body.modo-escuro .menu-collapse.menu-open {
-    border: 1px solid #DADADC;
-}
-
-body.modo-escuro span {
-    color: #f8f8ff;
-}
-
-nav a {
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-body.modo-escuro nav a,
-body.modo-escuro .footer-container a,
-body.modo-escuro .copyright {
-    color: #DADADC;
-}
-
-body.modo-escuro .menu-toggle div {
-    background-color: #DADADC;
-}
-
 /* botao acessibilidade */
 .icon {
     width: 30px;
@@ -219,9 +189,53 @@ body.modo-escuro .btn-clear {
 
 /* botao acessibilidade */
 
-body.modo-escuro .btn-login {
-    background-color: transparent;
+body.modo-escuro nav ul {
+    border-bottom: 1px solid #333;
+}
+
+body.modo-escuro nav,
+body.modo-escuro .footer-container,
+body.modo-escuro #logo-nav,
+body.modo-escuro .menu-collapse.menu-open,
+body.modo-escuro #select-acessibilidade {
+    background-color: #121212;
+}
+
+body.modo-escuro #select-acessibilidade,
+body.modo-escuro .conteudo-comentario,
+body.modo-escuro .conteudo-comentarioTitulo,
+body.modo-escuro .grupo-outros-comentarios {
+    border: 1px solid #333;
+}
+
+body.modo-escuro .menu-collapse.menu-open {
     border: 1px solid #DADADC;
+}
+
+body.modo-escuro span {
+    color: #f8f8ff;
+}
+
+nav a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body.modo-escuro nav a,
+body.modo-escuro .footer-container a,
+body.modo-escuro .copyright,
+body.modo-escuro #titulo-paginas,
+body.modo-escuro #redes_sociais-titulo,
+body.modo-escuro #contato-titulo {
+    color: #DADADC;
+}
+
+body.modo-escuro .footer-container {
+    border-top: 1px solid #333;
+}
+
+body.modo-escuro .menu-toggle div {
+    background-color: #DADADC;
 }
 
 body.modo-escuro .titulo-local,
@@ -239,7 +253,8 @@ body.modo-escuro .coment,
 body.modo-escuro .usuario,
 body.modo-escuro .texto-perfil,
 body.modo-escuro .perfil,
-body.modo-escuro .conteudo-comentario {
+body.modo-escuro .conteudo-comentario,
+body.modo-escuro .conteudo-comentarioTitulo {
     color: #DADADC;
 }
 
@@ -249,7 +264,8 @@ body.modo-escuro .texto-sair {
 
 body.modo-escuro .menu-flutuante,
 body.modo-escuro .content-sem-perfil,
-body.modo-escuro .conteudo-comentario {
+body.modo-escuro .conteudo-comentario,
+body.modo-escuro .conteudo-comentarioTitulo {
     background-color: #282828;
 }
 
@@ -270,4 +286,18 @@ body.modo-escuro #placas-braille {
 body.modo-escuro #mapas-tateis {
     color: #C0D2FF;
     background-color: #2A55C2;
+}
+
+body.modo-escuro .accessibility-menu.active::-webkit-scrollbar {
+    width: 12px;
+}
+
+body.modo-escuro .accessibility-menu.active::-webkit-scrollbar-track {
+    background-color: #282828;
+}
+
+body.modo-escuro .accessibility-menu.active::-webkit-scrollbar-thumb {
+    background-color: #121212;
+    border-radius: 20px;
+    border: 3px solid #282828;
 }
