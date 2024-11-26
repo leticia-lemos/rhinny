@@ -14,11 +14,11 @@
   display: flex;
   align-items: center;
   position: absolute;
-  top: 6em; 
-  left: 6em; 
+  top: 75px;
+  left: 95px;
   background-color: #0098FF;
   border-radius: 50%;
-  padding: 10px; 
+  padding: 10px;
   z-index: 10;
 }
 
@@ -34,7 +34,7 @@
 
 .layout-lugar {
   position: relative;
-  width: 80em;
+  width: auto;
   height: 40em;
   margin: 2em;
   gap: 10em;
@@ -50,16 +50,19 @@
 
 #praca-boulevard {
   width: 380px;
-  height:400px;
+  height: 400px;
   border-radius: 20px;
   margin-top: 60px;
+  position: relative;
+  right: 55px;
 }
 
 .grupo-direita {
   display: flex;
   flex-direction: column;
   margin: 0;
-  margin-right: -2em;
+  position: relative;
+  right: 25px;
 }
 
 .btn-acessibilidade {
@@ -103,6 +106,7 @@
 .grupo-acessibilidade {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 1em 0;
   gap: 3em;
 }
@@ -149,7 +153,7 @@
 }
 
 .comentario {
-  width: 35em;
+  width: 100%;
   height: 15em;
   padding: 0 0 10px 0;
 }
@@ -157,7 +161,6 @@
 .usuario-comentario {
   display: flex;
   flex-direction: row;
-  margin-left: 10px;
 }
 
 .usuario-data {
@@ -180,7 +183,7 @@
   font-family: "Poppins-semibold";
   font-size: 15px;
   color: #1e1e1e;
-  margin: 5px 15px;
+  margin: 15px auto;
 }
 
 .conteudo-comentario {
@@ -189,31 +192,44 @@
   outline: none;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
-  margin-left: 10px;
   padding: 5px;
-  min-width: 41.5em;
-  max-width: 41.5em;
+  min-width: 40em;
+  max-width: 40em;
   max-height: 10em;
   min-height: 10em;
   display: flex;
   flex-wrap: wrap;
   resize: none;
 }
+
 .conteudo-comentarioTitulo {
   font-family: "Poppins-regular";
   color: #1e1e1e;
   outline: none;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
-  margin-left: 10px;
   padding: 5px;
   min-width: 40em;
   max-width: 40em;
-  max-height: 5em;
-  min-height: 5em;
+  max-height: 3em;
+  min-height: 3em;
   display: flex;
   flex-wrap: wrap;
   resize: none;
+}
+
+.avaliacao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  margin: 10px 0 10px 10px;
+}
+
+#mediaAvaliacoes {
+  font-family: "Poppins-semibold";
+  margin-top: 3px;
+  margin-left: 15px;
 }
 
 .botao {
@@ -232,10 +248,12 @@
   width: 8em;
   height: 2.5em;
   cursor: pointer;
+  position: relative;
+  right: 80px;
 }
 
 .outros-comentarios {
-  margin: 2em 5em;
+  margin: 8em 5em 5em 5em;
 }
 
 .titulo-outros {
@@ -253,7 +271,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 0.5em;
+  margin: 0.5em auto;
   gap: 5em;
 }
 
@@ -270,8 +288,6 @@
   flex-direction: row;
   margin: 0.5em 0.7em;
   text-align: center;
-
-  
 }
 
 #star {
@@ -298,11 +314,12 @@
 }
 
 .localizar {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 5em;
+  margin: 6em auto;
 }
 
 .titulo-localize {
@@ -316,7 +333,7 @@
 }
 
 .localizar img {
-  margin: 2em;
+  margin: 2em auto;
 }
 
 /* Estilos do modal do perfil */
