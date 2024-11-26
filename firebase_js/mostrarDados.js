@@ -3,14 +3,14 @@ firebase.auth().onAuthStateChanged((user) => {
   // A função é chamada sempre que o estado de autenticação muda
   if (user) {
     // Se um usuário estiver logado, 'user' contém as informações do usuário
-    globalUserId = user.uid; // Armazena o UID do usuário globalmente
+    var globalUserId = user.uid; // Armazena o UID do usuário globalmente
     console.log("Usuário logado: " + globalUserId); // Exibe o UID do usuário no console
 
     // Chama a função para obter os dados do usuário no Firestore
     getUserData(globalUserId);
-    
     // Chama a função para mostrar os dados de autenticação na interface
     mostrarDadosAuth(user);
+    mostrarFavoritos(globalUserId)
   } else {
     // Se não houver usuário logado, exibe uma mensagem no console
     console.log("Nenhum usuário logado.");
@@ -99,4 +99,64 @@ function mudarDados() {
         alert("Erro ao enviar email de redefinição de senha: " + error); // Mensagem de erro se falhar ao enviar o e-mail de redefinição de senha
       });
   }
+}
+
+function mostrarFavoritos(globalUserId){
+  const userRef = firebase.firestore().collection("users").doc(globalUserId);
+  const favoritoRef = userRef.collection('favoritos')
+
+  favoritoRef.get().then((doc) => {
+    doc.forEach((data) => {
+      var info = data.data()
+      console.log(info)
+      mostrarFavoritosHtml(info)
+    });
+  }).catch((error) => {
+    console.log(error)
+  })
+}
+
+function mostrarFavoritosHtml(lugar){
+  var lugarSection = document.createElement("div");
+  lugarSection.classList.add("lugar");
+  lugarSection.innerHTML = `
+          <img src="${lugar.photos}" class="imagem-lugar" alt="">
+          <p class="p-titulo-lugar">${lugar.name}</p>
+          <div class="estrelas">
+            <box-icon name='star' type='solid' color='#fcc803'></box-icon>
+            <box-icon name='star' type='solid' color='#fcc803'></box-icon>
+            <box-icon name='star' type='solid' color='#fcc803'></box-icon>
+            <box-icon name='star' color='#fcc803'></box-icon>
+            <box-icon name='star' color='#fcc803'></box-icon>
+          </div>
+        </div>
+  `;
+
+  // Adiciona um evento de clique para redirecionar
+  lugarSection.addEventListener("click", () => {
+    const address = lugar.formatted_address || "Endereço não disponível";
+    const phone = lugar.formatted_phone_number || "Telefone não disponível";
+    // Redireciona para a página de detalhes
+    window.location.href = "../../pagina-lugar/pagina_lugarFiltro.html?uid="+lugar.id;
+  });
+
+  // Adiciona o lugar ao contêiner com o ID 'campo-locais'
+  document.getElementById("campo-locais").appendChild(lugarSection);
+}
+
+function pesquisarComentarios(){
+
+  const userRef = firebase.firestore().collection("lugares");
+  userRef.get().then((doc) => {
+    doc.forEach((ids) => {
+      var idLugar = ids.id
+      console.log(idLugar)
+      var refComentarios = userRef.doc(idLugar).collection('comentarios')
+      refComentarios.where()
+    })
+  }).catch((error) => {
+    console.log(error)
+  })
+  
+
 }
