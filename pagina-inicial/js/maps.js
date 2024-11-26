@@ -156,11 +156,29 @@ function obterCheckboxesAtivos() {
 
 }
 
+function obterCheckboxesPai() {
+  const filtrosAtivos = [];
+  
+  // Verifica cada checkbox e adiciona à lista se estiver marcado
+  const checkboxes = document.querySelectorAll('input[type=checkbox]');
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      filtrosAtivos.push(checkbox.dataset.value); // Adiciona o ID do checkbox ativo
+    }
+  });
+  
+  return filtrosAtivos;
+
+}
+
 // Função para buscar lugares no Firestore
 async function buscarLugares() {
-  const filtrosAtivos = obterCheckboxesAtivos();
   
-  if (filtrosAtivos.length === 0) {
+  const filtrosAtivos = obterCheckboxesAtivos();
+  const filtroPai = obterCheckboxesPai()
+  console.log(filtroPai)
+
+  if (filtrosAtivos.length === 0 && filtroPai.length === 0 ) {
     console.log("Nenhum filtro ativo.");
     return;
   }
@@ -172,22 +190,46 @@ async function buscarLugares() {
     // Cria uma consulta com base nos filtros ativos
     let query = lugaresRef;
 
-    filtrosAtivos.forEach(filtro => { 
-      query = query.where('sinalização', "==", filtro); // Assume que o campo no Firestore é booleano
-    });
+    if(filtroPai == 'sinalizacao'){
+      filtrosAtivos.forEach(filtro => { 
+        query = query.where('sinalizacao', "==", filtro); // Assume que o campo no Firestore é booleano
+      });
+  
+      const snapshot = await query.get();
+      
+      snapshot.forEach(doc => {
+        const lugarData = doc.data();
+        console.log(lugarData)
+         criarTabelaMapaFiltro(lugarData)
+      });
+      
+    }else if(filtroPai == 'audio'){
+      filtrosAtivos.forEach(filtro => { 
+        query = query.where('audio', "==", filtro); // Assume que o campo no Firestore é booleano
+      });
+  
+      const snapshot = await query.get();
+      
+      snapshot.forEach(doc => {
+        const lugarData = doc.data();
+        console.log(lugarData)
+         criarTabelaMapaFiltro(lugarData)
+      });
+      
+    } else if (filtroPai == 'equipamento'){
+      filtrosAtivos.forEach(filtro => { 
+        query = query.where('equipamento', "==", filtro); // Assume que o campo no Firestore é booleano
+      });
+  
+      const snapshot = await query.get();
+      
+      snapshot.forEach(doc => {
+        const lugarData = doc.data();
+        console.log(lugarData)
+         criarTabelaMapaFiltro(lugarData)
+      });
+    } 
 
-    const snapshot = await query.get();
-
-    if (snapshot.empty) {
-      console.log("Nenhum lugar encontrado.");
-      return;
-    }
-
-    snapshot.forEach(doc => {
-      const lugarData = doc.data();
-      criarTabelaMapaFiltro(lugarData,doc.id)
-    });
-    
   } catch (error) {
     console.error("Erro ao buscar lugares:", error);
   }
@@ -221,7 +263,7 @@ function criarTabelaMapaFiltro(lugar,id) {
     const address = lugar.formatted_address || "Endereço não disponível";
     const phone = lugar.formatted_phone_number || "Telefone não disponível";
     // Redireciona para a página de detalhes
-    window.location.href = "../../pagina-lugar/pagina-lugar.html?uid="+id;
+    window.location.href = "../../pagina-lugar/pagina_lugarFiltro.html?uid="+lugar.id;
   });
 
   // Adiciona o lugar ao contêiner com o ID 'campo-locais'

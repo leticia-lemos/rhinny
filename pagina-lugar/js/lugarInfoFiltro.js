@@ -1,13 +1,3 @@
-console.log(localStorage.getItem("lugarInfo"));
-
-const lugarInfos = JSON.parse(localStorage.getItem("lugarInfo"));
-
-var img = document.getElementById("praca-boulevard");
-img.src = lugarInfos.photo;
-
-var nomeLugar = document.getElementsByClassName("titulo-local")[0];
-nomeLugar.innerHTML = lugarInfos.name;
-
 function pegarUrl() {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get("uid");
@@ -15,30 +5,17 @@ function pegarUrl() {
 
 const url = pegarUrl();
 
-const db = firebase.firestore();
-const idLugar = lugarInfos.place_id
-console.log(idLugar)
+firebase.firestore().collection('lugares').doc(url).get().then((snapshot) => {
 
-document.getElementById("favoritar").addEventListener("click", () => {
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      var uid = user.uid;
-      const favoritoRef = db.collection("users").doc(uid).collection('favoritos');
-      favoritoRef
-        .add({
-          photos: lugarInfos.photo,
-          name: lugarInfos.name,
-          id: url,
-        })
-        .then(() => {
-          console.log("Favoritado");
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-  });
-});
+    var img = document.getElementById("praca-boulevard");
+    img.src = snapshot.data().photos;
+    
+    var nomeLugar = document.getElementsByClassName("titulo-local")[0];
+    nomeLugar.innerHTML = snapshot.data().name
+    
+})
+
+const db = firebase.firestore();
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
@@ -87,27 +64,26 @@ async function adicionarComentario() {
       console.log(error);
     });
 
-  var sinalizacao = document.getElementsByClassName("Sinalização")[0];
-  var audio = document.getElementsByClassName("audio")[0];
-  var equipamento = document.getElementsByClassName("equipamento")[0];
-
-  // Verifica se os elementos existem e obtém seus valores
-  var sinalizacaoValue = sinalizacao ? sinalizacao.value : null; // Supondo que seja um input
-  var audioValue = audio ? audio.value : null; // Supondo que seja um input
-  var equipamentoValue = equipamento ? equipamento.value : null; // Supondo que seja um input
-
-  // Referência ao documento no Firestore
-  var acessibilidadeRef = db.collection("lugares").doc(postId);
-
-  // Adiciona ou atualiza os dados no documento
-  acessibilidadeRef
-    .set({
-      sinalizacao: sinalizacaoValue,
-      audio: audioValue,
-      equipamento: equipamentoValue,
-      photos: lugarInfos.photo,
-      name: lugarInfos.name,
-      id: lugarInfos.place_id,
+    var sinalizacao = document.getElementsByClassName("Sinalização")[0];
+    var audio = document.getElementsByClassName("audio")[0];
+    var equipamento = document.getElementsByClassName("equipamento")[0];
+    
+    // Verifica se os elementos existem e obtém seus valores
+    var sinalizacaoValue = sinalizacao ? sinalizacao.value : null; // Supondo que seja um input
+    var audioValue = audio ? audio.value : null; // Supondo que seja um input
+    var equipamentoValue = equipamento ? equipamento.value : null; // Supondo que seja um input
+    
+    // Referência ao documento no Firestore
+    var acessibilidadeRef = db.collection("lugares").doc(postId);
+    
+    // Adiciona ou atualiza os dados no documento
+    acessibilidadeRef.set({
+      sinalizacao:sinalizacaoValue,
+      audio:audioValue,
+      equipamento:equipamentoValue,
+      photos:lugarInfos.photo,
+      name:lugarInfos.name,
+      id:lugarInfos.place_id,
     })
     .then(() => {
       console.log("Dados adicionados com sucesso");
@@ -250,5 +226,3 @@ async function calcularMedia(postId) {
     });
 }
 
-console.log(lugarInfos.photo);
-console.log(lugarInfos.name);
