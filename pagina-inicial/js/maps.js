@@ -8,22 +8,45 @@ function initMap(lat, long) {
     center: userLocation,
   });
 
+  // Inicia a busca de lugares próximos após a inicialização do mapa
+  findNearbyPlaces(userLocation);
+}
+
+function searchPlaceByName(name) {
   const request = {
-    location: userLocation,
-    radius: "2000", // Raio em metros para buscar lugares de lazer
-    types: ["park", "shopping_mall", "amusement_park", "zoo"], // Tipos de lugares de lazer
+    query: name,
+    fields: ['name', 'geometry'],
   };
 
-  document.getElementById("campo-locais").innerHTML = "";
+  const service = new google.maps.places.PlacesService(map);
+  service.findPlaceFromQuery(request, (results, status) => {
+    if (status === google.maps.places.PlacesServiceStatus.OK && results && results.length > 0) {
+      const place = results[0];
+      const userLocation = { lat: place.geometry.location.lat(), lng: place.geometry.location.lng() };
+      map.setCenter(userLocation);
+      findNearbyPlaces(userLocation); // Busca lugares próximos
+    } else {
+      console.error("Erro ao buscar o lugar:", status);
+    }
+  });
+}
+
+function findNearbyPlaces(location) {
+  const request = {
+    location: location,
+    radius: "2000", // Raio em metros
+    types: ["park", "shopping_mall", "amusement_park", "zoo"], // Tipos de lugares
+  };
+
   const service = new google.maps.places.PlacesService(map);
   service.nearbySearch(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-      for (let i = 0; i < results.length; i++) {
-        getPlaceDetails(results[i]);
-        console.log(results[i])
-      }
+      document.getElementById("campo-locais").innerHTML = ""; // Limpa resultados anteriores
+      results.forEach(place => {
+        getPlaceDetails(place);
+      });
     } else {
-      console.error("Erro ao buscar lugares de lazer:", status);
+      console.error("Erro ao buscar lugares próximos:", status);
     }
   });
 }
@@ -40,26 +63,26 @@ function getPlaceDetails(place) {
 }
 
 function criarTabelaMapa(lugar) {
-  // Cria um novo elemento <section>
   var lugarSection = document.createElement("section");
   lugarSection.classList.add("card");
+  lugarSection.innerHTML = ``
+  document.getElementById("campo-locais").appendChild(lugarSection);
 
-  // Adiciona o conteúdo HTML ao lugar
   lugarSection.innerHTML = `
     <div class="grupo-locais" data-name="${lugar.name}" data-address="${lugar.formatted_address || ''}" data-phone="${lugar.formatted_phone_number || ''}">
-            <img src="${lugar.photos && lugar.photos.length > 0 ? lugar.photos[0].getUrl({ width: 500, height: 150 }) : './img/default-image.svg'}" class="img-lugar" alt="${lugar.name}" />
-            <div class="text-locais">
-              <p class="titulo-locais">${lugar.name}</p>
-              <div class="estrelas">
-                <box-icon name="star" type="solid" color="#fcc803"></box-icon>
-                <box-icon name="star" type="solid" color="#fcc803"></box-icon>
-                <box-icon name="star" type="solid" color="#fcc803"></box-icon>
-                <box-icon name='star' color='#fcc803'></box-icon>
-                <box-icon name='star' color='#fcc803'></box-icon>
-              </div>
-            </div>
-          </div>
-`;
+      <img src="${lugar.photos && lugar.photos.length > 0 ? lugar.photos[0].getUrl({ width: 500, height: 150 }) : './img/default-image.svg'}" class="img-lugar" alt="${lugar.name}" />
+      <div class="text-locais">
+        <p class="titulo-locais">${lugar.name}</p>
+        <div class="estrelas">
+          <box-icon name="star" type="solid" color="#fcc803"></box-icon>
+          <box-icon name="star" type="solid" color="#fcc803"></box-icon>
+          <box-icon name="star" type="solid" color="#fcc803"></box-icon>
+          <box-icon name='star' color='#fcc803'></box-icon>
+          <box-icon name='star' color='#fcc803'></box-icon>
+        </div>
+      </div>
+    </div>
+  `;
 
   // Adiciona um evento de clique para redirecionar
   lugarSection.addEventListener("click", () => {
@@ -72,7 +95,6 @@ function criarTabelaMapa(lugar) {
       address: address,
       phone: phone,
       photo: lugar.photos && lugar.photos.length > 0 ? lugar.photos[0].getUrl({ width: 500, height: 150 }) : './img/default-image.svg',
-
     }));
 
     // Redireciona para a página de detalhes
@@ -82,6 +104,7 @@ function criarTabelaMapa(lugar) {
   // Adiciona o lugar ao contêiner com o ID 'campo-locais'
   document.getElementById("campo-locais").appendChild(lugarSection);
 }
+
 // Função para obter geolocalização do usuário
 function getGeolocation() {
   if (navigator.geolocation) {
@@ -91,12 +114,9 @@ function getGeolocation() {
         const long = position.coords.longitude;
         initMap(lat, long); // Inicializa o mapa com a localização do usuário
       },
-      () => {
-        handleLocationError(true);
-      }
+      () => handleLocationError(true)
     );
   } else {
-    // Geolocalização não suportada pelo navegador.
     handleLocationError(false);
   }
 }
@@ -113,36 +133,97 @@ function handleLocationError(browserHasGeolocation) {
 // Chama a função de geolocalização quando o DOM estiver carregado
 document.addEventListener("DOMContentLoaded", getGeolocation);
 
-// Código para buscar endereço pelo CEP permanece inalterado
-document.getElementById("cep").addEventListener("blur", function () {
-  pesquisacep(this.value);
+// Adiciona evento para buscar lugar pelo nome inserido
+document.getElementById("search").addEventListener("click", () => {
+  const placeName = document.getElementById("campo-pesquisa").value; // Campo onde o nome do lugar é inserido
+  searchPlaceByName(placeName); // Chama a função de pesquisa pelo nome
 });
 
-// Funções para manipulação de CEP...
+    // Função para detectar checkboxes ativos
+// Função para obter checkboxes ativos
+function obterCheckboxesAtivos() {
+  const filtrosAtivos = [];
+  
+  // Verifica cada checkbox e adiciona à lista se estiver marcado
+  const checkboxes = document.querySelectorAll('input[type=checkbox]');
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      filtrosAtivos.push(checkbox.className); // Adiciona o ID do checkbox ativo
+    }
+  });
+  
+  return filtrosAtivos;
 
-function limpa_formulário_cep() {
-   document.getElementById("rua").value = "";
-   document.getElementById("bairro").value = "";
 }
 
-// Callback para manipulação do retorno do CEP...
+// Função para buscar lugares no Firestore
+async function buscarLugares() {
+  const filtrosAtivos = obterCheckboxesAtivos();
+  
+  if (filtrosAtivos.length === 0) {
+    console.log("Nenhum filtro ativo.");
+    return;
+  }
 
-function pesquisacep(valor) {
-   var cep = valor.replace(/\D/g, "");
-   if (cep != "") {
-       var validacep = /^[0-9]{8}$/;
-       if (validacep.test(cep)) {
-           document.getElementById("rua").value = "...";
-           document.getElementById("bairro").value = "...";
-           var script = document.createElement("script");
-           script.src =
-               "https://viacep.com.br/ws/" + cep + "/json/?callback=meu_callback";
-           document.body.appendChild(script);
-       } else {
-           limpa_formulário_cep();
-           alert("Formato de CEP inválido.");
-       }
-   } else {
-       limpa_formulário_cep();
-   }
+  try {
+    const db = firebase.firestore(); // Inicializa o Firestore
+    const lugaresRef = db.collection("lugares");
+    
+    // Cria uma consulta com base nos filtros ativos
+    let query = lugaresRef;
+
+    filtrosAtivos.forEach(filtro => { 
+      query = query.where('sinalização', "==", filtro); // Assume que o campo no Firestore é booleano
+    });
+
+    const snapshot = await query.get();
+
+    if (snapshot.empty) {
+      console.log("Nenhum lugar encontrado.");
+      return;
+    }
+
+    snapshot.forEach(doc => {
+      const lugarData = doc.data();
+      criarTabelaMapaFiltro(lugarData,doc.id)
+    });
+    
+  } catch (error) {
+    console.error("Erro ao buscar lugares:", error);
+  }
+}
+
+
+function criarTabelaMapaFiltro(lugar,id) {
+  var lugarSection = document.createElement("section");
+  lugarSection.classList.add("card");
+  lugarSection.innerHTML = ""
+  document.getElementById("campo-locais").appendChild(lugarSection);
+
+  lugarSection.innerHTML = `
+    <div class="grupo-locais" data-name="${lugar.name}">
+      <img src="${lugar.photos}" class="img-lugar" alt="${lugar.name}" />
+      <div class="text-locais">
+        <p class="titulo-locais">${lugar.name}</p>
+        <div class="estrelas">
+          <box-icon name="star" type="solid" color="#fcc803"></box-icon>
+          <box-icon name="star" type="solid" color="#fcc803"></box-icon>
+          <box-icon name="star" type="solid" color="#fcc803"></box-icon>
+          <box-icon name='star' color='#fcc803'></box-icon>
+          <box-icon name='star' color='#fcc803'></box-icon>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Adiciona um evento de clique para redirecionar
+  lugarSection.addEventListener("click", () => {
+    const address = lugar.formatted_address || "Endereço não disponível";
+    const phone = lugar.formatted_phone_number || "Telefone não disponível";
+    // Redireciona para a página de detalhes
+    window.location.href = "../../pagina-lugar/pagina-lugar.html?uid="+id;
+  });
+
+  // Adiciona o lugar ao contêiner com o ID 'campo-locais'
+  document.getElementById("campo-locais").appendChild(lugarSection);
 }
