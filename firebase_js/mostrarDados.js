@@ -11,6 +11,7 @@ firebase.auth().onAuthStateChanged((user) => {
     // Chama a função para mostrar os dados de autenticação na interface
     mostrarDadosAuth(user);
     mostrarFavoritos(globalUserId)
+    pesquisarComentarios(globalUserId)
   } else {
     // Se não houver usuário logado, exibe uma mensagem no console
     console.log("Nenhum usuário logado.");
@@ -99,6 +100,7 @@ function mudarDados() {
         alert("Erro ao enviar email de redefinição de senha: " + error); // Mensagem de erro se falhar ao enviar o e-mail de redefinição de senha
       });
   }
+  enviarImagemPerfil()
 }
 
 function mostrarFavoritos(globalUserId){
@@ -144,7 +146,7 @@ function mostrarFavoritosHtml(lugar){
   document.getElementById("campo-locais").appendChild(lugarSection);
 }
 
-function pesquisarComentarios(){
+function pesquisarComentarios(globalUserId){
 
   const userRef = firebase.firestore().collection("lugares");
   userRef.get().then((doc) => {
@@ -152,7 +154,18 @@ function pesquisarComentarios(){
       var idLugar = ids.id
       console.log(idLugar)
       var refComentarios = userRef.doc(idLugar).collection('comentarios')
-      refComentarios.where()
+      refComentarios.where('usuarioID', '==' ,globalUserId )
+      .get()
+      .then((querysnapshot) => {
+        querysnapshot.forEach((doc) => {
+          var data = doc.data()
+          console.log(data)
+          mostrarComentario(data)
+        })
+        
+      }).catch((error) => {
+        console.log(error)
+      } )
     })
   }).catch((error) => {
     console.log(error)
@@ -160,3 +173,86 @@ function pesquisarComentarios(){
   
 
 }
+
+function mostrarComentario(usuario){
+
+  var comentarioCampo = document.createElement('div')
+  comentarioCampo.classList.add('comentario-perfil')
+
+  comentarioCampo.innerHTML = `
+          <h3>${usuario.titulo}</h3>
+          <div class="usuario-comentario">
+            <img src="./img/user.svg" alt="Foto de perfil">
+            <div class="usuario-data">
+              <p class="nome-user">${usuario.author}</p>
+              <p class="data">${usuario.data}</p>
+            </div>
+          </div>
+        </div>`
+
+document.getElementsByClassName('grupo-comentarios')[0].appendChild(comentarioCampo)
+
+}
+
+// Função para enviar a imagem e atualizar a foto de perfil
+function enviarImagemPerfil() {
+  const fileInput = document.getElementById('fileInput');
+  const user = firebase.auth().currentUser; // Obtendo o usuário autenticado
+
+  if (fileInput.files.length === 0) {
+      console.error('Nenhum arquivo selecionado.');
+      return;
+  }
+
+  const file = fileInput.files[0];
+
+  if (user) {
+      const storageRef = firebase.storage().ref(`profile_pictures/${user.uid}.jpg`);
+
+      // Fazendo upload da imagem
+      storageRef.put(file).then(() => {
+          console.log('Arquivo enviado com sucesso!');
+
+          // Obtendo a URL do arquivo enviado
+          return storageRef.getDownloadURL();
+      }).then((downloadURL) => {
+          // Atualizando a URL da foto de perfil no Firestore
+          return atualizarFotoPerfil(user.uid, downloadURL);
+      }).then(() => {
+          console.log('URL da foto de perfil atualizada com sucesso!');
+      }).catch((error) => {
+          console.error('Erro ao enviar o arquivo ou atualizar a URL:', error);
+      });
+  } else {
+      console.error('Usuário não autenticado.');
+  }
+}
+
+// Função para atualizar a foto de perfil no Firestore
+function atualizarFotoPerfil(userId, photoURL) {
+  const userRef = firebase.firestore().collection("users").doc(userId);
+  
+  return userRef.update({
+      photoURL: photoURL
+  }).catch((error) => {
+      console.error('Erro ao atualizar a foto de perfil:', error);
+  });
+}// Seleciona a imagem de edição e o input de arquivo
+
+const editImage = document.querySelector('.edit-image');
+const fileInput = document.getElementById('fileInput');
+
+// Adiciona um evento de clique à imagem de edição
+editImage.addEventListener('click', function(event) {
+    event.preventDefault(); // Previne a ação padrão do link
+    fileInput.click(); // Simula o clique no input de arquivo
+});
+
+// Opcional: adicionar um listener para quando um arquivo for selecionado
+fileInput.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        console.log('Arquivo selecionado:', file.name);
+        // Aqui você pode adicionar a lógica para enviar o arquivo para o Firebase Storage
+    }
+});
