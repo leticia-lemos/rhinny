@@ -252,3 +252,12 @@ async function calcularMedia(postId) {
 
 console.log(lugarInfos.photo);
 console.log(lugarInfos.name);
+
+function enviarMaps(){
+  redirecionarParaGoogleMaps(url)
+}
+
+function redirecionarParaGoogleMaps(url) {
+  const googleMapsUrl = `https://www.google.com/maps/place/?q=place_id:${url}`;
+  window.open(googleMapsUrl, '_blank'); // Abre em uma nova aba
+}

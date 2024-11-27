@@ -15,6 +15,7 @@
   <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore-compat.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvvanoz7U50-4faMR7NRMsBcc0CfOnCZY" async defer></script>
 
   <!-- icon -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
@@ -156,16 +157,6 @@
         <img src="" id="praca-boulevard" alt="" />
         <div class="grupo-direita">
           <h3 class="titulo-local"></h3>
-          <div class="acessibilidades">
-            <button class="btn-acessibilidade" id="piso-tatil">Piso Tátil</button>
-            <button class="btn-acessibilidade" id="placas-braille">Placas de Braille</button>
-            <button class="btn-acessibilidade" id="mapas-tateis">Mapas Táteis</button>
-          </div>
-          <div class="grupo-icons">
-            <img src="./img/icon-elevador-sem-cor.svg" id="icon" alt="" />
-            <img src="./img/icon-banheiro-sem-cor.svg" id="icon" alt="" />
-            <img src="./img/icon-rampa.svg" id="icon" alt="" />
-          </div>
           <p class="titulo-acessibilidade">Adicione as acessibilidades disponíveis no local:</p>
           <div class="grupo-acessibilidade">
             <div class="grupo-input">
@@ -290,9 +281,8 @@
 
     <section class="localizar">
       <h1 class="titulo-localize">Localize</h1>
-      <p class="p-localize">Encontre o local no qual deseja ir</p>
-      <div id="map"></div>
-      <img src="./img/image 6.svg" alt="">
+      <p onclick="enviarMaps()" class="p-localize">Encontre o local no qual deseja ir</p>
+      
     </section>
 
     <footer class="footer-container">
@@ -340,6 +330,6 @@
 </body>
 
 <script src="js/lugarInfoFiltro.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvvanoz7U50-4faMR7NRMsBcc0CfOnCZY" async defer></script>
+
 
 </html>

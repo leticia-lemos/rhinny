@@ -255,45 +255,11 @@ async function calcularMedia(postId) {
     });
 }
 
-async function initMap() {
-  // Obtém os detalhes do lugar usando o place_id
-  const placeDetails = await getPlaceDetails(url);
-  if (!placeDetails) {
-      console.error('Não foi possível obter os detalhes do lugar.');
-      return;
-  }
-
-  const position = {
-      lat: placeDetails.geometry.location.lat(),
-      lng: placeDetails.geometry.location.lng()
-  };
-
-  // Cria o mapa centrado na posição do lugar
-  const map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 15,
-      center: position
-  });
-
-  // Adiciona um marcador no local
-  const marker = new google.maps.Marker({
-      position: position,
-      map: map,
-      title: placeDetails.name // Título do marcador
-  });
+function enviarMaps(){
+  redirecionarParaGoogleMaps(url)
 }
 
-async function getPlaceDetails(placeId) {
-  const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=AIzaSyAvvanoz7U50-4faMR7NRMsBcc0CfOnCZY`;
-
-  try {
-      const response = await fetch(url);
-      if (!response.ok) {
-          throw new Error('Erro ao buscar detalhes do lugar: ' + response.statusText);
-      }
-      const data = await response.json();
-      return data.result; // Retorna os detalhes do lugar
-  } catch (error) {
-      console.error(error);
-      return null; // Retorna null em caso de erro
-  }
+function redirecionarParaGoogleMaps(url) {
+  const googleMapsUrl = `https://www.google.com/maps/place/?q=place_id:${url}`;
+  window.open(googleMapsUrl, '_blank'); // Abre em uma nova aba
 }

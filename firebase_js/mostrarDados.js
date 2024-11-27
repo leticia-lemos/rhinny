@@ -227,32 +227,3 @@ function enviarImagemPerfil() {
       console.error('Usuário não autenticado.');
   }
 }
-
-// Função para atualizar a foto de perfil no Firestore
-function atualizarFotoPerfil(userId, photoURL) {
-  const userRef = firebase.firestore().collection("users").doc(userId);
-  
-  return userRef.update({
-      photoURL: photoURL
-  }).catch((error) => {
-      console.error('Erro ao atualizar a foto de perfil:', error);
-  });
-}// Seleciona a imagem de edição e o input de arquivo
-
-const editImage = document.querySelector('.edit-image');
-const fileInput = document.getElementById('fileInput');
-
-// Adiciona um evento de clique à imagem de edição
-editImage.addEventListener('click', function(event) {
-    event.preventDefault(); // Previne a ação padrão do link
-    fileInput.click(); // Simula o clique no input de arquivo
-});
-
-// Opcional: adicionar um listener para quando um arquivo for selecionado
-fileInput.addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (file) {
-        console.log('Arquivo selecionado:', file.name);
-        // Aqui você pode adicionar a lógica para enviar o arquivo para o Firebase Storage
-    }
-});
