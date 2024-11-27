@@ -13,98 +13,14 @@
   <!-- icons -->
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
 
+  <!-- acessibilidade -->
+  <script src="https://cdn.userway.org/widget.js" data-account="3tjR35sfj5"></script>
+
   <link rel="shortcut icon" href="./img/rhinny.svg" type="image/x-icon" />
   <title>Página cadastro</title>
 </head>
 
 <body onchange="">
-  <!-- acessibilidades-começo -->
-  <!-- mascara -->
-  <div id="reading-mask-container"
-    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;">
-    <div id="top-mask"
-      style="position: absolute; left: 0; top: 0; width: 100%; height: 40%; background: rgba(0, 0, 0, 0.75);">
-    </div>
-    <div id="reading-line" style="position: absolute; left: 0; height: 80px; width: 100%; background: transparent;">
-    </div>
-    <div id="bottom-mask"
-      style="position: absolute; left: 0; bottom: 0; width: 100%; height: 40%; background: rgba(0, 0, 0, 0.75);">
-    </div>
-  </div>
-  <!-- Leitor -->
-  <div id="leitor-container"
-    style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #333; color: white; padding: 15px; border-radius: 8px; z-index: 9999; width: 80%; max-width: 600px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-      <span id="leitor-status" style="color: #fff;">Leitor de Tela Ativo</span>
-      <div style="display: flex; gap: 10px;">
-        <button id="leitor-pause"
-          style="background: #7ad761; border: none; padding: 5px 10px; border-radius: 4px; color: #f8f8ff; cursor: pointer;">Pausar</button>
-        <button id="leitor-stop"
-          style="background: #ff4444; border: none; padding: 5px 10px; border-radius: 4px; color: #f8f8ff; cursor: pointer;">Parar</button>
-      </div>
-    </div>
-    <div id="leitor-text" style="margin-top: 10px; font-size: 14px;">Selecione um texto para começar a leitura</div>
-  </div>
-
-  <div id="accessibilityBtn" class="accessibility-btn">
-    <span class="icon">
-      <img src="./img/icon-acessibilidade.svg" alt="Ícone de Acessibilidade" class="icon">
-    </span>
-  </div>
-
-  <div id="accessibilityMenu" class="accessibility-menu">
-    <h3 class="title-accessibility-menu">Controle de fonte</h3>
-    <div class="row-group">
-      <div class="group-btn">
-        <img src="./img/icons/A+.svg" alt="">
-        <h4 class="title-group">Tamanho da fonte</h4>
-      </div>
-      <div class="group-btn">
-        <img src="./img/icons/espaco-linhas.svg" alt="">
-        <h4 class="title-group">Espaço entre linhas</h4>
-      </div>
-      <div class="group-btn">
-        <img src="./img/icons/espacoLetras.svg" alt="">
-        <h4 class="title-group">Espaço entre letras</h4>
-      </div>
-    </div>
-
-    <h3 class="title-accessibility-menu">Auxílio de Leitura</h3>
-    <div class="row-group">
-      <div id="leitor-acs" class="group-btn">
-        <img src="./img/icons/leitor-sites.svg" alt="">
-        <h4 class="title-group">Leitor de Sites</h4>
-      </div>
-      <div class="group-btn modo-leitura-btn">
-        <img src="./img/icons/modo-leitura.svg" alt="">
-        <h4 class="title-group">Modo de Leitura</h4>
-      </div>
-      <div id="mascara-toggle" class="group-btn">
-        <img src="./img/icons/mascara-leitura.svg" alt="">
-        <h4 class="title-group">Máscara de leitura</h4>
-      </div>
-    </div>
-
-    <h3 class="title-accessibility-menu">Controle de cor</h3>
-    <div class="row-group">
-      <div class="group-btn" id="contrasteBtn">
-        <img src="./img/icons/contraste.svg" alt="Contraste">
-        <h4 class="title-group">Contraste</h4>
-      </div>
-
-      <div class="group-btn" id="saturacaoBtn">
-        <img src="./img/icons/saturacao.svg" alt="Saturação">
-        <h4 class="title-group">Saturação</h4>
-      </div>
-    </div>
-
-    <div class="clear-accessibility">
-      <button id="clearAccessibility" class="btn-clear">
-        <i class='bx bx-block' style="font-size: 16px;"></i>Desabilitar todas alterações no site
-      </button>
-    </div>
-  </div>
-
   <div class="container">
     <nav>
       <ul id="logo-nav">

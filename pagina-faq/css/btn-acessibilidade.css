@@ -187,6 +187,12 @@ body.modo-escuro .btn-clear {
     color: #C0D2FF;
 }
 
+.uwy .uai {
+    position: relative;
+    top: 65px;
+    right: 10px;
+}
+
 /* botao acessibilidade */
 
 body.modo-escuro nav ul {
