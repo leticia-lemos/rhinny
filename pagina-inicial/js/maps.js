@@ -180,6 +180,7 @@ async function buscarLugares() {
 
   if (filtrosAtivos.length === 0 && filtroPai.length === 0 ) {
     console.log("Nenhum filtro ativo.");
+    getGeolocation()
     return;
   }
 
@@ -236,11 +237,11 @@ async function buscarLugares() {
 }
 
 
-function criarTabelaMapaFiltro(lugar,id) {
+function criarTabelaMapaFiltro(lugar) {
+  
   var lugarSection = document.createElement("section");
   lugarSection.classList.add("card");
-  lugarSection.innerHTML = ""
-  document.getElementById("campo-locais").appendChild(lugarSection);
+  document.getElementById("campo-locais").innerHTML = ""
 
   lugarSection.innerHTML = `
     <div class="grupo-locais" data-name="${lugar.name}">
@@ -269,3 +270,11 @@ function criarTabelaMapaFiltro(lugar,id) {
   // Adiciona o lugar ao contêiner com o ID 'campo-locais'
   document.getElementById("campo-locais").appendChild(lugarSection);
 }
+
+const checkboxes = document.querySelectorAll('input[type=checkbox]');
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      checkbox.addEventListener('click',buscarLugares  )
+      ; // Adiciona o ID do checkbox ativo
+    }
+  })
