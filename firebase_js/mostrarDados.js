@@ -12,6 +12,7 @@ firebase.auth().onAuthStateChanged((user) => {
     mostrarDadosAuth(user);
     mostrarFavoritos(globalUserId)
     pesquisarComentarios(globalUserId)
+    localStorage.setItem('idUsuario', globalUserId)
   } else {
     // Se não houver usuário logado, exibe uma mensagem no console
     console.log("Nenhum usuário logado.");
@@ -77,10 +78,11 @@ function apagandoUsuario() {
 
 // Função para mudar os dados do usuário e, opcionalmente, redefinir a senha
 function mudarDados() {
+  const globalUserId = localStorage.getItem('idUsuario')
   const userRef = firebase.firestore().collection("users").doc(globalUserId); // Referência ao documento do usuário no Firestore
   
   const nome_mudanca = document.getElementById("nome_trocar").value; // Obtém o novo nome da criança a partir da interface
-  const senha = document.getElementById("password-trocar").value; // Obtém a nova senha (se fornecida)
+   // Obtém a nova senha (se fornecida)
   
   userRef.update({
     nome_crianca: nome_mudanca, // Atualiza o nome da criança no Firestore
@@ -89,18 +91,6 @@ function mudarDados() {
     alert("Dados do usuário modificados com sucesso"); // Mensagem de sucesso ao atualizar os dados
   });
 
-  if (senha) { 
-    var email = document.getElementById("email_trocar").value; // Obtém o e-mail atual da interface
-    
-    firebase.auth().sendPasswordResetEmail(email) // Envia um e-mail para redefinição de senha se uma nova senha for fornecida
-      .then(() => {
-        alert('Email para redefinição de senha enviado para ' + email); // Mensagem de sucesso ao enviar o e-mail de redefinição de senha
-      })
-      .catch((error) => {
-        alert("Erro ao enviar email de redefinição de senha: " + error); // Mensagem de erro se falhar ao enviar o e-mail de redefinição de senha
-      });
-  }
-  enviarImagemPerfil()
 }
 
 function mostrarFavoritos(globalUserId){
@@ -122,7 +112,10 @@ function mostrarFavoritosHtml(lugar){
   var lugarSection = document.createElement("div");
   lugarSection.classList.add("lugar");
   lugarSection.innerHTML = `
-          <img src="${lugar.photos}" class="imagem-lugar" alt="">
+          <img src="${lugar.photos}" style="  width: 250px;
+  border-radius: 8px;
+  height:180px;
+  margin-top: 15px;" class="imagem-lugar" alt="">
           <p class="p-titulo-lugar">${lugar.name}</p>
           <div class="estrelas">
             <box-icon name='star' type='solid' color='#fcc803'></box-icon>

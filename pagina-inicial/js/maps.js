@@ -70,7 +70,7 @@ function criarTabelaMapa(lugar) {
 
   lugarSection.innerHTML = `
     <div class="grupo-locais" data-name="${lugar.name}" data-address="${lugar.formatted_address || ''}" data-phone="${lugar.formatted_phone_number || ''}">
-      <img src="${lugar.photos && lugar.photos.length > 0 ? lugar.photos[0].getUrl({ width: 500, height: 150 }) : './img/default-image.svg'}" class="img-lugar" alt="${lugar.name}" />
+      <img src="${lugar.photos && lugar.photos.length > 0 ? lugar.photos[0].getUrl({ width: 500, height: 150 }) : './img/default.jpg'}" class="img-lugar" alt="${lugar.name}" />
       <div class="text-locais">
         <p class="titulo-locais">${lugar.name}</p>
         <div class="estrelas">

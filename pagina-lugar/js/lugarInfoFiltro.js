@@ -112,7 +112,7 @@ async function adicionarComentario() {
       equipamento:equipamentoValue,
       photos:lugarInfos.photo,
       name:lugarInfos.name,
-      id:lugarInfos.place_id,
+      id:url,
     })
     .then(() => {
       console.log("Dados adicionados com sucesso");

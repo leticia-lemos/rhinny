@@ -89,7 +89,7 @@ async function adicionarComentario() {
 
   var sinalizacao = document.getElementsByClassName("Sinalização")[0];
   var audio = document.getElementsByClassName("audio")[0];
-  var equipamento = document.getElementsByClassName("equipamento")[0];
+  var equipamento = document.getElementsByClassName("equipamentos")[0];
 
   // Verifica se os elementos existem e obtém seus valores
   var sinalizacaoValue = sinalizacao ? sinalizacao.value : null; // Supondo que seja um input
@@ -107,7 +107,7 @@ async function adicionarComentario() {
       equipamento: equipamentoValue,
       photos: lugarInfos.photo,
       name: lugarInfos.name,
-      id: lugarInfos.place_id,
+      id: url,
     })
     .then(() => {
       console.log("Dados adicionados com sucesso");
@@ -117,6 +117,15 @@ async function adicionarComentario() {
     });
 }
 
+function mostrarFiltrosAtivos(){
+  var sinalizacao = document.getElementsByClassName("Sinalização")[0];
+  var audio = document.getElementsByClassName("audio")[0];
+  var equipamento = document.getElementsByClassName("equipamentos")[0];
+
+  console.log(sinalizacao.value)
+  console.log(audio.value)
+  console.log(equipamento.value)
+}
 async function mostrarComentario() {
   db.collection("lugares")
     .doc(url)
