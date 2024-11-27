@@ -14,98 +14,14 @@
   <!-- icon -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
+  <!-- acessibilidade -->
+  <script src="https://cdn.userway.org/widget.js" data-account="3tjR35sfj5"></script>
+
   <link rel="shortcut icon" href="./img/rhinny.svg" type="image/x-icon" />
   <title>Página inicial</title>
 </head>
 
 <body onload="getUserData()">
-  <!-- acessibilidades-começo -->
-  <!-- mascara -->
-  <div id="reading-mask-container"
-    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;">
-    <div id="top-mask"
-      style="position: absolute; left: 0; top: 0; width: 100%; height: 40%; background: rgba(0, 0, 0, 0.75);">
-    </div>
-    <div id="reading-line" style="position: absolute; left: 0; height: 80px; width: 100%; background: transparent;">
-    </div>
-    <div id="bottom-mask"
-      style="position: absolute; left: 0; bottom: 0; width: 100%; height: 40%; background: rgba(0, 0, 0, 0.75);">
-    </div>
-  </div>
-  <!-- Leitor -->
-  <div id="leitor-container"
-    style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #333; color: white; padding: 15px; border-radius: 8px; z-index: 9999; width: 80%; max-width: 600px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-      <span id="leitor-status" style="color: #fff;">Leitor de Tela Ativo</span>
-      <div style="display: flex; gap: 10px;">
-        <button id="leitor-pause"
-          style="background: #7ad761; border: none; padding: 5px 10px; border-radius: 4px; color: #f8f8ff; cursor: pointer;">Pausar</button>
-        <button id="leitor-stop"
-          style="background: #ff4444; border: none; padding: 5px 10px; border-radius: 4px; color: #f8f8ff; cursor: pointer;">Parar</button>
-      </div>
-    </div>
-    <div id="leitor-text" style="margin-top: 10px; font-size: 14px;">Selecione um texto para começar a leitura</div>
-  </div>
-
-  <div id="accessibilityBtn" class="accessibility-btn">
-    <span class="icon">
-      <img src="./img/icon-acessibilidade.svg" alt="Ícone de Acessibilidade" class="icon">
-    </span>
-  </div>
-
-  <div id="accessibilityMenu" class="accessibility-menu">
-    <h3 class="title-accessibility-menu">Controle de fonte</h3>
-    <div class="row-group">
-      <div class="group-btn">
-        <img src="./img/icons/A+.svg" alt="">
-        <h4 class="title-group">Tamanho da fonte</h4>
-      </div>
-      <div class="group-btn">
-        <img src="./img/icons/espaco-linhas.svg" alt="">
-        <h4 class="title-group">Espaço entre linhas</h4>
-      </div>
-      <div class="group-btn">
-        <img src="./img/icons/espacoLetras.svg" alt="">
-        <h4 class="title-group">Espaço entre letras</h4>
-      </div>
-    </div>
-
-    <h3 class="title-accessibility-menu">Auxílio de Leitura</h3>
-    <div class="row-group">
-      <div id="leitor-acs" class="group-btn">
-        <img src="./img/icons/leitor-sites.svg" alt="">
-        <h4 class="title-group">Leitor de Sites</h4>
-      </div>
-      <div class="group-btn modo-leitura-btn">
-        <img src="./img/icons/modo-leitura.svg" alt="">
-        <h4 class="title-group">Modo de Leitura</h4>
-      </div>
-      <div id="mascara-toggle" class="group-btn">
-        <img src="./img/icons/mascara-leitura.svg" alt="">
-        <h4 class="title-group">Máscara de leitura</h4>
-      </div>
-    </div>
-
-    <h3 class="title-accessibility-menu">Controle de cor</h3>
-    <div class="row-group">
-      <div class="group-btn" id="contrasteBtn">
-        <img src="./img/icons/contraste.svg" alt="Contraste">
-        <h4 class="title-group">Contraste</h4>
-      </div>
-
-      <div class="group-btn" id="saturacaoBtn">
-        <img src="./img/icons/saturacao.svg" alt="Saturação">
-        <h4 class="title-group">Saturação</h4>
-      </div>
-    </div>
-
-    <div class="clear-accessibility">
-      <button id="clearAccessibility" class="btn-clear">
-        <i class='bx bx-block' style="font-size: 16px;"></i>Desabilitar todas alterações no site
-      </button>
-    </div>
-  </div>
-
   <div class="container">
     <nav>
       <div id="map"></div>
@@ -115,6 +31,8 @@
             <img src="./img/logo.svg" id="rhinny" alt="Rhinny" />
           </a>
         </li>
+        <i class="bx bx-sun modo-leitura-btn"
+          style="font-size: 22px; position: relative; left: 550px; cursor: pointer;"></i>
         <div class="user" id="user-icon">
           <i class='bx bx-chevron-down' style='color:#6d6d6d; margin-right: 10px;'></i>
           <img src="./img/user.svg" id="foto-usuario" alt="Usuário" />
@@ -142,7 +60,7 @@
     </div>
 
     <aside class="menu-flutuante">
-      <h3 class="titulo-menu">Palavras-chaves</h3>
+      <!-- <h3 class="titulo-menu">Palavras-chaves</h3>
       <div class="search-box">
         <input type="search" id="pesquisa-menu" placeholder="Pesquisar" />
         <button class="search-btn" onclick="adicionarPalavraChave()">
@@ -150,26 +68,29 @@
         </button>
       </div>
 
-      <!-- Contêiner onde as palavras-chave aparecerão -->
+      <!-- Contêiner onde as palavras-chave aparecerão
       <div id="palavras-chaves-container" class="palavras-chaves-container">
-        <!-- As palavras-chave vão aparecer aqui -->
-      </div>
+        <!-- As palavras-chave vão aparecer aqui 
+      </div> -->
 
       <h3 class="titulo-menu">Acessibilidades</h3>
-
       <div class="filtro">
         <div class="filtro-header" onclick="toggleSection('sinalizacao-opcoes')">
           <span class="titulo-filtro">Sinalização</span>
           <i class='bx bx-chevron-down-circle'></i>
         </div>
         <ul id="sinalizacao-opcoes" class="filtro-opcoes">
-          <li><input type="checkbox" onclick="buscarLugares()"data-value="sinalizacao" class="Placas em Braille" id="braille" /> <label for="braille">Placas em
+          <li><input type="checkbox" onclick="buscarLugares()" data-value="sinalizacao" class="Placas em Braille"
+              id="braille" /> <label for="braille">Placas em
               Braille</label></li>
-          <li><input type="checkbox" data-value="sinalizacao" class="Sinalização tátil" id="tactile" /> <label for="tactile">Sinalização
+          <li><input type="checkbox" data-value="sinalizacao" class="Sinalização tátil" id="tactile" /> <label
+              for="tactile">Sinalização
               tátil</label></li>
-          <li><input type="checkbox" data-value="sinalizacao" class="Trilhas adaptadas" id="trilhas" /> <label for="trilhas">Trilhas
+          <li><input type="checkbox" data-value="sinalizacao" class="Trilhas adaptadas" id="trilhas" /> <label
+              for="trilhas">Trilhas
               adaptadas</label></li>
-          <li><input type="checkbox" data-value="sinalizacao" class="Mapas táteis" id="mapas" /> <label for="mapas">Mapas táteis</label></li>
+          <li><input type="checkbox" data-value="sinalizacao" class="Mapas táteis" id="mapas" /> <label
+              for="mapas">Mapas táteis</label></li>
         </ul>
       </div>
 
@@ -179,15 +100,17 @@
           <i class='bx bx-chevron-down-circle'></i>
         </div>
         <ul id="audio-opcoes" class="filtro-opcoes">
-          <li><input type="checkbox" data-value="audio" class="Guias de áudio" id="guias-audio" /> <label for="guias-audio">Guias de
+          <li><input type="checkbox" data-value="audio" class="Guias de áudio" id="guias-audio" /> <label
+              for="guias-audio">Guias de
               áudio</label></li>
           <li><input type="checkbox" data-value="audio" class="Descrição de áudio" id="descricao-audio" /> <label
               for="descricao-audio">Descrição de áudio</label>
           </li>
-          <li><input type="checkbox" data-value="audio" class="Aplicativos de orientação auditiva" id="app-audio" /> <label
-              for="app-audio">Aplicativos de orientação auditiva</label>
+          <li><input type="checkbox" data-value="audio" class="Aplicativos de orientação auditiva" id="app-audio" />
+            <label for="app-audio">Aplicativos de orientação auditiva</label>
           </li>
-          <li><input type="checkbox" data-value="audio" class="Legendagem ao vivo" id="legenda" /> <label for="legenda">Legendagem ao
+          <li><input type="checkbox" data-value="audio" class="Legendagem ao vivo" id="legenda" /> <label
+              for="legenda">Legendagem ao
               vivo</label></li>
           <li><input type="checkbox" data-value="audio" class="Audiodescrição de
             performances" id="audiodescricao" /> <label for="audiodescricao">Audiodescrição de
@@ -201,9 +124,11 @@
           <i class='bx bx-chevron-down-circle'></i>
         </div>
         <ul id="equipamentos-opcoes" class="filtro-opcoes">
-          <li><input type="checkbox" data-value="equipamentos" class="Brinquedos táteis" id="brinquedos" /> <label for="brinquedos">Brinquedos táteis</label></li>
-          <li><input type="checkbox" data-value="equipamentos" class="Equipamentos com audiodescrição" id="equipamentos-audiodescricao" /> <label
-              for="equipamentos-audiodescricao">Equipamentos com audiodescrição</label></li>
+          <li><input type="checkbox" data-value="equipamentos" class="Brinquedos táteis" id="brinquedos" /> <label
+              for="brinquedos">Brinquedos táteis</label></li>
+          <li><input type="checkbox" data-value="equipamentos" class="Equipamentos com audiodescrição"
+              id="equipamentos-audiodescricao" /> <label for="equipamentos-audiodescricao">Equipamentos com
+              audiodescrição</label></li>
           <li><input type="checkbox" data-value="equipamentos" class="Áreas de descanso
             acessíveis" id="areas-descanso" /> <label for="areas-descanso">Áreas de descanso
               acessíveis</label></li>
