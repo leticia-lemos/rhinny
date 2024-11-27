@@ -352,7 +352,8 @@
 
 .modal-content {
   background-color: var(--azul);
-  margin: 4.5em 0 0 75em;
+  margin: 4.5em 0 0 auto;
+  margin-right: 15px;
   width: 14em;
   height: 12em;
   border-radius: 25px;
