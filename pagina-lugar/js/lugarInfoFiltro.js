@@ -62,8 +62,14 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 
+
 var id = localStorage.getItem("idUsuario");
 console.log(id);
+
+var nomeUsuario = localStorage.getItem('nomeUsuario')
+
+document.getElementsByClassName('nome-user')[0].innerHTML = nomeUsuario
+document.getElementsByClassName('data')[0].innerHTML = obterDataAtual()
 
 async function adicionarComentario() {
   var postId = pegarUrl();
