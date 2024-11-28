@@ -167,7 +167,7 @@ function exibirComentarioNaTela(Comentario, key) {
         <h2 class="titulo-comentario">${Comentario.titulo}</h2>
         <p class="p-comentario">${Comentario.text}</p>
         <div class="usuario-comentario">
-            <img src="./img/user1.svg" alt="Foto de perfil">
+            <img src="./img/user.svg" alt="Foto de perfil">
             <div class="usuario-data">
                 <p class="nome-user">${Comentario.author}</p>
                 <p class="data">${Comentario.data}</p>

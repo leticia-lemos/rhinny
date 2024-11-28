@@ -100,7 +100,7 @@ function criarTabelaMapa(lugar) {
     // Redireciona para a página de detalhes
     window.location.href = "../../pagina-lugar/pagina-lugar.html?uid="+lugar.place_id;
   });
-
+  
   // Adiciona o lugar ao contêiner com o ID 'campo-locais'
   document.getElementById("campo-locais").appendChild(lugarSection);
 }
