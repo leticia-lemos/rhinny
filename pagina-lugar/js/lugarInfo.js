@@ -84,6 +84,7 @@ async function adicionarComentario() {
       data: obterDataAtual(),
       titulo: titulo,
       usuarioID: id,
+      idLugar:url,
     })
     .then(() => {
       console.log("Comentário adicionado com sucesso");
@@ -114,7 +115,7 @@ async function adicionarComentario() {
       photos: lugarInfos.photo,
       name: lugarInfos.name,
       id: url,
-    })
+    }, {merge:true})
     .then(() => {
       console.log("Dados adicionados com sucesso");
     })
