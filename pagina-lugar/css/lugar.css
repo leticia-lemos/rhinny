@@ -270,9 +270,10 @@
 .campo-outros-comentarios {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 0.5em auto;
+  margin: 25px auto;
   gap: 5em;
 }
 
@@ -331,6 +332,7 @@
 .p-localize {
   font-family: "Poppins-regular";
   color: #757575;
+  cursor: pointer;
 }
 
 .localizar img {

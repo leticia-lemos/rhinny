@@ -164,9 +164,9 @@ function exibirComentarioNaTela(Comentario, key) {
   let estrelasHTML = "";
   for (let i = 1; i <= 5; i++) {
     if (i <= estrelasArredondadas) {
-      estrelasHTML += `<span class="estrela" onclick="salvarAvaliacao('${i}','${key}')" style="color: #fcc803;">⭐</span>`; // Estrela preenchida
+      estrelasHTML += `<span class="estrela" onclick="salvarAvaliacao('${i}','${key}')" style="color: #fcc803; cursor: pointer;">⭐</span>`; // Estrela preenchida
     } else {
-      estrelasHTML += `<span class="estrela" onclick="salvarAvaliacao('${i}','${key}')" style="opacity:0.5;">⭐</span>`; // Estrela vazia
+      estrelasHTML += `<span class="estrela" onclick="salvarAvaliacao('${i}','${key}')" style="opacity:0.5; cursor: pointer;">⭐</span>`; // Estrela vazia
     }
   }
 
