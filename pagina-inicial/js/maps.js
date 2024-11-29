@@ -217,7 +217,7 @@ async function buscarLugares() {
     const snapshot = await query.get();
 
     if (snapshot.empty) {
-      campoLocais.innerHTML = "<p>Não foram encontrados locais com os filtros selecionados.</p>"; // Mensagem quando não há resultados
+      campoLocais.innerHTML = "<p style='margin-bottom: 250px;'>Não foram encontrados locais com os filtros selecionados.</p>"; // Mensagem quando não há resultados
       return;
     }
 
