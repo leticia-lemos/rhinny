@@ -19,27 +19,6 @@ const db = firebase.firestore();
 const idLugar = lugarInfos.place_id
 console.log(idLugar)
 
-document.getElementById("favoritar").addEventListener("click", () => {
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      var uid = user.uid;
-      const favoritoRef = db.collection("users").doc(uid).collection('favoritos');
-      favoritoRef
-        .add({
-          photos: lugarInfos.photo,
-          name: lugarInfos.name,
-          id: url,
-        })
-        .then(() => {
-          console.log("Favoritado");
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
-  });
-});
-
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     var uid = user.uid;

@@ -15,9 +15,9 @@ firebase.auth().onAuthStateChanged((user) => {
     })
   }})
 
+
 // Seleciona o ícone de coração e a imagem do ícone
 const heartIcon = document.querySelector('#favoritar');
-
 // Adiciona um evento de clique ao ícone de coração
 heartIcon.addEventListener('click', () => {
   // Verifica se o ícone já está preenchido
@@ -41,8 +41,6 @@ heartIcon.addEventListener('click', () => {
               .catch((error) => {
                 console.log(error);
               })
-            }else{  
-              console.log('nao ta no favorito')
             }
           }).catch((error) => {
             console.log(error)
@@ -56,8 +54,11 @@ heartIcon.addEventListener('click', () => {
     // Se não estiver preenchido, adiciona a classe 'filled'
     heartIcon.classList.add('filled');
     heartIcon.src = './img/Heart-filled.svg';
-    var nomeLugar = localStorage.getItem("nomeLugar");
-      var photoLugar = localStorage.getItem("img");
+
+    var photoLugar = document.getElementById('praca-boulevard').src
+    var name = document.getElementsByClassName("titulo-local")[0].innerText
+
+
       firebase.auth().onAuthStateChanged((user) => {
         if (user) {
           var uid = user.uid;
@@ -69,14 +70,12 @@ heartIcon.addEventListener('click', () => {
             .doc(url)
             .get()
             .then((doc) => {
-              if (doc.exists) {
-                console.log(" ja ta la");
-              } else {
+              if (!doc.exists) {
                 favoritoRef
                   .doc(url)
                   .set({
                     photos: photoLugar,
-                    name: nomeLugar,
+                    name: name,
                     id: url,
                   })
                   .then(() => {
